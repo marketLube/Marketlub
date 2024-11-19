@@ -1,0 +1,23 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.15s all ease;
+}
+
+body {
+}
+.main {
+}
+.app {
+}
+
+.logo-box {
+  width: 7rem;
+  height: 4rem;
+  background-color: variables.$color-gray;
+  @include mixins.flex(center);
+}

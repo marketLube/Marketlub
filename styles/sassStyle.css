@@ -1,0 +1,97 @@
+.icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+
+.active {
+  background-color: #fff;
+  transition: 0.5s all ease;
+  color: rgb(54, 50, 50);
+}
+
+.active .icons {
+  color: rgb(28, 101, 126);
+  transition: 0.5s all ease;
+}
+
+.active p {
+  color: rgb(54, 50, 50);
+  transition: 0.5s all ease;
+}
+
+.hide {
+  opacity: 0;
+  transform: 0.5s all ease;
+  display: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: 0.5s all ease;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.15s all ease;
+}
+
+.logo-box {
+  width: 7rem;
+  height: 4rem;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes navText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main-head {
+  font-size: 1.825rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.small-text {
+  font-size: 0.8rem;
+  color: rgb(54, 50, 50);
+  font-weight: 500;
+}
+
+.text-small-bold {
+  font-weight: 600;
+  color: rgb(54, 50, 50);
+  font-size: 1.3rem;
+}
+
+.robot-container {
+  width: 100%;
+  height: 50rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.robot-container .robot-image {
+  width: 100%;
+  height: 50%;
+}
+.robot-container .overlay-text {
+  display: flex;
+  font-size: 10rem;
+  font-weight: bold;
+  color: rgb(162, 162, 162);
+}
+
+/*# sourceMappingURL=sassStyle.css.map */

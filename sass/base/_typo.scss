@@ -1,0 +1,19 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.main-head {
+  font-size: 1.825rem;
+  font-weight: 600;
+  @include mixins.flex(between);
+}
+.small-text {
+  font-size: 0.8rem;
+  color: variables.$color-dark;
+  font-weight: 500;
+}
+
+.text-small-bold {
+  font-weight: 600;
+  color: variables.$color-dark;
+  font-size: 1.3rem;
+}
