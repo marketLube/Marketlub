@@ -78,7 +78,8 @@
 
 .robot-container {
   width: 100%;
-  height: 50rem;
+  height: 70rem;
+  display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -92,6 +93,232 @@
   font-size: 10rem;
   font-weight: bold;
   color: rgb(162, 162, 162);
+}
+
+.boost-performance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000ff;
+  color: white;
+  text-align: center;
+  padding: 4rem;
+}
+.boost-performance__title {
+  font-size: 1.5rem;
+  font-weight: thin;
+  margin: 0;
+}
+.boost-performance__highlight {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+.boost-performance__subtitle {
+  font-size: 1rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0000ff;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  height: 50%;
+}
+.stats-section__item {
+  flex: 1;
+}
+.stats-section__value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.stats-section__label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.logo-section {
+  display: flex;
+  gap: 1rem;
+  color: white;
+  background-color: #0000ff;
+  font-size: 2rem;
+  justify-content: space-around;
+  text-align: center;
+  padding: 5rem;
+}
+
+.paragraph {
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  padding: 20rem;
+  background-color: #0000ff;
+}
+
+.work-section {
+  padding: 7rem;
+  background-color: #000;
+  color: #fff;
+}
+.work-section__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.work-section__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .work-section__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.work-section__image {
+  width: 50%;
+  height: 630px;
+  background-color: #0000ff;
+  margin-right: 2rem;
+}
+@media (max-width: 768px) {
+  .work-section__image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+.work-section__details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .work-section__details {
+    width: 100%;
+    text-align: center;
+  }
+}
+.work-section__tabs {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.work-section__tabs__firstbutton {
+  border: 1px solid #0000ff;
+  background: transparent;
+  color: #fff;
+  height: 2rem;
+  width: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.work-section__heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0;
+}
+.work-section__description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  width: 65%;
+  font-family: sans-serif;
+}
+.work-section__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+.work-section__link span {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.selected {
+  color: white;
+  font-size: 18.5rem;
+  background-color: rgb(0, 0, 0);
+  font-weight: 600;
+  bottom: 0rem;
+}
+
+.grid-container {
+  width: 100%;
+  padding: 6rem;
+  margin: 0 auto;
+  height: 100vh;
+}
+.grid-container__filters {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.grid-container__filter-btn {
+  border: 2px solid rgb(21, 10, 179);
+  border-radius: 18px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  background: none;
+  font-size: 14px;
+}
+.grid-container__filter-btn:hover {
+  background-color: rgba(203, 202, 217, 0.1);
+}
+.grid-container__filter-btn.active {
+  background-color: rgb(21, 10, 179);
+  color: white;
+}
+.grid-container__bluebox {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 40px;
+}
+.grid-container__boxitem {
+  height: 200px;
+  border-radius: 8px;
+}
+.grid-container__boxitem--tall {
+  background-color: blue;
+  height: 24rem;
+  margin-bottom: 2rem;
+}
+.grid-container__boxitem--medium {
+  background-color: blue;
+  height: 13rem;
+  margin-bottom: 2rem;
+}
+
+.lets {
+  color: white;
+  font-size: 4.3rem;
+  background-color: #0000ff;
+  font-weight: 100;
+  padding: 2rem;
+  font-family: sans-serif;
 }
 
 /*# sourceMappingURL=sassStyle.css.map */

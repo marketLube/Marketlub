@@ -1,0 +1,52 @@
+.grid-container {
+  width: 100%;
+  padding: 6rem;
+  margin: 0 auto;
+  height: 100vh;
+
+  &__filters {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  &__filter-btn {
+    border: 2px solid rgb(21, 10, 179);
+    border-radius: 18px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background: none;
+    font-size: 14px;
+
+    &:hover {
+      background-color: rgba(203, 202, 217, 0.1);
+    }
+
+    &.active {
+      background-color: rgb(21, 10, 179);
+      color: white;
+    }
+  }
+
+  &__bluebox {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 40px;
+  }
+  &__boxitem {
+    height: 200px;
+    border-radius: 8px;
+
+    &--tall {
+      background-color: blue;
+      height: 24rem;
+      margin-bottom: 2rem;
+    }
+    &--medium {
+      background-color: blue;
+      height: 13rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

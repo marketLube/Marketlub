@@ -3,4 +3,12 @@
 @use "./base/base";
 @use "./abstract/animations";
 @use "./base/typo";
-@use "./page/robo.scss";
+@use "./page/Section1/robo.scss";
+@use "./page/Section2/Boost.scss";
+@use "./page/Section2/numSection.scss";
+@use "./page/Section2/Logo.scss";
+@use "./page/Section3/para.scss";
+@use "./page/Section4/work.scss";
+@use "./page/Section4/selected.scss";
+@use "./page/Section5/gridSection.scss";
+@use "./page/Footer/lets.scss";
