@@ -5,7 +5,11 @@ export const Robo = () => {
   return (
     <div
       className="robot-container"
-      style={{ height: "100vh", width: "100vw", overflow: "hidden" }}
+      style={{
+        height: "100vh",
+        width: "100vw",
+        overflow: "hidden",
+      }}
     >
       {/* <div className="robot-image" /> */}
       <script

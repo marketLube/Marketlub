@@ -2,10 +2,11 @@
   height: 200vh; // Extend height to enable scrolling
   width: 100vw;
   overflow: hidden;
-  position: relative;
-  background: linear-gradient(to bottom, #000, #333); // Background for testing
-  z-index: 1;
   position: sticky;
+  display: flex;
+  flex-flow: column;
+  top: 0;
+  z-index: -1;
 }
 
 .robot-image {

@@ -11,15 +11,15 @@ import { NumberSection } from "./SectionTwo/NumberSection";
 function App() {
   return (
     <>
-      <div>
-        <Robo />
+      <Robo />
+      <div style={{ backgroundColor: "white" }}>
         <Boost />
         <Paragraph />
+        <WorkSection />
+        <Selected />
+        <GridSection />
+        <Lets />
       </div>
-      <WorkSection />
-      <Selected />
-      <GridSection />
-      <Lets />
     </>
   );
 }

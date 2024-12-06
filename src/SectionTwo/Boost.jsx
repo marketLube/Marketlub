@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Paragraph } from "../SectionThree/Paragraph";
+import { LogoSection } from "./LogoSection";
 
 export const Boost = () => {
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => {
-    setOffsetY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const stats = [
     { value: "59", label: "Projects Done" },
     { value: "23", label: "Happy Clients" },
@@ -22,9 +13,9 @@ export const Boost = () => {
   return (
     <div
       className="boost-performance"
-      style={{
-        transform: `translateY(-${offsetY * 0.3}px)`, // Adjust parallax speed here
-      }}
+      // style={{
+      //   transform: `translateY(-${offsetY * 0.5}px)`, // Adjust parallax speed here
+      // }}
     >
       <h1 className="boost-performance__title">Boost your</h1>
       <h2 className="boost-performance__highlight">Performance</h2>
@@ -41,15 +32,8 @@ export const Boost = () => {
         ))}
       </div>
 
-      <div className="logo-section">
-        <div>logo</div>
-        <div>logo</div>
-        <div>logo</div>
-        <div>logo</div>
-        <div>logo</div>
-        <div>logo</div>
-        <div>logo</div>
-        <div>logo</div>
+      <div className="logo-swiper">
+        <LogoSection />
       </div>
     </div>
   );

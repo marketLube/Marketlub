@@ -1,13 +1,16 @@
 .boost-performance {
-  position: absolute;
   width: 100%;
-  transform: translate(-50%, -50%); // Center the content
+  // transform: translate(-50%, -50%); // Center the content
   z-index: 2;
   text-align: center;
   color: #fff;
   background: #000fff;
   padding: 2rem;
   border-radius: 10px;
+  bottom: 0;
+  inset: 0;
+  display: flex;
+  flex-flow: column;
   // box-shadow: 0 4px 10px rgba(30, 19, 187, 0.3);
   // transition: transform 0.1s ease-out;
 
