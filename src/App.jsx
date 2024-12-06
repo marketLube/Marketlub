@@ -11,11 +11,11 @@ import { NumberSection } from "./SectionTwo/NumberSection";
 function App() {
   return (
     <>
-      <Robo />
-      <Boost />
-      <NumberSection />
-      <LogoSection />
-      <Paragraph />
+      <div>
+        <Robo />
+        <Boost />
+        <Paragraph />
+      </div>
       <WorkSection />
       <Selected />
       <GridSection />

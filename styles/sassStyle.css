@@ -77,18 +77,21 @@
 }
 
 .robot-container {
-  width: 100%;
-  height: 70rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  height: 200vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, #000, #333);
+  z-index: 1;
+  position: sticky;
 }
-.robot-container .robot-image {
+
+.robot-image {
   width: 100%;
   height: 50%;
 }
-.robot-container .overlay-text {
+
+.overlay-text {
   display: flex;
   font-size: 10rem;
   font-weight: bold;
@@ -96,28 +99,28 @@
 }
 
 .boost-performance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #0000ff;
-  color: white;
+  position: absolute;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
   text-align: center;
-  padding: 4rem;
+  color: #fff;
+  background: #000fff;
+  padding: 2rem;
+  border-radius: 10px;
 }
 .boost-performance__title {
-  font-size: 1.5rem;
-  font-weight: thin;
+  font-size: 2.5rem;
   margin: 0;
 }
 .boost-performance__highlight {
-  color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
 }
 .boost-performance__subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 1rem;
-  letter-spacing: 1px;
 }
 
 .stats-section {
