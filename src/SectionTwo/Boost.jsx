@@ -32,9 +32,9 @@ export const Boost = () => {
         ))}
       </div>
 
-      <div className="logo-swiper">
-        <LogoSection />
-      </div>
+      {/* <div className="logo-swiper"> */}
+      <LogoSection />
+      {/* </div> */}
     </div>
   );
 };

@@ -1,0 +1,42 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Centers vertically in the viewport
+  background-color: #f4f4f4; // Light background for demonstration
+}
+
+.nav {
+  background-color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    background-color: #444;
+    border-radius: 25px;
+  }
+}
+
+.nav__item--active {
+  background-color: #000fff;
+  color: $text-color;
+  border-radius: 25px;
+  font-weight: bold;
+}

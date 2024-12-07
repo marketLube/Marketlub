@@ -1,25 +1,27 @@
 import React, { useEffect } from "react";
 
 export const LogoSection = () => {
-  useEffect(() => {
-    const logosSlide = document.querySelector(".logos-slide");
-    if (logosSlide) {
-      const copy = logosSlide.cloneNode(true);
-      document.querySelector(".logo-slider").appendChild(copy);
-    }
-  }, []);
+  const logos = Array.from({ length: 15 }, (_, i) => `Logo ${i + 1}`);
+
   return (
-    <div className="logo-slider">
-      <div className="logos-slide">
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
-        <div className>logo</div>
+    <div className="logos">
+      <div className="logo-slide">
+        {/* Render two sets of logos for seamless looping */}
+        {logos.map((logo, index) => (
+          <div key={`logo-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
       </div>
     </div>
   );

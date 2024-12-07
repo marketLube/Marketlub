@@ -1,4 +1,5 @@
 import { Lets } from "./Footer/Lets";
+import { Navbar } from "./Nav/Navbar";
 import { GridSection } from "./SectionFive/GridSection";
 import { Selected } from "./SectionFour/Selected";
 import { WorkSection } from "./SectionFour/WorkSection";
@@ -11,6 +12,7 @@ import { NumberSection } from "./SectionTwo/NumberSection";
 function App() {
   return (
     <>
+      <Navbar />
       <Robo />
       <div style={{ backgroundColor: "white" }}>
         <Boost />
