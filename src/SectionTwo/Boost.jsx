@@ -20,7 +20,7 @@ export const Boost = () => {
       <h1 className="boost-performance__title">Boost your</h1>
       <h2 className="boost-performance__highlight">Performance</h2>
       <p className="boost-performance__subtitle">
-        Creating unmatchable digital presence
+        CREATING UNMATCHABLE DIGITAL PRESENCE
       </p>
 
       <div className="stats-section">
