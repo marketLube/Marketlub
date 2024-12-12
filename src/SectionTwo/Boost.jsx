@@ -16,10 +16,7 @@ export const Boost = () => {
 
   return (
     <div
-      className="boost-performance"
-      // style={{
-      //   transform: `translateY(-${offsetY * 0.5}px)`, // Adjust parallax speed here
-      // }}
+      className="boost-performance" 
     >
       <h1 className="boost-performance__title">Boost your</h1>
       <h2 className="boost-performance__highlight">Performance</h2>

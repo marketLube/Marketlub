@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+
 
 export const GridSection = () => {
   const [activeButton, setActiveButton] = useState("");
@@ -6,6 +7,7 @@ export const GridSection = () => {
   const handleButtonClick = (filterName) => {
     setActiveButton(filterName);
   };
+
   return (
     <section className="grid-container">
       <div className="grid-container__filters">
