@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "@mdi/react";
-import { mdiArrowTopRight } from "@mdi/js";
+// import { mdiArrowTopRight } from "@mdi/js";
 import {
   FaWhatsapp,
   FaInstagram,
