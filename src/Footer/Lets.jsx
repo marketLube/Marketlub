@@ -19,7 +19,7 @@ export const Lets = () => {
         </div>
         <h6 className="lets-h6">PROJECT TOGETHER</h6>
       </div>
-      {/* <div className="divider"></div>  */}
+      <div className="divider"></div> 
       <div className="small-footer">
         <div className="icon-wrapper">
           <a

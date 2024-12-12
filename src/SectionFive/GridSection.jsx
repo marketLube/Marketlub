@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState,} from "react";
+import { Parallax } from "react-scroll-parallax";
 
 
 export const GridSection = () => {
@@ -8,12 +9,8 @@ export const GridSection = () => {
     setActiveButton(filterName);
   };
   
-
-
-
-  
   return (
-    
+    <Parallax speed={62}>
         <section className="grid-container">
           <div className="grid-container__filters">
             {["WEB SERVICE", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
@@ -51,6 +48,8 @@ export const GridSection = () => {
             </div>
           </div>
         </section>
+
+        </Parallax>
       
   );
 };

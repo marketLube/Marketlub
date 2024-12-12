@@ -1,8 +1,9 @@
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: 0 auto;
-  height: 100vh;
+  margin: -28rem auto;
+  height: 150vh;
+  background-color: white;
 
   &__filters {
     display: flex;
