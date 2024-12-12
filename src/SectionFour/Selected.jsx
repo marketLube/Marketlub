@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
+
 
 
 export const Selected = () => {
-
-  return(
-    <div 
+  return (
     
-    className="selected-scroll">
-      <div className="selected" >Selected Works</div>
-    </div>
-
-  ) 
+        <div className="selected-works-wrap">
+          <div className="selected">Selected Works</div>
+        </div>
+  
+  );
 };
