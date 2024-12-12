@@ -1,6 +1,6 @@
 import React from "react";
-import Icon from "@mdi/react";
-import { mdiArrowTopRight } from "@mdi/js";
+// import Icon from "@mdi/react";
+// import { mdiArrowTopRight } from "@mdi/js";
 import { FaWhatsapp, FaInstagram, FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 export const Lets = () => {
@@ -9,7 +9,7 @@ export const Lets = () => {
       <div className="lets">
         <div className="lets-row">
           <h6 className="lets-h6">LET'S CRAFT A STUNNING</h6>
-          <Icon path={mdiArrowTopRight} className="lets-icon" />
+          {/* <Icon path={mdiArrowTopRight} className="lets-icon" /> */}
         </div>
         <h6 className="lets-h6">PROJECT TOGETHER</h6>
       </div>
