@@ -15,11 +15,11 @@ export const Lets = () => {
       <div className="lets">
         <div className="lets-row">
           <h6 className="lets-h6">LET'S CRAFT A STUNNING</h6>
-          <Icon path={mdiArrowTopRight} className="lets-icon" />
+          {/* <Icon path={mdiArrowTopRight} className="lets-icon" /> */}
         </div>
         <h6 className="lets-h6">PROJECT TOGETHER</h6>
       </div>
-      <div className="divider"></div> {/* White line */}
+      {/* <div className="divider"></div>  */}
       <div className="small-footer">
         <div className="icon-wrapper">
           <a
