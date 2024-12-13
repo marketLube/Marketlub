@@ -197,148 +197,63 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  padding: 15rem;
+  font-size: 2.5rem;
+  padding: 20rem;
   background-color: #0000ff;
-  font-weight: 500;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  height: 100vh;
 }
 
-.work-section {
+.-section {
   padding: 7rem;
   background-color: #000;
   color: #fff;
-  border-top-left-radius: 6rem;
-  border-top-right-radius: 6rem;
-  margin-top: -85px;
 }
-.work-section__scroll-container {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  overflow-y: scroll;
-  height: 70vh;
-  gap: 60px;
-  row-gap: 40px;
-}
-.work-section__scroll-container::-webkit-scrollbar {
-  display: none;
-}
-.work-section__imageDiv {
-  grid-column: 1/2;
-  position: sticky;
-  top: 0;
-  text-align: center;
-}
-.work-section__pills {
-  grid-column-gap: 0.75rem;
-  grid-row-gap: 0.75rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  display: flex;
-}
-.work-section__pill-item {
-  color: white;
-  background-color: black;
-  border: 1px solid #0000ff;
-  border-radius: 100px;
-  justify-content: center;
-  align-items: center;
-  min-height: 1.75rem;
-  font-size: 1.675rem;
-  line-height: 157.143%;
-  display: flex;
-  overflow: hidden;
-  padding: 5px 15px;
-  flex: 1 1 auto;
-  min-width: 200px;
-  text-align: center;
-}
-.work-section__heading-style {
-  color: white;
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-.work-section____para-style {
-  min-width: 150px;
-}
-.work-section__imageDiv {
-  grid-column: 1/2;
-  position: sticky;
-  top: 0;
-  text-align: center;
-}
-.work-section__rightBottomDiv {
-  grid-column: 2/3;
-  gap: 1.875rem;
-  flex-direction: column;
-  justify-content: start;
-  align-items: flex-start;
-  height: 65vh;
-  display: flex;
-  margin-top: 10px;
-}
-.work-section__linktag {
-  border-bottom: 1px solid white;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  gap: 10px;
-  cursor: pointer;
-}
-.work-section__title {
-  font-size: 4.5rem;
+.-section__title {
+  font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: bold;
 }
-.work-section__content {
+.-section__content {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
 }
 @media (max-width: 768px) {
-  .work-section__content {
+  .-section__content {
     flex-direction: column;
     align-items: center;
   }
 }
-.work-section__image {
+.-section__image {
   width: 50%;
   height: 630px;
   background-color: #0000ff;
   margin-right: 2rem;
 }
 @media (max-width: 768px) {
-  .work-section__image {
+  .-section__image {
     width: 100%;
     margin-right: 0;
     margin-bottom: 1rem;
   }
 }
-.work-section__details {
+.-section__details {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
 @media (max-width: 768px) {
-  .work-section__details {
+  .-section__details {
     width: 100%;
     text-align: center;
   }
 }
-.work-section__tabs {
+.-section__tabs {
   display: flex;
   margin-bottom: 1rem;
   gap: 1rem;
 }
-.work-section__tabs__firstbutton {
+.-section__tabs__firstbutton {
   border: 1px solid #0000ff;
   background: transparent;
   color: #fff;
@@ -351,19 +266,19 @@
   align-items: center;
   justify-content: center;
 }
-.work-section__heading {
+.-section__heading {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   padding: 1.5rem 0;
 }
-.work-section__description {
+.-section__description {
   font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   width: 65%;
   font-family: sans-serif;
 }
-.work-section__link {
+.-section__link {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -371,7 +286,7 @@
   display: inline-flex;
   align-items: center;
 }
-.work-section__link span {
+.-section__link span {
   margin-left: 0.5rem;
   font-size: 1.2rem;
 }
@@ -382,17 +297,13 @@
   background-color: rgb(0, 0, 0);
   font-weight: 600;
   bottom: 0rem;
-  width: 100%;
-  justify-content: center;
-  display: flex;
 }
 
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: -28rem auto;
-  height: 150vh;
-  background-color: white;
+  margin: 0 auto;
+  height: 100vh;
 }
 .grid-container__filters {
   display: flex;
@@ -475,8 +386,5 @@
   background-color: white;
   height: 1px;
 }
-
-}
-
 
 /*# sourceMappingURL=sassStyle.css.map */
