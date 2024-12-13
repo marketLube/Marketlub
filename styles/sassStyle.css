@@ -305,9 +305,10 @@
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: -28rem auto;
+  margin: -24rem auto;
   height: 150vh;
   background-color: white;
+  z-index: 1;
 }
 .grid-container__filters {
   display: flex;
@@ -345,11 +346,6 @@
   height: 24rem;
   margin-bottom: 2rem;
 }
-.grid-container__boxitem--medium {
-  background-color: blue;
-  height: 13rem;
-  margin-bottom: 2rem;
-}
 
 .lets {
   color: white;
@@ -361,6 +357,8 @@
   align-items: center;
   align-content: center;
   height: 50vh;
+  margin-top: 10rem;
+  bottom: 0;
 }
 
 .lets-h6 {

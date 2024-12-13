@@ -1,9 +1,10 @@
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: -28rem auto;
+  margin: -24rem auto;
   height: 150vh;
   background-color: white;
+  z-index: 1;
 
   &__filters {
     display: flex;
@@ -44,10 +45,6 @@
       height: 24rem;
       margin-bottom: 2rem;
     }
-    &--medium {
-      background-color: blue;
-      height: 13rem;
-      margin-bottom: 2rem;
-    }
+   
   }
 }

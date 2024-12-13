@@ -10,7 +10,7 @@ export const GridSection = () => {
   };
   
   return (
-    <Parallax speed={62}>
+    <Parallax speed={63}>
         <section className="grid-container">
           <div className="grid-container__filters">
             {["WEB SERVICE", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
@@ -28,14 +28,13 @@ export const GridSection = () => {
             )}
           </div>
           <div className="grid-container__bluebox">
-            <div className="grid-container__boxitem grid-container__boxitem ">
+            <div className="grid-container__boxitem grid-container__boxitem">
               <div className=" grid-container__boxitem--tall"></div>
               <div className=" grid-container__boxitem--tall"></div>
             </div>
             <div className="grid-container__boxitem grid-container__boxitem ">
-              <div className="grid-container__boxitem--medium"></div>
-              <div className="grid-container__boxitem--medium"></div>
-              <div className="grid-container__boxitem--medium"></div>
+              <div className="grid-container__boxitem--tall"></div>
+              <div className="grid-container__boxitem--tall"></div>
             </div>
             <div className="grid-container__boxitem grid-container__boxitem ">
               <div className=" grid-container__boxitem--tall"></div>
