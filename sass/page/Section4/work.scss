@@ -1,10 +1,118 @@
-.-section {
+.work-section {
   padding: 7rem;
   background-color: #000;
   color: #fff;
+  border-top-left-radius: 6rem;
+  border-top-right-radius: 6rem;
+  margin-top: -85px;
+
+  &__scroll-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    overflow-y: scroll;
+    height: 70vh;
+    gap: 60px;
+    row-gap: 40px;
+  }
+
+  &__scroll-container::-webkit-scrollbar {
+    display: none;
+
+  }
+
+  &__imageDiv {
+    grid-column: 1 / 2;
+    position: sticky;
+    top: 0;
+    text-align: center;
+
+  }
+
+
+
+  &__pills {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  &__pill-item {
+    color: white;
+    background-color: black;
+    border: 1px solid #0000ff;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    min-height: 1.75rem;
+    font-size: 1.675rem;
+    line-height: 157.143%;
+    display: flex;
+    overflow: hidden;
+    padding: 5px 15px;
+    flex: 1 1 auto; 
+    min-width: 200px; 
+    text-align: center;
+  }
+
+  &__heading-style {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  &____para-style{
+    min-width: 150px;
+  }
+
+  &__imageDiv {
+    grid-column: 1 / 2;
+    position: sticky;
+    top: 0;
+    text-align: center;
+  }
+
+  &__rightBottomDiv {
+    grid-column: 2 / 3;
+    gap: 1.875rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    height: 65vh;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  &__linktag {
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   &__title {
-    font-size: 2rem;
+    font-size: 4.5rem;
     margin-bottom: 2rem;
     font-weight: bold;
   }
