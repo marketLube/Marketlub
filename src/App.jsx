@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Lets } from "./Footer/Lets";
 import { Navbar } from "./Nav/Navbar";
 import { GridSection } from "./SectionFive/GridSection";
@@ -10,6 +11,7 @@ import { LogoSection } from "./SectionTwo/LogoSection";
 import { NumberSection } from "./SectionTwo/NumberSection";
 
 function App() {
+
   return (
     <>
       <Navbar />

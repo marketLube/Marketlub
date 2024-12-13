@@ -197,9 +197,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
-  padding: 20rem;
+  font-size: 4rem;
+  padding: 15rem;
   background-color: #0000ff;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: 100vh;
 }
 
 .work-section {
