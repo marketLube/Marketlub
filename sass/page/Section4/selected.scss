@@ -1,7 +1,25 @@
 .selected {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+
+  background-color: black;
+}
+
+.selectHead {
+  width: 100%;
   color: white;
-  font-size: 10rem;
-  background-color: rgb(0, 0, 0);
-  font-weight: 600;
-  bottom: 0rem;
+  text-align: center;
+  margin: 0rem 0rem 9rem 0rem;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 15vw;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .selectHead {
+    font-size: 15vw;
+  }
 }

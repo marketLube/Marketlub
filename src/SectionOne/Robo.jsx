@@ -1,5 +1,5 @@
-import Spline from "@splinetool/react-spline";
 import React from "react";
+import Spline from "@splinetool/react-spline";
 
 export const Robo = () => {
   return (
@@ -14,7 +14,7 @@ export const Robo = () => {
       {/* <div className="robot-image" /> */}
       <script
         type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.9.46/build/spline-viewer.js"
+        src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"
       ></script>
       <spline-viewer url="https://prod.spline.design/zFtU7pDI6WudFXAg/scene.splinecode"></spline-viewer>
       <Spline scene="https://prod.spline.design/zFtU7pDI6WudFXAg/scene.splinecode" />

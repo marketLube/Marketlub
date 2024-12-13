@@ -1,18 +1,25 @@
 .grid-container {
+  // width: 100%;
+  // padding: 5rem 10rem;
+  // // margin: 0 auto;
+  // height: 100vh;
+
   width: 100%;
   padding: 6rem;
-  margin: 0 auto;
-  height: 100vh;
+  margin: -24rem auto;
+  height: 150vh;
+  background-color: white;
+  z-index: 1;
 
   &__filters {
     display: flex;
     justify-content: start;
     margin-bottom: 20px;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   &__filter-btn {
-    border: 2px solid rgb(21, 10, 179);
+    border: 2px solid #0000ff;
     border-radius: 18px;
     padding: 10px 20px;
     margin: 0 5px;
@@ -24,7 +31,7 @@
     }
 
     &.active {
-      background-color: rgb(21, 10, 179);
+      background-color: #0000ff;
       color: white;
     }
   }
@@ -48,5 +55,22 @@
       height: 13rem;
       margin-bottom: 2rem;
     }
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-around;
+  }
+
+  .grid-container > div {
+    background-color: #0000ff;
+    color: white;
+    width: 16rem;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
   }
 }

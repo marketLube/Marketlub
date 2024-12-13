@@ -80,7 +80,6 @@
   height: 200vh;
   width: 100vw;
   overflow: hidden;
-  position: sticky;
   display: flex;
   flex-flow: column;
   top: 0;
@@ -113,17 +112,19 @@
   padding-top: 4rem;
 }
 .boost-performance__title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
+  font-weight: 200;
 }
 .boost-performance__highlight {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   margin: 0;
 }
 .boost-performance__subtitle {
   font-size: 1.2rem;
   margin-top: 1rem;
+  font-weight: thin;
 }
 
 .stats-section {
@@ -375,30 +376,53 @@
   margin-left: 0.5rem;
   font-size: 1.2rem;
 }
-
-.selected {
-  color: white;
-  font-size: 10rem;
-  background-color: rgb(0, 0, 0);
-  font-weight: 600;
-  bottom: 0rem;
+@media (min-width: 1600px) {
+  .work-section__title {
+    margin-left: 4.7rem;
+  }
 }
 
+.selected {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  background-color: black;
+}
+
+.selectHead {
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin: 0rem 0rem 9rem 0rem;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 15vw;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .selectHead {
+    font-size: 15vw;
+  }
+}
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: 0 auto;
-  height: 100vh;
+  margin: -24rem auto;
+  height: 150vh;
+  background-color: white;
+  z-index: 1;
 }
 .grid-container__filters {
   display: flex;
   justify-content: start;
   margin-bottom: 20px;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .grid-container__filter-btn {
-  border: 2px solid rgb(21, 10, 179);
+  border: 2px solid #0000ff;
   border-radius: 18px;
   padding: 10px 20px;
   margin: 0 5px;
@@ -409,7 +433,7 @@
   background-color: rgba(203, 202, 217, 0.1);
 }
 .grid-container__filter-btn.active {
-  background-color: rgb(21, 10, 179);
+  background-color: #0000ff;
   color: white;
 }
 .grid-container__bluebox {
@@ -431,14 +455,64 @@
   height: 13rem;
   margin-bottom: 2rem;
 }
-
-.lets {
-  color: white;
-  font-size: 4.3rem;
+.grid-container .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-around;
+}
+.grid-container .grid-container > div {
   background-color: #0000ff;
-  font-weight: 100;
-  padding: 2rem;
-  font-family: sans-serif;
+  color: white;
+  width: 16rem;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+/* Logo Section */
+.navbar-logo {
+  background-color: #ffffff; /* Optional: Add background for better visibility */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Sticky Navigation Menu */
+.navbar-menu {
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: flex-end; /* Align nav items to the right */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: #007bff;
 }
 
 /*# sourceMappingURL=sassStyle.css.map */
