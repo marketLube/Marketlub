@@ -1,2 +1,38 @@
 .lets {
+  color: white;
+  font-size: 4.3rem;
+  background-color: #0000ff;
+  font-weight: 100;
+  padding: 2rem;
+  font-family: sans-serif;
+  align-items: center;
+  align-content: center;
+  height: 50vh;
+}
+.lets-h6 {
+  font-weight: 100;
+  font-size: 7rem;
+  margin-left: 3rem;
+  align-content: center;
+}
+
+.lets-icon {
+  font-weight: 100;
+  font-size: 10px;
+  color: white;
+  z-index: 1;
+}
+
+.small-footer {
+  background-color: black;
+  height: 4.5rem;
+}
+
+.footer-icon {
+  color: white;
+}
+
+.divider {
+  background-color: white;
+  height: 1px;
 }

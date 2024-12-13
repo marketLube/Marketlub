@@ -1,4 +1,5 @@
 import React from "react";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 export const Selected = () => {
   return (
