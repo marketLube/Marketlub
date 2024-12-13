@@ -382,13 +382,17 @@
   background-color: rgb(0, 0, 0);
   font-weight: 600;
   bottom: 0rem;
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: 0 auto;
-  height: 100vh;
+  margin: -28rem auto;
+  height: 150vh;
+  background-color: white;
 }
 .grid-container__filters {
   display: flex;
@@ -439,6 +443,40 @@
   font-weight: 100;
   padding: 2rem;
   font-family: sans-serif;
+  align-items: center;
+  align-content: center;
+  height: 50vh;
 }
+
+.lets-h6 {
+  font-weight: 100;
+  font-size: 7rem;
+  margin-left: 3rem;
+  align-content: center;
+}
+
+.lets-icon {
+  font-weight: 100;
+  font-size: 10px;
+  color: white;
+  z-index: 1;
+}
+
+.small-footer {
+  background-color: black;
+  height: 4.5rem;
+}
+
+.footer-icon {
+  color: white;
+}
+
+.divider {
+  background-color: white;
+  height: 1px;
+}
+
+}
+
 
 /*# sourceMappingURL=sassStyle.css.map */
