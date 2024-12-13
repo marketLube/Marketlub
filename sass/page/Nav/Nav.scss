@@ -1,9 +1,5 @@
 .nav-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; // Centers vertically in the viewport
-  background-color: #f4f4f4; // Light background for demonstration
+  background-color: #000fff;
 }
 
 .nav {
@@ -36,7 +32,6 @@
 
 .nav__item--active {
   background-color: #000fff;
-  color: $text-color;
   border-radius: 25px;
   font-weight: bold;
 }
