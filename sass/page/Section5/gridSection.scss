@@ -1,14 +1,13 @@
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: -28rem auto;
   height: 150vh;
   background-color: white;
 
   &__filters {
     display: flex;
     justify-content: start;
-    margin-bottom: 20px;
+    margin-bottom: 5rem;
     gap: 15px;
     flex-wrap: wrap;
   }
@@ -19,6 +18,7 @@
     margin: 0 5px;
     background: none;
     font-size: 14px;
+    cursor: pointer;
 
     &:hover {
       background-color: rgba(203, 202, 217, 0.1);
@@ -32,22 +32,12 @@
 
   &__bluebox {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
   &__boxitem {
-    height: 200px;
     border-radius: 8px;
-
-    &--tall {
-      background-color: blue;
-      height: 24rem;
-      margin-bottom: 2rem;
-    }
-    &--medium {
-      background-color: blue;
-      height: 13rem;
-      margin-bottom: 2rem;
-    }
+    background-color: blue;
+    height: 26rem;
   }
 }

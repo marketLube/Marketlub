@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 export const LogoSection = () => {
   const logos = Array.from({ length: 15 }, (_, i) => `Logo ${i + 1}`);
 

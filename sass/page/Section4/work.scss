@@ -20,7 +20,6 @@
 
   &__scroll-container::-webkit-scrollbar {
     display: none;
-
   }
 
   &__imageDiv {
@@ -28,14 +27,11 @@
     position: sticky;
     top: 0;
     text-align: center;
-
   }
 
-
-
   &__pills {
-    grid-column-gap: .75rem;
-    grid-row-gap: .75rem;
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -55,8 +51,8 @@
     display: flex;
     overflow: hidden;
     padding: 5px 15px;
-    flex: 1 1 auto; 
-    min-width: 200px; 
+    flex: 1 1 auto;
+    min-width: 200px;
     text-align: center;
   }
 
@@ -67,7 +63,7 @@
     line-height: 1.2;
   }
 
-  &____para-style{
+  &____para-style {
     min-width: 150px;
   }
 
@@ -98,18 +94,6 @@
     gap: 10px;
     cursor: pointer;
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
   &__title {
     font-size: 4.5rem;

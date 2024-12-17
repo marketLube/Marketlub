@@ -11,11 +11,10 @@ import { LogoSection } from "./SectionTwo/LogoSection";
 import { NumberSection } from "./SectionTwo/NumberSection";
 
 function App() {
-
   return (
     <>
       <Navbar />
-      <Robo />
+      {/* <Robo /> */}
       <div style={{ backgroundColor: "white" }}>
         <Boost />
         <Paragraph />
