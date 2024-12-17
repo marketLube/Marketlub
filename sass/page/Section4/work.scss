@@ -4,7 +4,7 @@
   color: #fff;
   border-top-left-radius: 6rem;
   border-top-right-radius: 6rem;
-  margin-top: -85px;
+  margin-top: -88px;
 
   &__scroll-container {
     scrollbar-width: none;
@@ -16,6 +16,7 @@
     height: 70vh;
     gap: 60px;
     row-gap: 40px;
+    scroll-behavior: smooth;
   }
 
   &__scroll-container::-webkit-scrollbar {
@@ -27,6 +28,14 @@
     position: sticky;
     top: 0;
     text-align: center;
+  }
+
+  &__workImage {
+    width: 100%;
+    max-width: 560px;
+    height: "500px";
+    object-fit: cover;
+    margin-left: -90px;
   }
 
   &__pills {
@@ -83,6 +92,7 @@
     height: 65vh;
     display: flex;
     margin-top: 10px;
+    // width: 60%;
   }
 
   &__linktag {
@@ -183,6 +193,10 @@
       margin-left: 0.5rem;
       font-size: 1.2rem;
     }
+  }
+
+  &__icon {
+    margin-top: 10px;
   }
 
   @media (min-width: 1600px) {

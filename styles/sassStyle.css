@@ -11,7 +11,7 @@
 }
 
 .active .icons {
-  color: rgb(28, 101, 126);
+  color: rgb(0, 32, 211);
   transition: 0.5s all ease;
 }
 
@@ -85,7 +85,6 @@
   top: 0;
   z-index: -1;
 }
-
 .robot-image {
   width: 100%;
   height: 50%;
@@ -212,7 +211,7 @@
   color: #fff;
   border-top-left-radius: 6rem;
   border-top-right-radius: 6rem;
-  margin-top: -85px;
+  margin-top: -88px;
 }
 .work-section__scroll-container {
   scrollbar-width: none;
@@ -224,6 +223,7 @@
   height: 70vh;
   gap: 60px;
   row-gap: 40px;
+  scroll-behavior: smooth;
 }
 .work-section__scroll-container::-webkit-scrollbar {
   display: none;
@@ -233,6 +233,13 @@
   position: sticky;
   top: 0;
   text-align: center;
+}
+.work-section__workImage {
+  width: 100%;
+  max-width: 560px;
+  height: "500px";
+  object-fit: cover;
+  margin-left: -90px;
 }
 .work-section__pills {
   grid-column-gap: 0.75rem;
@@ -376,6 +383,9 @@
   margin-left: 0.5rem;
   font-size: 1.2rem;
 }
+.work-section__icon {
+  margin-top: 10px;
+}
 @media (min-width: 1600px) {
   .work-section__title {
     margin-left: 4.7rem;
@@ -409,7 +419,7 @@
 .grid-container {
   width: 100%;
   padding: 6rem;
-  margin: -24rem auto;
+  margin: -23.5rem auto;
   height: 150vh;
   background-color: white;
   z-index: 1;
@@ -455,20 +465,80 @@
   height: 13rem;
   margin-bottom: 2rem;
 }
-.grid-container .grid-container {
+.grid-container .grid-container2 {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-around;
 }
-.grid-container .grid-container > div {
+.grid-container .grid-container2 > div {
   background-color: #0000ff;
   color: white;
-  width: 16rem;
+  flex: 1 1 calc(25% - 16px);
   margin: 10px;
+  max-width: 20%;
+  height: 400px;
   text-align: center;
   line-height: 75px;
   font-size: 30px;
+}
+@media (max-width: 1024px) {
+  .grid-container .grid-container2 > div {
+    flex: 1 1 calc(25% - 16px);
+    max-width: 25%;
+  }
+}
+@media (max-width: 768px) {
+  .grid-container .grid-container2 > div {
+    flex: 1 1 calc(50% - 16px);
+    max-width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .grid-container .grid-container2 > div {
+    flex: 1 1 calc(100% - 16px);
+    max-width: 100%;
+  }
+}
+
+.lets {
+  color: white;
+  font-size: 4.3rem;
+  background-color: #0000ff;
+  font-weight: 100;
+  padding: 2rem;
+  font-family: sans-serif;
+  align-items: center;
+  align-content: center;
+  height: 50vh;
+}
+
+.lets-h6 {
+  font-weight: 100;
+  font-size: 7rem;
+  margin-left: 3rem;
+  align-content: center;
+}
+
+.lets-icon {
+  font-weight: 100;
+  font-size: 10px;
+  color: white;
+  z-index: 1;
+}
+
+.small-footer {
+  background-color: black;
+  height: 4.5rem;
+}
+
+.footer-icon {
+  color: white;
+}
+
+.divider {
+  background-color: white;
+  height: 1px;
 }
 
 /* Logo Section */

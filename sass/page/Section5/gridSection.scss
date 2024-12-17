@@ -6,7 +6,7 @@
 
   width: 100%;
   padding: 6rem;
-  margin: -24rem auto;
+  margin: -23.5rem auto;
   height: 150vh;
   background-color: white;
   z-index: 1;
@@ -57,20 +57,43 @@
     }
   }
 
-  .grid-container {
+  .grid-container2 {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: space-around;
   }
 
-  .grid-container > div {
+  .grid-container2 > div {
     background-color: #0000ff;
     color: white;
-    width: 16rem;
+    flex: 1 1 calc(25% - 16px);
     margin: 10px;
+    max-width: 20%;
+    height: 400px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+  }
+
+  @media (max-width: 1024px) {
+    .grid-container2 > div {
+      flex: 1 1 calc(25% - 16px);
+      max-width: 25%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid-container2 > div {
+      flex: 1 1 calc(50% - 16px);
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid-container2 > div {
+      flex: 1 1 calc(100% - 16px);
+      max-width: 100%;
+    }
   }
 }

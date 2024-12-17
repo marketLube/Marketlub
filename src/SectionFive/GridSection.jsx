@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-// import { Parallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
+import { motion } from "framer-motion";
+
 const contentMap = {
   VIDEOS: [
     "Video 1",
@@ -42,6 +44,26 @@ const contentMap = {
     "Branding 8",
   ],
 };
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.3 },
+  }),
+};
 
 export const GridSection = () => {
   const [activeButton, setActiveButton] = useState("VIDEOS");
@@ -51,28 +73,30 @@ export const GridSection = () => {
   };
 
   return (
-    // <Parallax speed={64}>
-    <section className="grid-container">
-      <div className="grid-container__filters">
-        {["VIDEOS", "WEB SERVICES", "PHOTOSHOOTS", "BRANDING"].map((filter) => (
-          <div
-            key={filter}
-            className={`grid-container__filter-btn ${
-              activeButton === filter ? "active" : ""
-            }`}
-            onClick={() => handleButtonClick(filter)}
-          >
-            {filter}
-          </div>
-        ))}
-      </div>
+    <Parallax speed={23}>
+      <motion.div className="grid-container" variants={containerVariants}>
+        <motion.div className="grid-container__filters" variants={itemVariants}>
+          {["VIDEOS", "WEB SERVICES", "PHOTOSHOOTS", "BRANDING"].map(
+            (filter) => (
+              <div
+                key={filter}
+                className={`grid-container__filter-btn ${
+                  activeButton === filter ? "active" : ""
+                }`}
+                onClick={() => handleButtonClick(filter)}
+              >
+                {filter}
+              </div>
+            )
+          )}
+        </motion.div>
 
-      <div className="grid-container">
-        {Array.from({ length: 8 }).map((_, index) => (
-          <div key={index}>{contentMap[activeButton][index]}</div>
-        ))}
-      </div>
-    </section>
-    // </Parallax>
+        <motion.div className="grid-container2" variants={itemVariants}>
+          {Array.from({ length: 8 }).map((_, index) => (
+            <div key={index}>{contentMap[activeButton][index]}</div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </Parallax>
   );
 };

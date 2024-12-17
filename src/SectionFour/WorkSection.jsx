@@ -1,18 +1,12 @@
-
 import React from "react";
-
-import Image1 from "../assets/images/image1.jpg"
-import Image2 from "../assets/images/image2.jpg"
-import Image3 from "../assets/images/image3.jpg"
-import Image4 from "../assets/images/image4.jpg"
-import Image5 from "../assets/images/image5.jpg"
-
-import Icon from '@mdi/react';
-import { mdiArrowTopRight } from '@mdi/js';
-
+import Image1 from "../assets/images/image1.jpg";
+import Image2 from "../assets/images/image2.jpg";
+import Image3 from "../assets/images/image3.jpg";
+import Image4 from "../assets/images/image4.jpg";
+import Image5 from "../assets/images/image5.jpg";
+import { GoArrowDownLeft } from "react-icons/go";
 
 export const WorkSection = () => {
-
   const items = [
     {
       image: Image1,
@@ -91,7 +85,11 @@ export const WorkSection = () => {
         {items.map((item, index) => (
           <>
             <div className="work-section__imageDiv">
-              <img src={item.image} alt="image1" height="800px" />
+              <img
+                src={item.image}
+                alt="image1"
+                className="work-section__workImage"
+              />
             </div>
             <div className="work-section__rightBottomDiv">
               <div>
@@ -105,7 +103,10 @@ export const WorkSection = () => {
               </div>
               <div>
                 <h1 className="work-section__heading-style">{item.heading}</h1>
-                <p className="work-section__para-style" style={{ color: "#696969", fontSize: "23px" }}>
+                <p
+                  className="work-section__para-style"
+                  style={{ color: "#696969", fontSize: "23px" }}
+                >
                   {item.description}
                 </p>
               </div>
@@ -114,9 +115,7 @@ export const WorkSection = () => {
                   See full case study
                 </div>
                 <div className="work-section__icon">
-                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10l5 5 5-5z"></path>
-                  </svg>
+                  <GoArrowDownLeft />
                 </div>
               </a>
             </div>
