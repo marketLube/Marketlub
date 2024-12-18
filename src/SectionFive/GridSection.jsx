@@ -1,22 +1,23 @@
 import React, { useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
+import { motion, useInView } from "framer-motion";
+import Web from "../components/Web";
 
+const contents = [0, 1, 2, 3, 4, 5, 6, 7];
 export const GridSection = () => {
-  const [activeButton, setActiveButton] = useState("");
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const [activeButton, setActiveButton] = useState("WEB SERVICES");
 
   const handleButtonClick = (filterName) => {
     setActiveButton(filterName);
   };
 
   return (
-    <Parallax speed={0}>
-      <section className="grid-container">
-        <div className="grid-container__filters">
-          {["WEB SERVICE", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
+    <Parallax speed={-20}>
+      <div className="grid-container">
+        <motion.div className="grid-container__filters">
+          {["WEB SERVICES", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
             (filter) => (
-              <button
+              <div
                 key={filter}
                 className={`grid-container__filter-btn ${
                   activeButton === filter ? "active" : ""
@@ -24,21 +25,12 @@ export const GridSection = () => {
                 onClick={() => handleButtonClick(filter)}
               >
                 {filter}
-              </button>
+              </div>
             )
           )}
-        </div>
-        <div className="grid-container__bluebox">
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-          <div className=" grid-container__boxitem"></div>
-        </div>
-      </section>
+        </motion.div>
+        {activeButton === "WEB SERVICES" && <Web contents={contents} />}
+      </div>
     </Parallax>
   );
 };
