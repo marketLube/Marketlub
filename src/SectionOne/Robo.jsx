@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { useState, Suspense, lazy, useRef } from "react";
 import { useInView } from "framer-motion";
 
 const SplineLazy = lazy(() => import("@splinetool/react-spline"));
@@ -7,10 +7,8 @@ export const Robo = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const ref = useRef(null);
+  const inView = useInView(ref);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -28,7 +26,7 @@ export const Robo = () => {
       style={{
         width: "100%",
         height: "100vh",
-        position: "relative",
+        position: "sticky",
         overflow: "hidden",
       }}
     >
@@ -46,7 +44,7 @@ export const Robo = () => {
         >
           {inView && (
             <SplineLazy
-              scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
+              scene="https://prod.spline.design/BZNlozQI2y68Epn7/scene.splinecode"
               onLoad={handleLoad}
               onError={handleError}
               style={{

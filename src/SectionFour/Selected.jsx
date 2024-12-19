@@ -12,9 +12,9 @@ export const Selected = () => {
         justifyContent: "center",
       }}
     >
-      {/* <Parallax className="selected" speed={-28}> */}
-      <h1 className="selectHead">Selected Works</h1>
-      {/* </Parallax> */}
+      <Parallax className="selected" speed={-28}>
+        <h1 className="selectHead">Selected Works</h1>
+      </Parallax>
     </div>
   );
 };

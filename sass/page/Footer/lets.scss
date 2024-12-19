@@ -3,21 +3,27 @@
   font-size: 4.3rem;
   background-color: #0000ff;
   font-weight: 100;
-  padding: 5rem 0;
+  padding: 3rem 0;
   font-family: sans-serif;
   align-items: center;
   align-content: center;
   transform-origin: bottom;
-  bottom: 0;
+  // bottom: 0;
   position: relative;
-  z-index: -1;
+  z-index: -1000000;
   margin-top: 5rem;
+  height: 20rem;
+  &-container {
+    position: relative;
+    overflow: hidden;
+  }
 }
 .lets-h6 {
   font-weight: 100;
   font-size: 7rem;
   margin-left: 3rem;
   align-content: center;
+  // line-height: 1;
 }
 
 .lets-icon {
