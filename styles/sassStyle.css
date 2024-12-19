@@ -210,16 +210,17 @@
   border-top-right-radius: 6rem;
   background-color: #000;
   height: 100vh;
+  margin-top: -5.5rem;
 }
 .work-section__scroll-container {
-  padding: 10rem 7rem 5rem 7rem;
+  padding: 7rem 7rem 5rem 7rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   overflow-y: scroll;
-  height: 75vh;
+  height: 80vh;
   gap: 60px;
   row-gap: 40px;
   scroll-behavior: smooth;

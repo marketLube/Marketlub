@@ -79,9 +79,7 @@ export const WorkSection = () => {
   return (
     <div className="work-section" style={{ position: "sticky", top: 0 }}>
       <div className="work-section__scroll-container container">
-        <div>
-          <h1 className="work-section__title">Dive into the work.</h1>
-        </div>
+        <h1 className="work-section__title">Dive into the work.</h1>
         {items.map((item, index) => (
           <>
             <div className="work-section__imageDiv">
