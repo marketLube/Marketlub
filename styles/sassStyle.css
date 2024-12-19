@@ -206,9 +206,9 @@ html {
   background-color: blue;
   font-weight: 500;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  height: 100vh; /* Make the height of the sticky element fill the viewport */
-  position: sticky; /* Enable sticky positioning */
-  top: 0; /* Stick the element to the top of the viewport */
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .work-section {

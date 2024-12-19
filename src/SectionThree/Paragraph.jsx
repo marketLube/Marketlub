@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const str =
   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde non dicta obcaecati deserunt, eum magni. Fuga sapiente eaque similique est magnam quos corporis aut ut suscipit soluta consequuntur, accusamus totam!";
@@ -8,29 +8,29 @@ export const Paragraph = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
+      const scrollPosition = window.scrollY - 1500;
       const windowHeight = window.innerHeight;
       const maxScroll = document.documentElement.scrollHeight - windowHeight;
 
       // Calculate how many words should be bright based on scroll position
       const progress = scrollPosition / maxScroll;
       const totalWords = str.split(" ").length;
-      const activeWordIndex = Math.floor(progress * totalWords);
+      const activeWordIndex = Math.floor(progress * totalWords * 2);
 
       wordsRef.current.forEach((word, index) => {
         if (word) {
-          if (index === activeWordIndex) {
-            // Current word is fully bright
-            word.style.color = "rgba(255, 255, 255, 1)";
+          if (index <= activeWordIndex) {
+            // Current word is fully visible (bright)
+            word.style.opacity = "1";
           } else if (
             index === activeWordIndex - 1 ||
             index === activeWordIndex + 1
           ) {
-            // Adjacent words are partially bright
-            word.style.color = "rgba(255, 255, 255, 0.7)";
+            // Adjacent words are partially visible
+            word.style.opacity = "0.7";
           } else {
             // Other words are dim
-            word.style.color = "rgba(255, 255, 255, 0.3)";
+            word.style.opacity = "0.3";
           }
         }
       });
@@ -46,7 +46,7 @@ export const Paragraph = () => {
   }, []);
 
   return (
-    <div style={{ height: "1000vh" }}>
+    <div style={{ height: "700vh" }}>
       <div className="paragraph">
         <div
           style={{
@@ -60,7 +60,11 @@ export const Paragraph = () => {
             <span
               key={index}
               ref={(el) => (wordsRef.current[index] = el)}
-              style={{ transition: "color 0.3s ease" }}
+              style={{
+                color: "white",
+                opacity: "0.3",
+                transition: "opacity 0.3s ease",
+              }}
             >
               {word}
             </span>
