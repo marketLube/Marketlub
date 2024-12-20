@@ -13,8 +13,8 @@ function App() {
   return (
     <>
       <Robo />
+      <Boost />
       <div style={{ backgroundColor: "white" }}>
-        <Boost />
         <Paragraph />
         <WorkSection />
         <Selected />

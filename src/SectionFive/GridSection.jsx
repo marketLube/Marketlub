@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Web from "../components/Web";
 
 const contents = [0, 1, 2, 3, 4, 5, 6, 7];

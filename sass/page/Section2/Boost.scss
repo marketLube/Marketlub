@@ -1,16 +1,17 @@
 .boost-performance {
   width: 100%;
   // transform: translate(-50%, -50%); // Center the content
-  z-index: 2;
+  z-index: 2000;
   text-align: center;
+  background-color: blue;
   color: #fff;
-  background: #000fff;
   padding: 2rem;
   border-radius: 10px;
   bottom: 0;
   display: flex;
   flex-flow: column;
   padding-top: 4rem;
+  position: relative;
 
   &__title {
     font-size: 3rem;

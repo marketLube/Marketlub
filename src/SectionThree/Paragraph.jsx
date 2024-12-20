@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Boost } from "../SectionTwo/Boost";
 
 const str =
   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde non dicta obcaecati deserunt, eum magni. Fuga sapiente eaque similique est magnam quos corporis aut ut suscipit soluta consequuntur, accusamus totam!";
@@ -8,7 +9,7 @@ export const Paragraph = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY - 1500;
+      const scrollPosition = window.scrollY - 1300;
       const windowHeight = window.innerHeight;
       const maxScroll = document.documentElement.scrollHeight - windowHeight;
 
@@ -20,16 +21,8 @@ export const Paragraph = () => {
       wordsRef.current.forEach((word, index) => {
         if (word) {
           if (index <= activeWordIndex) {
-            // Current word is fully visible (bright)
             word.style.opacity = "1";
-          } else if (
-            index === activeWordIndex - 1 ||
-            index === activeWordIndex + 1
-          ) {
-            // Adjacent words are partially visible
-            word.style.opacity = "0.7";
           } else {
-            // Other words are dim
             word.style.opacity = "0.3";
           }
         }

@@ -36,10 +36,22 @@
 .small-footer {
   background-color: black;
   height: 4.5rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-contents {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+  }
 }
 
 .footer-icon {
   color: white;
+  font-size: 1.6rem;
 }
 
 .divider {

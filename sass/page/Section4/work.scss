@@ -2,10 +2,10 @@
   border-top-left-radius: 6rem;
   border-top-right-radius: 6rem;
   background-color: #000;
-  height: 120vh;
+  height: 500vh;
   margin-top: -5.5rem;
-  position: sticky;
   top: 0;
+  position: relative;
 
   &__scroll-container {
     padding: 7rem 7rem 5rem 7rem;
@@ -15,24 +15,28 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
     overflow-y: scroll;
-    height: 80vh;
+    height: 500vh;
     gap: 60px;
     row-gap: 40px;
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    top: 0;
+    position: sticky;
   }
-
   &__scroll-container::-webkit-scrollbar {
     display: none;
   }
-
   &__imageDiv {
     grid-column: 1 / 2;
     position: sticky;
     top: 0;
     text-align: center;
     scroll-behavior: smooth;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
   }
 
   &__workImage {
@@ -120,6 +124,7 @@
     font-weight: bold;
     color: #fff;
     text-align: start;
+    grid-column: span 2;
   }
 
   &__content {

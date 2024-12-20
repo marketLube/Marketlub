@@ -1,14 +1,14 @@
 @use "../../base/responsive" as mixins;
+
 .robot-container {
-  height: 200vh; // Extend height to enable scrolling
+  height: 200vh;
   width: 100vw;
   overflow: hidden;
-  // position: relative;
   display: flex;
   flex-flow: column;
   top: 0;
-  z-index: -1;
 
+  position: sticky;
   @include mixins.respond(smallPhone) {
   }
 }

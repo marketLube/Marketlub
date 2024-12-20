@@ -1,4 +1,5 @@
 import React from "react";
+
 import Image1 from "../assets/images/image1.jpg";
 import Image2 from "../assets/images/image2.jpg";
 import Image3 from "../assets/images/image3.jpg";
@@ -78,8 +79,9 @@ export const WorkSection = () => {
   ];
   return (
     <div className="work-section">
-      <div className="work-section__scroll-container container">
+      <div className="work-section__scroll-container">
         <h1 className="work-section__title">Dive into the work.</h1>
+
         {items.map((item, index) => (
           <>
             <div className="work-section__imageDiv">

@@ -1,13 +1,23 @@
 // import Lenis from "lenis";
 
+// // Even faster scrolling option
 // const lenis = new Lenis({
-//   duration: 1.3, // Adjust for smoothness
-//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function
-//   smoothWheel: true, // Enable smooth scroll on wheel events
-//   smoothTouch: false, // Disable smooth scrolling on touch devices
+//   duration: 0.4,
+//   easing: (t) => t, // Linear easing for immediate response
+//   smoothWheel: true,
+//   smoothTouch: false,
+//   wheelMultiplier: 1.5,
 // });
 
-// // Force the browser to recalculate sticky positioning
+// //   // Or for medium speed
+// //   const lenis = new Lenis({
+// //     duration: 0.8,
+// //     easing: (t) => 1 - (1 - t) * (1 - t),  // Ease-out quad
+// //     smoothWheel: true,
+// //     smoothTouch: false,
+// //     wheelMultiplier: 1.3,
+// //   });
+
 // lenis.on("scroll", () => {
 //   document.querySelectorAll('[style*="sticky"]').forEach((el) => {
 //     el.style.transform = "translateZ(0)";

@@ -1,5 +1,5 @@
 import React from "react";
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
 
 export const Selected = () => {
   return (
@@ -7,7 +7,7 @@ export const Selected = () => {
       style={{
         height: "50vh",
         backgroundColor: "black",
-        display: "flex",
+        display: "none",
         alignItems: "center",
         justifyContent: "center",
       }}

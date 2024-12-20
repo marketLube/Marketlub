@@ -22,7 +22,7 @@ export const Robo = () => {
   return (
     <div
       ref={ref}
-      className="spline-scene-container"
+      className="spline-scene-container robot-container"
       style={{
         width: "100%",
         height: "100vh",
@@ -44,7 +44,7 @@ export const Robo = () => {
         >
           {inView && (
             <SplineLazy
-              scene="https://prod.spline.design/BZNlozQI2y68Epn7/scene.splinecode"
+              scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
               onLoad={handleLoad}
               onError={handleError}
               style={{
