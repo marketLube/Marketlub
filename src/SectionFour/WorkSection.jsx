@@ -81,46 +81,49 @@ export const WorkSection = () => {
     <div className="work-section">
       <div className="work-section__scroll-container">
         <h1 className="work-section__title">Dive into the work.</h1>
-
-        {items.map((item, index) => (
-          <>
-            <div className="work-section__imageDiv">
-              <img
-                src={item.image}
-                alt="image1"
-                className="work-section__workImage"
-              />
-            </div>
-            <div className="work-section__rightBottomDiv">
-              <div>
-                <div className="work-section__pills">
-                  {item.pills.map((pill, pillIndex) => (
-                    <div key={pillIndex} className="work-section__pill-item">
-                      {pill}
-                    </div>
-                  ))}
-                </div>
+        <div className="work-section-stick">
+          {items.map((item) => (
+            <>
+              <div className="work-section__imageDiv">
+                <img
+                  src={item.image}
+                  alt="image1"
+                  className="work-section__workImage"
+                />
               </div>
-              <div>
-                <h1 className="work-section__heading-style">{item.heading}</h1>
-                <p
-                  className="work-section__para-style"
-                  style={{ color: "#696969", fontSize: "23px" }}
-                >
-                  {item.description}
-                </p>
+              <div className="work-section__rightBottomDiv">
+                <div>
+                  <div className="work-section__pills">
+                    {item.pills.map((pill, pillIndex) => (
+                      <div key={pillIndex} className="work-section__pill-item">
+                        {pill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h1 className="work-section__heading-style">
+                    {item.heading}
+                  </h1>
+                  <p
+                    className="work-section__para-style"
+                    style={{ color: "#696969", fontSize: "23px" }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+                <a href="" className="work-section__linktag">
+                  <div style={{ color: "white", fontSize: "20px" }}>
+                    See full case study
+                  </div>
+                  <div className="work-section__icon">
+                    <GoArrowDownLeft />
+                  </div>
+                </a>
               </div>
-              <a href="" className="work-section__linktag">
-                <div style={{ color: "white", fontSize: "20px" }}>
-                  See full case study
-                </div>
-                <div className="work-section__icon">
-                  <GoArrowDownLeft />
-                </div>
-              </a>
-            </div>
-          </>
-        ))}
+            </>
+          ))}
+        </div>
       </div>
     </div>
   );

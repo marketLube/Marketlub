@@ -221,7 +221,7 @@ html {
   top: 0;
   position: relative;
 }
-.work-section__scroll-container {
+.work-section-stick {
   padding: 7rem 7rem 5rem 7rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -229,7 +229,7 @@ html {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   overflow-y: scroll;
-  height: 500vh;
+  height: 100vh;
   gap: 60px;
   row-gap: 40px;
   scroll-behavior: smooth;
@@ -238,12 +238,15 @@ html {
   top: 0;
   position: sticky;
 }
+.work-section__scroll-container {
+  top: 0;
+  position: sticky;
+}
 .work-section__scroll-container::-webkit-scrollbar {
   display: none;
 }
 .work-section__imageDiv {
   grid-column: 1/2;
-  position: sticky;
   top: 0;
   text-align: center;
   scroll-behavior: smooth;
@@ -251,6 +254,7 @@ html {
   align-items: center;
   justify-content: center;
   height: 80vh;
+  position: sticky;
 }
 .work-section__workImage {
   width: 100%;
