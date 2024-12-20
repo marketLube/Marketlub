@@ -23,7 +23,7 @@ function Web() {
   const isAnim = useInView(ref);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
-  const intervals = useRef({}); // Track intervals for each content
+  const intervals = useRef({}); 
 
   useEffect(() => {
     return () => {

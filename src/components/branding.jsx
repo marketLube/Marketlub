@@ -1,22 +1,67 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
 import HIlineM from "../assets/images/hilineMob.jpeg";
 import HIlineL from "../assets/images/hilineLap.jpeg";
 import ProtienNutM from "../assets/images/protienNutMob.jpeg";
 import ProtienNutT from "../assets/images/protienNutTab.jpeg";
+import SkymarkM from "../assets/images/skymarkMob.jpeg";
+import SkymarkL from "../assets/images/skymarkLap.jpeg";
+import Moto from "../assets/images/moto.jpeg";
+import Accordings2 from "../assets/images/accoundings2.jpeg";
 
-const imageContents = [HIlineM, HIlineL, ProtienNutM, ProtienNutT];
+const imageContents = [
+  { name: "HIline", images: [HIlineM, HIlineL] },
+  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
+  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
+  { name: "Moto", images: [Moto] },
+];
 
 const scales = [10, 20, 40, 80, 100];
 
-function Web() {
+function Branding() {
   const ref = useRef(null);
   const isAnim = useInView(ref);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [currentImageIndexes, setCurrentImageIndexes] = useState({});
+  const intervals = useRef({}); 
+
+  useEffect(() => {
+    return () => {
+      
+      Object.values(intervals.current).forEach((interval) =>
+        clearInterval(interval)
+      );
+    };
+  }, []);
+
+  const handleMouseEnter = (contentIndex) => {
+    setHoveredIndex(contentIndex);
+    let index = 0;
+
+    
+    intervals.current[contentIndex] = setInterval(() => {
+      setCurrentImageIndexes((prev) => ({
+        ...prev,
+        [contentIndex]: index,
+      }));
+      index = (index + 1) % imageContents[contentIndex].images.length;
+    }, 1000);
+  };
+
+  const handleMouseLeave = (contentIndex) => {
+    clearInterval(intervals.current[contentIndex]);
+    delete intervals.current[contentIndex];
+    setHoveredIndex(null);
+    setCurrentImageIndexes((prev) => ({
+      ...prev,
+      [contentIndex]: 0, 
+    }));
+  };
 
   let k = 0;
   return (
     <div className="grid-container__bluebox" ref={ref}>
-      {imageContents?.map((imageSrc, i) => {
+      {imageContents?.map((content, i) => {
         if (i % 4 === 0) {
           k = 0; // Reset `k` at the start of every 4-item group
         }
@@ -30,18 +75,25 @@ function Web() {
             className="grid-container__boxitem"
             style={{
               transform: `translateY(${translateY})`,
+              transition: "transform 1s ease",
             }}
           >
-            <img
-              src={imageSrc}
-              alt={`content-${i}`}
-              style={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "8px",
-                objectFit: "cover",
-              }}
-            />
+            {content.images.map((imgSrc, index) => (
+              <img
+                key={index}
+                src={
+                  hoveredIndex === i
+                    ? content.images[currentImageIndexes[i] || 0]
+                    : content.images[0]
+                }
+                alt={`${content.name}-content-${index}`}
+                className={`grid-container__hoverimage ${
+                  index === currentImageIndexes[i] ? "slide" : "hidden"
+                }`}
+                onMouseEnter={() => handleMouseEnter(i)}
+                onMouseLeave={() => handleMouseLeave(i)}
+              />
+            ))}
           </div>
         );
       })}
@@ -49,4 +101,4 @@ function Web() {
   );
 }
 
-export default Web;
+export default Branding;
