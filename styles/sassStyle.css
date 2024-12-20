@@ -466,7 +466,19 @@ html {
   border-radius: 8px;
   background-color: blue;
   height: 26rem;
-  transition: 1s all ease;
+  position: relative;
+  transition: transform 1s ease;
+}
+
+.grid-container__hoverimage {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .lets {
