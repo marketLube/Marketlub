@@ -1,19 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
-import HIlineM from "../assets/images/hilineMob.jpeg";
-import HIlineL from "../assets/images/hilineLap.jpeg";
-import ProtienNutM from "../assets/images/protienNutMob.jpeg";
-import ProtienNutT from "../assets/images/protienNutTab.jpeg";
-import SkymarkM from "../assets/images/skymarkMob.jpeg";
-import SkymarkL from "../assets/images/skymarkLap.jpeg";
-import Moto from "../assets/images/moto.jpeg";
-import Accordings2 from "../assets/images/accoundings2.jpeg";
 
 const imageContents = [
-  { name: "HIline", images: [HIlineM, HIlineL] },
-  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
-  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
-  { name: "Moto", images: [Moto] },
+  { name: "video-1", images: [""] },
+  { name: "video-2", images: [""] },
+  { name: "video-3", images: [""] },
+  { name: "video-4", images: [""] },
 ];
 
 const scales = [10, 20, 40, 80, 100];
@@ -23,11 +15,10 @@ function Video() {
   const isAnim = useInView(ref);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
-  const intervals = useRef({}); 
+  const intervals = useRef({});
 
   useEffect(() => {
     return () => {
-      
       Object.values(intervals.current).forEach((interval) =>
         clearInterval(interval)
       );
@@ -38,7 +29,6 @@ function Video() {
     setHoveredIndex(contentIndex);
     let index = 0;
 
-    
     intervals.current[contentIndex] = setInterval(() => {
       setCurrentImageIndexes((prev) => ({
         ...prev,
@@ -54,7 +44,7 @@ function Video() {
     setHoveredIndex(null);
     setCurrentImageIndexes((prev) => ({
       ...prev,
-      [contentIndex]: 0, 
+      [contentIndex]: 0,
     }));
   };
 

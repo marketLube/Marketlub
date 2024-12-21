@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import Web from "../components/Web";
 import Video from "../components/video";
 import Photoshoot from "../components/photoshoot";
-import Branding from "../components/video";
+import Branding from "../components/branding";
 
 const contents = [0, 1, 2, 3, 4, 5, 6, 7];
 export const GridSection = () => {

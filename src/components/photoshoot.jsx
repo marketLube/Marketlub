@@ -1,23 +1,34 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
-import HIlineM from "../assets/images/hilineMob.jpeg";
-import HIlineL from "../assets/images/hilineLap.jpeg";
-import ProtienNutM from "../assets/images/protienNutMob.jpeg";
-import ProtienNutT from "../assets/images/protienNutTab.jpeg";
-import SkymarkM from "../assets/images/skymarkMob.jpeg";
-import SkymarkL from "../assets/images/skymarkLap.jpeg";
-import Moto from "../assets/images/moto.jpeg";
-import Accordings2 from "../assets/images/accoundings2.jpeg";
+import WillM1 from "../assets/images/Poster/willmount.png";
+import WillM2 from "../assets/images/Poster/summer.png";
+
+import Shine1 from "../assets/images/Poster/shine.png";
+import Shine2 from "../assets/images/Poster/bathroom.png";
+
+import Evergreen1 from "../assets/images/Poster/evergreen.png";
+import Evergreen2 from "../assets/images/Poster/evergreen2.png";
+
+import BigDeal1 from "../assets/images/Poster/bigDeals.png";
+import BigDeal2 from "../assets/images/Poster/home.png";
+
+import Defzen1 from "../assets/images/Poster/defzen.png";
+import Defzen2 from "../assets/images/Poster/defzen2.png";
+
+import Blazeemco1 from "../assets/images/Poster/blazeemco.png";
+import Blazeemco2 from "../assets/images/Poster/blazeemco2.png";
+
+import Kuruva1 from "../assets/images/Poster/kuruva.png";
+import Kuruva2 from "../assets/images/Poster/natureLove.png";
 
 const imageContents = [
-  { name: "HIline", images: [HIlineM, HIlineL] },
-  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
-  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
-  { name: "Moto", images: [Moto] },
-  { name: "HIline", images: [HIlineM, HIlineL] },
-  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
-  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
-  { name: "Moto", images: [Moto] },
+  { name: "WillMount", images: [WillM1, WillM2] },
+  { name: "Shine", images: [Shine1, Shine2] },
+  { name: "Evergreen", images: [Evergreen1, Evergreen2] },
+  { name: "BigDeal", images: [BigDeal1, BigDeal2] },
+  { name: "Defzen", images: [Defzen1, Defzen2] },
+  { name: "Blazeemco", images: [Blazeemco1, Blazeemco2] },
+  { name: "kuruva", images: [Kuruva1, Kuruva2] },
 ];
 
 const scales = [10, 20, 40, 80, 100];
@@ -27,11 +38,10 @@ function Photoshoot() {
   const isAnim = useInView(ref);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
-  const intervals = useRef({}); 
+  const intervals = useRef({});
 
   useEffect(() => {
     return () => {
-      
       Object.values(intervals.current).forEach((interval) =>
         clearInterval(interval)
       );
@@ -42,7 +52,6 @@ function Photoshoot() {
     setHoveredIndex(contentIndex);
     let index = 0;
 
-    
     intervals.current[contentIndex] = setInterval(() => {
       setCurrentImageIndexes((prev) => ({
         ...prev,
@@ -58,7 +67,7 @@ function Photoshoot() {
     setHoveredIndex(null);
     setCurrentImageIndexes((prev) => ({
       ...prev,
-      [contentIndex]: 0, 
+      [contentIndex]: 0,
     }));
   };
 

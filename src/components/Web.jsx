@@ -23,11 +23,10 @@ function Web() {
   const isAnim = useInView(ref);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
-  const intervals = useRef({}); 
+  const intervals = useRef({});
 
   useEffect(() => {
     return () => {
-      // Clear intervals on unmount
       Object.values(intervals.current).forEach((interval) =>
         clearInterval(interval)
       );
@@ -38,7 +37,6 @@ function Web() {
     setHoveredIndex(contentIndex);
     let index = 0;
 
-    // Start cycling through images
     intervals.current[contentIndex] = setInterval(() => {
       setCurrentImageIndexes((prev) => ({
         ...prev,
@@ -49,12 +47,12 @@ function Web() {
   };
 
   const handleMouseLeave = (contentIndex) => {
-    clearInterval(intervals.current[contentIndex]); // Clear interval
-    delete intervals.current[contentIndex]; // Remove interval from tracking
+    clearInterval(intervals.current[contentIndex]);
+    delete intervals.current[contentIndex];
     setHoveredIndex(null);
     setCurrentImageIndexes((prev) => ({
       ...prev,
-      [contentIndex]: 0, // Reset to the first image
+      [contentIndex]: 0,
     }));
   };
 

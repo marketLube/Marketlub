@@ -1,19 +1,72 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
-import HIlineM from "../assets/images/hilineMob.jpeg";
-import HIlineL from "../assets/images/hilineLap.jpeg";
-import ProtienNutM from "../assets/images/protienNutMob.jpeg";
-import ProtienNutT from "../assets/images/protienNutTab.jpeg";
-import SkymarkM from "../assets/images/skymarkMob.jpeg";
-import SkymarkL from "../assets/images/skymarkLap.jpeg";
-import Moto from "../assets/images/moto.jpeg";
-import Accordings2 from "../assets/images/accoundings2.jpeg";
+import Ever1 from "../assets/images/Branding/Evergeen/eve1.png";
+import Ever2 from "../assets/images/Branding/Evergeen/eve2.png";
+import Ever3 from "../assets/images/Branding/Evergeen/eve3.png";
+import Ever4 from "../assets/images/Branding/Evergeen/eve4.png";
+import Ever5 from "../assets/images/Branding/Evergeen/eve5.png";
+import Kurusi1 from "../assets/images/Branding/Kursii/kursii1.png";
+import Kurusi2 from "../assets/images/Branding/Kursii/kursii2.png";
+import Kurusi3 from "../assets/images/Branding/Kursii/kursii3.png";
+import Kurusi4 from "../assets/images/Branding/Kursii/kursii4.png";
+import Kurusi5 from "../assets/images/Branding/Kursii/kursii5.png";
+import Kurusi6 from "../assets/images/Branding/Kursii/kursii6.png";
+import Kurusi7 from "../assets/images/Branding/Kursii/kursii7.png";
+import Kurusi8 from "../assets/images/Branding/Kursii/kursii8.png";
+import Kurusi9 from "../assets/images/Branding/Kursii/kursii9.png";
+import Kurusi10 from "../assets/images/Branding/Kursii/kursii10.png";
+// import MotoC1 from "../assets/images/Branding/Motocraze/moto1.png";
+// import MotoC2 from "../assets/images/Branding/Motocraze/moto2.png";
+// import MotoC3 from "../assets/images/Branding/Motocraze/moto3.png";
+// import Protien1 from "../assets/images/Branding/Proteinut/protie1.png";
+// import Protien2 from "../assets/images/Branding/Proteinut/protie1.png";
+import Tea1 from "../assets/images/Branding/TeaToday/tea1.png";
+import Tea2 from "../assets/images/Branding/TeaToday/tea2.png";
+import Tea3 from "../assets/images/Branding/TeaToday/tea3.png";
+import Tea4 from "../assets/images/Branding/TeaToday/tea4.png";
+import Tea5 from "../assets/images/Branding/TeaToday/tea5.png";
+import Tea6 from "../assets/images/Branding/TeaToday/tea6.png";
+import Tea7 from "../assets/images/Branding/TeaToday/tea7.png";
+import Tea8 from "../assets/images/Branding/TeaToday/tea8.png";
+import Tea9 from "../assets/images/Branding/TeaToday/tea9.png";
+import Tea10 from "../assets/images/Branding/TeaToday/tea10.png";
+import Tea11 from "../assets/images/Branding/TeaToday/tea11.png";
 
 const imageContents = [
-  { name: "HIline", images: [HIlineM, HIlineL] },
-  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
-  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
-  { name: "Moto", images: [Moto] },
+  { name: "Evergreen", images: [Ever1, Ever2, Ever3, Ever4, Ever5] },
+  {
+    name: "Kursii",
+    images: [
+      Kurusi1,
+      Kurusi2,
+      Kurusi3,
+      Kurusi4,
+      Kurusi5,
+      Kurusi6,
+      Kurusi7,
+      Kurusi8,
+      Kurusi9,
+      Kurusi10,
+    ],
+  },
+  // { name: "Motocraze", images: [MotoC1, MotoC2, MotoC3] },
+  // { name: "Proteinut", images: [Protien1, Protien2] },
+  {
+    name: "TeaToday",
+    images: [
+      Tea1,
+      Tea2,
+      Tea3,
+      Tea4,
+      Tea5,
+      Tea6,
+      Tea7,
+      Tea8,
+      Tea9,
+      Tea10,
+      Tea11,
+    ],
+  },
 ];
 
 const scales = [10, 20, 40, 80, 100];
@@ -23,11 +76,10 @@ function Branding() {
   const isAnim = useInView(ref);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentImageIndexes, setCurrentImageIndexes] = useState({});
-  const intervals = useRef({}); 
+  const intervals = useRef({});
 
   useEffect(() => {
     return () => {
-      
       Object.values(intervals.current).forEach((interval) =>
         clearInterval(interval)
       );
@@ -38,7 +90,6 @@ function Branding() {
     setHoveredIndex(contentIndex);
     let index = 0;
 
-    
     intervals.current[contentIndex] = setInterval(() => {
       setCurrentImageIndexes((prev) => ({
         ...prev,
@@ -54,7 +105,7 @@ function Branding() {
     setHoveredIndex(null);
     setCurrentImageIndexes((prev) => ({
       ...prev,
-      [contentIndex]: 0, 
+      [contentIndex]: 0,
     }));
   };
 
