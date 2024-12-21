@@ -464,21 +464,29 @@ html {
 }
 .grid-container__boxitem {
   border-radius: 8px;
-  background-color: blue;
+  background-color: transparent;
+  background-color: transparent;
   height: 26rem;
   position: relative;
   transition: transform 1s ease;
+  overflow: hidden;
+}
+
+.grid-container__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.grid-container__boxitem:hover .grid-container__image-wrapper {
+  transform: translateY(-100%);
 }
 
 .grid-container__hoverimage {
+  display: block;
   width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  transition: opacity 0.3s ease-in-out;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: auto;
 }
 
 .lets {
