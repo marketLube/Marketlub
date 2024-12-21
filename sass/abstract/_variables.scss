@@ -8,9 +8,7 @@ $color-light-gray: rgb(226, 225, 225);
 $color-red: rgb(126, 25, 25);
 $color-green: #2eb629;
 $color-blue: #0c2d48;
-
 $color-table-col: rgba(204, 222, 228, 0.8);
-
 //layout variables
 $sidebar-width: 5rem;
 $head-width: 4rem;
@@ -19,11 +17,9 @@ $layout-padding: 3rem;
 $table-header: 2.3rem;
 $table-footer: 2.3rem;
 $checkbox-w: 2.5rem;
-
 //gaps
 $general-gap: 1.2rem;
 $ul-margin: calc($head-width + $layout-padding + $general-gap - 0.75rem);
-
 //radius
 $large-radius: 1rem;
 $small-radius: 0.3rem;

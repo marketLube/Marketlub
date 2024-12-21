@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import Image1 from "../assets/images/image1.jpg";
 import Image2 from "../assets/images/image2.jpg";
 import Image3 from "../assets/images/image3.jpg";
 import Image4 from "../assets/images/image4.jpg";
 import Image5 from "../assets/images/image5.jpg";
+
 import { GoArrowDownLeft } from "react-icons/go";
 
 export const WorkSection = () => {
@@ -77,20 +78,17 @@ export const WorkSection = () => {
       link: "https://www.phunk.co.uk/work/honest-watch-dealer",
     },
   ];
+
   return (
     <div className="work-section">
       <div className="work-section__scroll-container">
-        <h1 className="work-section__title">Dive into the work.</h1>
+        <div>
+          <h1 className="work-section__title">Dive into the work.</h1>
+          <p>hello world</p>
+        </div>
+
         {items.map((item, index) => (
-          <div
-            key={index}
-            className="work-section-stick"
-            style={{
-              top: `${0}px`,
-              height: "100vh",
-              position: "sticky",
-            }}
-          >
+          <div key={index} className="work-section-stick">
             <div className="work-section__imageDiv">
               <img
                 src={item.image}

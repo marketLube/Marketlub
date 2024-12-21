@@ -3,9 +3,9 @@ import LetsContent from "./LetsContent";
 
 export const Lets = () => {
   const frog = useParallax({
-    scaleY: [0, 1.1, "easeOutQuart"], // Start at 50% height, scale to full
-    shouldAlwaysCompleteAnimation: true, // Ensure smooth completion
-    easing: [0.25, 0.1, 0.25, 1], // Slow cubic-bezier easing curve
+    scaleY: [0, 1.2, "easeOutQuart"],
+    shouldAlwaysCompleteAnimation: true,
+    easing: [0.25, 0.1, 0.25, 1],
   });
 
   return (

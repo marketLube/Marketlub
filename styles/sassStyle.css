@@ -218,14 +218,14 @@ html {
   background-color: #000;
   min-height: 500vh;
   position: relative;
-  padding: 5rem 0;
 }
 .work-section__scroll-container {
   position: relative;
   height: 100%;
+  padding-top: 10rem;
 }
 .work-section-stick {
-  padding: 5rem;
+  padding: 0 5rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
   width: 80vw;
@@ -237,6 +237,9 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  top: 10rem;
+  height: 100vh;
+  position: sticky;
   z-index: calc(1000 - var(--index));
 }
 .work-section-stick::-webkit-scrollbar {
@@ -246,9 +249,7 @@ html {
   top: 0;
   text-align: center;
   scroll-behavior: smooth;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   height: 80vh;
   position: relative;
 }
@@ -277,7 +278,6 @@ html {
   line-height: 157.143%;
   display: flex;
   overflow: hidden;
-  padding: 5px 15px;
   flex: 1 1 auto;
   min-width: 200px;
   text-align: center;
@@ -294,8 +294,6 @@ html {
   font-size: 23px;
 }
 .work-section__rightBottomDiv {
-  margin-top: 1rem;
-  padding-top: 2rem;
   grid-column: 2/3;
   gap: 1.875rem;
   flex-direction: column;
@@ -303,7 +301,6 @@ html {
   align-items: flex-start;
   height: 65vh;
   display: flex;
-  margin-top: 10px;
   position: relative;
   background-color: #000;
   scroll-behavior: smooth;
@@ -319,13 +316,15 @@ html {
 }
 .work-section__title {
   font-size: 4.5rem;
-  margin-left: 4.9rem;
   font-weight: bold;
   color: #fff;
   text-align: start;
   grid-column: span 2;
   padding-top: 2rem;
   z-index: 1001;
+  position: sticky;
+  top: 0;
+  margin-left: 5rem;
 }
 
 .selected {
