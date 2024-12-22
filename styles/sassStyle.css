@@ -80,101 +80,25 @@ html {
   font-size: 1.3rem;
 }
 
-.work-section {
-  background-color: black;
-  min-height: 100vh;
-}
-.work-section__header-container {
-  position: sticky;
+.robot-container {
+  height: 200vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
   top: 0;
-  background-color: black;
-  z-index: 10;
-  padding: 10rem;
-  padding-top: 0;
-  padding-bottom: 3rem;
-  width: 100%;
-}
-.work-section__title {
-  font-size: 3.8rem;
-  padding-top: 3rem;
-  font-weight: 500;
-  color: #fff;
-  text-align: start;
-}
-.work-section__paragraph {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #a7a2a2;
-  text-align: start;
-  width: 500px;
-  padding-top: 1.5rem;
-}
-.work-section__combo-set {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  padding: 3rem 10rem;
-  gap: 3rem;
-}
-.work-section__second-tab {
-  background: black;
-  display: flex;
-}
-.work-section__scroll-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(0, 0, 0);
-}
-.work-section__sticky-section {
   position: sticky;
-  top: 14rem;
-  height: 100vh;
-  display: flex;
 }
-.work-section__imageDiv {
-  text-align: center;
-  max-width: 100%;
-}
-.work-section__workImage {
+.robot-image {
   width: 100%;
-  max-width: 500px;
-  height: 550px;
-  object-fit: cover;
+  height: 50%;
 }
-.work-section__pills {
+
+.overlay-text {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-.work-section__pill-item {
-  color: white;
-  background-color: black;
-  border: 1px solid #0000ff;
-  border-radius: 100px;
-  padding: 5px 15px;
-  text-align: center;
-}
-.work-section__heading-style {
-  color: white;
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-.work-section__rightBottomDiv {
-  gap: 3rem;
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  background-color: black;
-}
-.work-section__linktag {
-  border-bottom: 1px solid white;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  gap: 10px;
-  cursor: pointer;
+  font-size: 10rem;
+  font-weight: bold;
+  color: rgb(162, 162, 162);
 }
 
 .boost-performance {

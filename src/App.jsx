@@ -3,7 +3,7 @@ import { Lets } from "./Footer/Lets";
 import { GridSection } from "./SectionFive/GridSection";
 import { Selected } from "./SectionFour/Selected";
 import { WorkSection } from "./SectionFour/WorkSection";
-import { Robo } from "./SectionOne/robo";
+import { Robo } from "./SectionOne/Robo";
 import { Paragraph } from "./SectionThree/Paragraph";
 import { Boost } from "./SectionTwo/Boost";
 import SmallFooter from "./Footer/SmallFooter";
