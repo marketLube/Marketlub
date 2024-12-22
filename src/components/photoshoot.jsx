@@ -39,7 +39,7 @@ function Photoshoot() {
 
   let k = 0;
   return (
-    <div className="grid-container__bluebox" ref={ref}>
+    <div className="grid-container__blueboxPhoto" ref={ref}>
       {imageContents?.map((content, i) => {
         if (i % 4 === 0) {
           k = 0; // Reset `k` at the start of every 4-item group
@@ -51,18 +51,18 @@ function Photoshoot() {
         return (
           <div
             key={i}
-            className="grid-container__boxitem"
+            className="grid-container__boxitemPhoto"
             style={{
               transform: `translateY(${translateY})`,
               transition: "transform 1s ease",
             }}
           >
             {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapper">
+              <div key={index} className="grid-container__image-wrapperPhoto">
                 <img
                   src={imgSrc}
                   alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimage"
+                  className="grid-container__hoverimagePhoto"
                 />
               </div>
             ))}

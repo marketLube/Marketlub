@@ -62,9 +62,9 @@ const imageContents = [
       Tea6,
       Tea7,
       Tea8,
-      Tea9,
-      Tea10,
-      Tea11,
+      // Tea9,
+      // Tea10,
+      // Tea11,
     ],
   },
 ];
@@ -89,18 +89,18 @@ function Branding() {
         return (
           <div
             key={i}
-            className="grid-container__boxitem"
+            className="grid-container__boxitemBrand"
             style={{
               transform: `translateY(${translateY})`,
               transition: "transform 1s ease",
             }}
           >
             {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapper">
+              <div key={index} className="grid-container__image-wrapperBrand">
                 <img
                   src={imgSrc}
                   alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimage"
+                  className="grid-container__hoverimageBrand"
                 />
               </div>
             ))}

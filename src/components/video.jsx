@@ -16,7 +16,7 @@ function Video() {
 
   let k = 0;
   return (
-    <div className="grid-container__bluebox" ref={ref}>
+    <div className="grid-container__blueboxVideo" ref={ref}>
       {imageContents?.map((content, i) => {
         if (i % 4 === 0) {
           k = 0;
@@ -28,18 +28,18 @@ function Video() {
         return (
           <div
             key={i}
-            className="grid-container__boxitem"
+            className="grid-container__boxitemVideo"
             style={{
               transform: `translateY(${translateY})`,
               transition: "transform 1s ease",
             }}
           >
             {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapper">
+              <div key={index} className="grid-container__image-wrapperVideo">
                 <img
                   src={imgSrc}
                   alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimage"
+                  className="grid-container__hoverimageVideo"
                 />
               </div>
             ))}
