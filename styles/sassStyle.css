@@ -490,7 +490,7 @@ html {
 }
 
 .grid-container__image-wrapper:nth-child(1) {
-  transition-delay: 1.5s;
+  transition-delay: 1.2s;
 }
 
 .grid-container__image-wrapper:nth-child(2) {
@@ -499,6 +499,14 @@ html {
 
 .grid-container__image-wrapper:nth-child(3) {
   transition-delay: 0s;
+}
+
+.grid-container__boxitem:not(:hover) .grid-container__image-wrapper {
+  transition-delay: 0s;
+}
+
+.grid-container__boxitem:last-child .grid-container__image-wrapper:hover {
+  transform: translateY(0) !important;
 }
 
 .grid-container__hoverimage {
@@ -626,6 +634,10 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+}
+
+.grid-container__boxitemBrand:not(:hover) .grid-container__image-wrapperBrand {
+  transition-delay: 0s;
 }
 
 .lets {
