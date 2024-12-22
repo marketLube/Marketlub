@@ -45,7 +45,7 @@ export const Robo = () => {
       className="spline-scene-container robot-container"
       style={{
         width: "100%",
-        height: "100vh",
+        height: "110vh",
         position: "sticky",
         overflow: "hidden",
         opacity: opacity, // Set the opacity dynamically

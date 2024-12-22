@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Image1 from "../assets/images/image1.jpg";
 import Image2 from "../assets/images/image2.jpg";
@@ -34,7 +34,6 @@ export const WorkSection = () => {
       heading: "Mobilleo",
       description:
         "Mobilleo is a SaaS solution making it easy for organisations to manage global business travel for their employees.  The team at Mobilleo approached Phunk to provide a range of design and illustration services, building on their existing brand, for use across their website and app.",
-
       link: "https://www.phunk.co.uk/work/mobillio",
     },
     {
@@ -78,25 +77,41 @@ export const WorkSection = () => {
     },
   ];
 
+  const workParagraphRef = useRef(null);
+
   return (
     <div className="work-section">
-      <div className="work-section__scroll-container">
-        <div>
-          <h1 className="work-section__title">Dive into the work.</h1>
-          <p>hello world</p>
-        </div>
-
-        {items.map((item, index) => (
-          <div key={index} className="work-section-stick">
-            <div className="work-section__imageDiv">
-              <img
-                src={item.image}
-                alt={item.heading}
-                className="work-section__workImage"
-              />
+      <div className="work-section__header-container">
+        <h1 className="work-section__title">Dive into the work.</h1>
+        <p ref={workParagraphRef} className="work-section__paragraph">
+          As creatives ourselves, we know that what you really want to see is
+          the work we’ve actually put live. Here’s a showcase of some of our
+          recent projects, across a range of sectors.
+        </p>
+      </div>
+      <div className="work-section__combo-set">
+        <div className="work-section__scroll-container">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className={`work-section__sticky-section ${
+                index === items.length - 1 ? "work-section__last" : ""
+              }`}
+            >
+              <div className="work-section__imageDiv">
+                <img
+                  src={item.image}
+                  alt={`Project ${index + 1}`}
+                  className="work-section__workImage"
+                />
+              </div>
             </div>
-            <div className="work-section__rightBottomDiv">
-              <div>
+          ))}
+        </div>
+        <div className="work-section__second-tab">
+          <div style={{ width: "75%" }}>
+            {items.map((item, index) => (
+              <div className="work-section__rightBottomDiv" key={index}>
                 <div className="work-section__pills">
                   {item.pills.map((pill, pillIndex) => (
                     <div key={pillIndex} className="work-section__pill-item">
@@ -104,22 +119,34 @@ export const WorkSection = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-              <div>
-                <h1 className="work-section__heading-style">{item.heading}</h1>
-                <p className="work-section__para-style">{item.description}</p>
-              </div>
-              <a href={item.link} className="work-section__linktag">
-                <div style={{ color: "white", fontSize: "20px" }}>
-                  See full case study
+                <div>
+                  <h1 className="work-section__heading-style">
+                    {item.heading}
+                  </h1>
+                  <p
+                    className="work-section__para-style"
+                    style={{ color: "#696969", fontSize: "20px" }}
+                  >
+                    {item.description}
+                  </p>
                 </div>
-                <div className="work-section__icon">
-                  <GoArrowDownLeft />
-                </div>
-              </a>
-            </div>
+                <a
+                  href={item.link}
+                  className="work-section__linktag"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div style={{ color: "white", fontSize: "20px" }}>
+                    See full case study
+                  </div>
+                  <div className="work-section__icon">
+                    <GoArrowDownLeft />
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
