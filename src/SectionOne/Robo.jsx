@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy, useRef } from "react";
+import React, { useState, useEffect, Suspense, lazy, useRef } from "react";
 import { useInView } from "framer-motion";
 
 const SplineLazy = lazy(() => import("@splinetool/react-spline"));
@@ -6,6 +6,7 @@ const SplineLazy = lazy(() => import("@splinetool/react-spline"));
 export const Robo = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [opacity, setOpacity] = useState(1); // State to control opacity
 
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -19,6 +20,25 @@ export const Robo = () => {
     setHasError(true);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      // Check if scrolled beyond 200vh
+      if (scrollPosition > 2 * viewportHeight) {
+        setOpacity(0);
+      } else {
+        setOpacity(1);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
       ref={ref}
@@ -28,6 +48,8 @@ export const Robo = () => {
         height: "100vh",
         position: "sticky",
         overflow: "hidden",
+        opacity: opacity, // Set the opacity dynamically
+        transition: "opacity 0.5s", // Smooth opacity transition
       }}
     >
       {hasError ? (

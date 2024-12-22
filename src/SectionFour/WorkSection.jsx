@@ -5,7 +5,6 @@ import Image2 from "../assets/images/image2.jpg";
 import Image3 from "../assets/images/image3.jpg";
 import Image4 from "../assets/images/image4.jpg";
 import Image5 from "../assets/images/image5.jpg";
-
 import { GoArrowDownLeft } from "react-icons/go";
 
 export const WorkSection = () => {

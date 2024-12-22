@@ -413,6 +413,8 @@ html {
 .lets-container {
   position: relative;
   overflow: hidden;
+  background-color: white;
+  transform: translateY(-5rem);
 }
 
 .lets-h6 {

@@ -3,7 +3,7 @@ import LetsContent from "./LetsContent";
 
 export const Lets = () => {
   const frog = useParallax({
-    scaleY: [0, 1.2, "easeOutQuart"],
+    scaleY: [0, 1.3, "easeOutQuart"],
     shouldAlwaysCompleteAnimation: true,
     easing: [0.25, 0.1, 0.25, 1],
   });
