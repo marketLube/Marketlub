@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import Web from "../components/Web";
+import Video from "../components/video";
+import Photoshoot from "../components/photoshoot";
+import Branding from "../components/branding";
 
 const contents = [0, 1, 2, 3, 4, 5, 6, 7];
 export const GridSection = () => {
@@ -12,7 +15,7 @@ export const GridSection = () => {
   };
 
   return (
-    <Parallax speed={-10}>
+    <Parallax speed={-20}>
       <div className="grid-container">
         <motion.div className="grid-container__filters">
           {["WEB SERVICES", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
@@ -29,7 +32,10 @@ export const GridSection = () => {
             )
           )}
         </motion.div>
-        {activeButton === "WEB SERVICES" && <Web contents={contents} />}
+        {activeButton === "WEB SERVICES" && <Web />}
+        {activeButton === "VIDEOS" && <Video />}
+        {activeButton === "PHOTOSHOOTS" && <Photoshoot />}
+        {activeButton === "BRANDING" && <Branding />}
       </div>
     </Parallax>
   );
