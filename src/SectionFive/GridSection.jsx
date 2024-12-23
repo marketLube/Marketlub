@@ -5,10 +5,11 @@ import Web from "../components/Web";
 import Video from "../components/video";
 import Photoshoot from "../components/photoshoot";
 import Branding from "../components/branding";
+import All from "../components/All";
 
 const contents = [0, 1, 2, 3, 4, 5, 6, 7];
 export const GridSection = () => {
-  const [activeButton, setActiveButton] = useState("WEB SERVICES");
+  const [activeButton, setActiveButton] = useState(" ALL ");
 
   const handleButtonClick = (filterName) => {
     setActiveButton(filterName);
@@ -18,7 +19,7 @@ export const GridSection = () => {
     <Parallax speed={-20}>
       <div className="grid-container">
         <motion.div className="grid-container__filters">
-          {["WEB SERVICES", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
+          {[" ALL ", "WEB SERVICES", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
             (filter) => (
               <div
                 key={filter}
@@ -32,6 +33,7 @@ export const GridSection = () => {
             )
           )}
         </motion.div>
+        {activeButton === " ALL " && <All />}
         {activeButton === "WEB SERVICES" && <Web />}
         {activeButton === "VIDEOS" && <Video />}
         {activeButton === "PHOTOSHOOTS" && <Photoshoot />}

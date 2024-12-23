@@ -12,7 +12,7 @@ import SmallFooter from "./Footer/SmallFooter";
 function App() {
   return (
     <>
-      <Robo />
+      {/* <Robo /> */}
       <Boost />
       <div style={{ backgroundColor: "white" }}>
         <Paragraph />

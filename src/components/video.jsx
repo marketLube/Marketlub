@@ -38,7 +38,7 @@ function Video() {
               <div key={index} className="grid-container__image-wrapperVideo">
                 <img
                   src={imgSrc}
-                  alt={`${content.name}-content-${index}`}
+                  alt={`${content.name}`}
                   className="grid-container__hoverimageVideo"
                 />
               </div>

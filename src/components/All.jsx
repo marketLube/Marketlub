@@ -1,5 +1,28 @@
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
+
+import HIlineM from "../assets/images/hilineMob.jpeg";
+import HIlineL from "../assets/images/hilineLap.jpeg";
+import ProtienNutM from "../assets/images/protienNutMob.jpeg";
+import ProtienNutT from "../assets/images/protienNutTab.jpeg";
+import SkymarkM from "../assets/images/skymarkMob.jpeg";
+import SkymarkL from "../assets/images/skymarkLap.jpeg";
+import Moto from "../assets/images/moto.jpeg";
+import Accordings2 from "../assets/images/accoundings2.jpeg";
+import WillM1 from "../assets/images/Poster/willmount.png";
+import WillM2 from "../assets/images/Poster/summer.png";
+import Shine1 from "../assets/images/Poster/shine.png";
+import Shine2 from "../assets/images/Poster/bathroom.png";
+import Evergreen1 from "../assets/images/Poster/evergreen.png";
+import Evergreen2 from "../assets/images/Poster/evergreen2.png";
+import BigDeal1 from "../assets/images/Poster/bigDeals.png";
+import BigDeal2 from "../assets/images/Poster/home.png";
+import Defzen1 from "../assets/images/Poster/defzen.png";
+import Defzen2 from "../assets/images/Poster/defzen2.png";
+import Blazeemco1 from "../assets/images/Poster/blazeemco.png";
+import Blazeemco2 from "../assets/images/Poster/blazeemco2.png";
+import Kuruva1 from "../assets/images/Poster/kuruva.png";
+import Kuruva2 from "../assets/images/Poster/natureLove.png";
 import Ever1 from "../assets/images/Branding/Evergeen/eve1.png";
 import Ever2 from "../assets/images/Branding/Evergeen/eve2.png";
 import Ever3 from "../assets/images/Branding/Evergeen/eve3.png";
@@ -25,7 +48,12 @@ import Tea7 from "../assets/images/Branding/TeaToday/tea7.png";
 import Tea8 from "../assets/images/Branding/TeaToday/tea8.png";
 
 const imageContents = [
-  { name: "Evergreen", images: [Ever1, Ever2, Ever3, Ever4, Ever5] },
+  { name: "HIline", images: [HIlineM, HIlineL] },
+  {
+    name: "TeaToday",
+    images: [Tea1, Tea2, Tea3, Tea4, Tea5, Tea6, Tea7, Tea8],
+  },
+  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
   {
     name: "Kursii",
     images: [
@@ -41,29 +69,21 @@ const imageContents = [
       Kurusi10,
     ],
   },
-  // { name: "Motocraze", images: [MotoC1, MotoC2, MotoC3] },
-  // { name: "Proteinut", images: [Protien1, Protien2] },
-  {
-    name: "TeaToday",
-    images: [
-      Tea1,
-      Tea2,
-      Tea3,
-      Tea4,
-      Tea5,
-      Tea6,
-      Tea7,
-      Tea8,
-      // Tea9,
-      // Tea10,
-      // Tea11,
-    ],
-  },
+  { name: "BigDeal", images: [BigDeal1, BigDeal2] },
+  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
+  { name: "Evergreen", images: [Ever1, Ever2, Ever3, Ever4, Ever5] },
+  { name: "kuruva", images: [Kuruva1, Kuruva2] },
+  { name: "Moto", images: [Moto] },
+  { name: "Blazeemco", images: [Blazeemco1, Blazeemco2] },
+  { name: "WillMount", images: [WillM1, WillM2] },
+  { name: "Defzen", images: [Defzen1, Defzen2] },
+  { name: "Shine", images: [Shine1, Shine2] },
+  { name: "Evergreen", images: [Evergreen1, Evergreen2] },
 ];
 
 const scales = [10, 20, 40, 80, 100];
 
-function Branding() {
+function All() {
   const ref = useRef(null);
   const isAnim = useInView(ref);
 
@@ -81,18 +101,18 @@ function Branding() {
         return (
           <div
             key={i}
-            className="grid-container__boxitemBrand"
+            className="grid-container__boxitemAll"
             style={{
               transform: `translateY(${translateY})`,
               transition: "transform 1s ease",
             }}
           >
             {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapperBrand">
+              <div key={index} className="grid-container__image-wrapperAll">
                 <img
                   src={imgSrc}
                   alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimageBrand"
+                  className="grid-container__hoverimageAll"
                 />
               </div>
             ))}
@@ -103,4 +123,4 @@ function Branding() {
   );
 }
 
-export default Branding;
+export default All;

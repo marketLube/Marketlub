@@ -458,7 +458,7 @@ html {
 .grid-container__filter-btn {
   border: 2px solid #0000ff;
   border-radius: 18px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   margin: 0 5px;
   background: none;
   font-size: 14px;
@@ -489,6 +489,64 @@ html {
   grid-template-rows: 1fr;
 }
 
+.grid-container__image-wrapperAll {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  transition: transform 0.5s ease, bottom 0.5s ease;
+  transform: translateY(0);
+}
+
+.grid-container__boxitemAll:hover .grid-container__image-wrapperAll {
+  transform: translateY(-100%);
+}
+
+.grid-container__image-wrapperAll:nth-child(1) {
+  transform: translateY(0) !important;
+  transition: none;
+}
+
+.grid-container__image-wrapperAll:nth-child(2) {
+  transition-delay: 1.12s;
+}
+
+.grid-container__image-wrapperAll:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+.grid-container__image-wrapperAll:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.grid-container__image-wrapperAll:nth-child(5) {
+  transition-delay: 0s;
+}
+
+.grid-container__hoverimageAll {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container__boxitemAll {
+  border-radius: 8px;
+  background-color: transparent;
+  background-color: transparent;
+  height: 26rem;
+  position: relative;
+  transition: transform 1s ease;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.grid-container__boxitemAll:not(:hover) .grid-container__image-wrapperAll {
+  transition-delay: 0s;
+}
+
 .grid-container__image-wrapper {
   position: relative;
   width: 100%;
@@ -509,7 +567,7 @@ html {
 }
 
 .grid-container__image-wrapper:nth-child(2) {
-  transition-delay: 0.5s;
+  transition-delay: 0.7s;
 }
 
 .grid-container__image-wrapper:nth-child(3) {
@@ -541,6 +599,7 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  border: 1px solid rgba(155, 155, 155, 0.425);
 }
 
 .grid-container__image-wrapperVideo {

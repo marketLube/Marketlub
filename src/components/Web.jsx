@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useInView } from "framer-motion";
 import HIlineM from "../assets/images/hilineMob.jpeg";
 import HIlineL from "../assets/images/hilineLap.jpeg";
@@ -23,8 +23,6 @@ function Web() {
   const isAnim = useInView(ref);
 
   let k = 0;
-
-  document;
 
   return (
     <div className="grid-container__bluebox" ref={ref}>
