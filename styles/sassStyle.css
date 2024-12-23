@@ -446,7 +446,7 @@ html {
   padding: 6rem;
   background-color: white;
   z-index: 1;
-  min-height: 100vh;
+  height: 100vh;
 }
 .grid-container__filters {
   display: flex;
@@ -476,7 +476,7 @@ html {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .grid-container__bluebox {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -785,7 +785,6 @@ html {
 .small-footer {
   background-color: black;
   height: 4.5rem;
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;

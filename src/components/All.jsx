@@ -89,40 +89,37 @@ function All() {
 
   let k = 0;
   return (
-    <>
-      {" "}
-      <div className="grid-container__bluebox" ref={ref}>
-        {imageContents?.map((content, i) => {
-          if (i % 4 === 0) {
-            k = 0;
-          }
+    <div className="grid-container__bluebox" ref={ref}>
+      {imageContents?.map((content, i) => {
+        if (i % 4 === 0) {
+          k = 0;
+        }
 
-          const translateY = isAnim ? "0" : `${scales[k] * 1.5}rem`;
-          k = (k + 1) % scales.length;
+        const translateY = isAnim ? "0" : `${scales[k] * 1.5}rem`;
+        k = (k + 1) % scales.length;
 
-          return (
-            <div
-              key={i}
-              className="grid-container__boxitemAll"
-              style={{
-                transform: `translateY(${translateY})`,
-                transition: "transform 1s ease",
-              }}
-            >
-              {content.images.map((imgSrc, index) => (
-                <div key={index} className="grid-container__image-wrapperAll">
-                  <img
-                    src={imgSrc}
-                    alt={`${content.name}-content-${index}`}
-                    className="grid-container__hoverimageAll"
-                  />
-                </div>
-              ))}
-            </div>
-          );
-        })}
-      </div>
-    </>
+        return (
+          <div
+            key={i}
+            className="grid-container__boxitemAll"
+            style={{
+              transform: `translateY(${translateY})`,
+              transition: "transform 1s ease",
+            }}
+          >
+            {content.images.map((imgSrc, index) => (
+              <div key={index} className="grid-container__image-wrapperAll">
+                <img
+                  src={imgSrc}
+                  alt={`${content.name}-content-${index}`}
+                  className="grid-container__hoverimageAll"
+                />
+              </div>
+            ))}
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
