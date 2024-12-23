@@ -49,10 +49,12 @@ import Tea8 from "../assets/images/Branding/TeaToday/tea8.png";
 
 const imageContents = [
   { name: "HIline", images: [HIlineM, HIlineL] },
+  { name: "Evergreen", images: [Evergreen1, Evergreen2] },
   {
     name: "TeaToday",
     images: [Tea1, Tea2, Tea3, Tea4, Tea5, Tea6, Tea7, Tea8],
   },
+  { name: "Shine", images: [Shine1, Shine2] },
   { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
   {
     name: "Kursii",
@@ -77,8 +79,6 @@ const imageContents = [
   { name: "Blazeemco", images: [Blazeemco1, Blazeemco2] },
   { name: "WillMount", images: [WillM1, WillM2] },
   { name: "Defzen", images: [Defzen1, Defzen2] },
-  { name: "Shine", images: [Shine1, Shine2] },
-  { name: "Evergreen", images: [Evergreen1, Evergreen2] },
 ];
 
 const scales = [10, 20, 40, 80, 100];
