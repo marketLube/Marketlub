@@ -1,32 +1,14 @@
-// import Lenis from "lenis";
+// import LocomotiveScroll from "locomotive-scroll";
+// import "locomotive-scroll/dist/locomotive-scroll.css";
 
-// // Even faster scrolling option
-// const lenis = new Lenis({
-//   duration: 0.4,
-//   easing: (t) => t, // Linear easing for immediate response
-//   smoothWheel: true,
-//   smoothTouch: false,
-//   wheelMultiplier: 1.5,
+// const scroll = new LocomotiveScroll({
+//   el: document.body, // Target the entire HTML body
+//   smooth: true, // Enable smooth scrolling
+//   smoothMobile: true, // Enable smooth scrolling on mobile
+//   inertia: 1.2, // Adjust smoothness
 // });
 
-// //   // Or for medium speed
-// //   const lenis = new Lenis({
-// //     duration: 0.8,
-// //     easing: (t) => 1 - (1 - t) * (1 - t),  // Ease-out quad
-// //     smoothWheel: true,
-// //     smoothTouch: false,
-// //     wheelMultiplier: 1.3,
-// //   });
-
-// lenis.on("scroll", () => {
-//   document.querySelectorAll('[style*="sticky"]').forEach((el) => {
-//     el.style.transform = "translateZ(0)";
-//   });
+// // Update scroll when the window resizes
+// window.addEventListener("resize", () => {
+//   scroll.update();
 // });
-
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);

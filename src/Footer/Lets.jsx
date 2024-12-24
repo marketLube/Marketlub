@@ -1,19 +1,19 @@
-import { Parallax, useParallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
 import LetsContent from "./LetsContent";
+import SmallFooter from "./SmallFooter";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 export const Lets = () => {
-  const frog = useParallax({
-    scaleY: [0, 1.3, "easeOutQuart"],
-    shouldAlwaysCompleteAnimation: true,
-    easing: [0.25, 0.1, 0.25, 1],
-  });
-
   return (
-    <Parallax speed={0} className="lets-container">
-      <div className="lets" ref={frog.ref}></div>
-      <LetsContent
-        style={{ top: "5rem", position: "absolute", color: "white" }}
-      />
-    </Parallax>
+    <div className="lets">
+      <Parallax className="lets-container" speed={30}>
+        <div className="contents">
+          <h6 className="lets-h6">LET'S CRAFT A STUNNING</h6>
+          <h6 className="lets-h6">PROJECT TOGETHER</h6>
+        </div>
+        <SmallFooter />
+      </Parallax>
+    </div>
   );
 };

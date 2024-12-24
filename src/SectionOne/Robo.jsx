@@ -6,8 +6,7 @@ const SplineLazy = lazy(() => import("@splinetool/react-spline"));
 export const Robo = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [opacity, setOpacity] = useState(1); // State to control opacity
-
+  const [isVisible, setIsVisible] = useState(true);
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -24,14 +23,11 @@ export const Robo = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
-
-      // Check if scrolled beyond 200vh
-      if (scrollPosition > 2 * viewportHeight) {
-        setOpacity(0);
-      } else {
-        setOpacity(1);
-      }
+      setIsVisible(scrollPosition <= 2 * viewportHeight);
     };
+
+    // Initial check
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -48,8 +44,8 @@ export const Robo = () => {
         height: "110vh",
         position: "sticky",
         overflow: "hidden",
-        opacity: opacity, // Set the opacity dynamically
-        transition: "opacity 0.5s", // Smooth opacity transition
+        display: isVisible ? "flex" : "none",
+        top: 0,
       }}
     >
       {hasError ? (
@@ -64,7 +60,7 @@ export const Robo = () => {
             </div>
           }
         >
-          {inView && (
+          {inView && isVisible && (
             <SplineLazy
               scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
               onLoad={handleLoad}

@@ -11,10 +11,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  z-index: -3;
 }
+
 .main {
+  z-index: -3;
 }
 .app {
+  z-index: -3;
 }
 
 .logo-box {
