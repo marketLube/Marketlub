@@ -6,17 +6,33 @@ const Navbar = () => {
   const [active, setActive] = useState("#home");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [showLogo, setShowLogo] = useState(true);
+
   useEffect(() => {
-    const currentHash = window.location.hash || "#home";
-    setActive(currentHash);
-  }, [window.location.hash]);
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setShowLogo(false);
+      } else {
+        setShowLogo(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="navbar-menu">
-      <div className="navbar-logo">
-        <img src="your-icon-url.png" alt="Logo" className="navbar-icon" />
-      </div>
-
+      {showLogo ? (
+        <div className="navbar-logo">
+          <img src="your-icon-url.png" alt="Logo" className="navbar-icon" />
+        </div>
+      ) : (
+        <div className="dummyLogo"></div>
+      )}
       <button className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
       </button>
