@@ -17,7 +17,7 @@ export const GridSection = () => {
 
   return (
     <Parallax speed={-20}>
-      <div className="grid-container">
+      <div className="grid-container" id="portfolio">
         <motion.div className="grid-container__filters">
           {[" ALL ", "WEB SERVICES", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
             (filter) => (

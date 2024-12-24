@@ -7,12 +7,13 @@ import { Robo } from "./SectionOne/Robo";
 import { Paragraph } from "./SectionThree/Paragraph";
 import { Boost } from "./SectionTwo/Boost";
 import SmallFooter from "./Footer/SmallFooter";
-// import Navbar from "./Nav/Navbar";
+import Navbar from "./Nav/Navbar";
 
 function App() {
   return (
     <>
-      {/* <Robo /> */}
+      <Navbar />
+      <Robo />
       <Boost />
       <div style={{ backgroundColor: "white" }}>
         <Paragraph />

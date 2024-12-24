@@ -10,7 +10,7 @@ export const Lets = () => {
 
   return (
     <Parallax speed={0} className="lets-container">
-      <div className="lets" ref={frog.ref}></div>
+      <div className="lets" ref={frog.ref} id="footer"></div>
       <LetsContent
         style={{ top: "5rem", position: "absolute", color: "white" }}
       />

@@ -6,7 +6,7 @@ const SplineLazy = lazy(() => import("@splinetool/react-spline"));
 export const Robo = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [opacity, setOpacity] = useState(1); // State to control opacity
+  const [opacity, setOpacity] = useState(1);
 
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -25,7 +25,6 @@ export const Robo = () => {
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
 
-      // Check if scrolled beyond 200vh
       if (scrollPosition > 2 * viewportHeight) {
         setOpacity(0);
       } else {
@@ -51,6 +50,7 @@ export const Robo = () => {
         opacity: opacity, // Set the opacity dynamically
         transition: "opacity 0.5s", // Smooth opacity transition
       }}
+      id="home"
     >
       {hasError ? (
         <div className="error-message">

@@ -1,29 +1,77 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
+  const [active, setActive] = useState("#home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const currentHash = window.location.hash || "#home";
+    setActive(currentHash);
+  }, [window.location.hash]);
+
   return (
-    <>
+    <div className="navbar-menu">
       <div className="navbar-logo">
         <img src="your-icon-url.png" alt="Logo" className="navbar-icon" />
       </div>
 
-      <nav className="navbar-menu">
-        <ul className="navbar-list">
-          <li className="navbar-item">
-            <a href="#home">Home</a>
-          </li>
-          <li className="navbar-item">
-            <a href="#service">Service</a>
-          </li>
-          <li className="navbar-item">
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li className="navbar-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </>
+      <button className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+      </button>
+
+      <ul className={`navbar-list ${menuOpen ? "open" : ""}`}>
+        <li className="navbar-item">
+          <a
+            href="#home"
+            className={active === "#home" ? "active" : ""}
+            onClick={() => {
+              setActive("#home");
+              setMenuOpen(false);
+            }}
+          >
+            Home
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="#service"
+            className={active === "#service" ? "active" : ""}
+            onClick={() => {
+              setActive("#service");
+              setMenuOpen(false);
+            }}
+          >
+            Service
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="#portfolio"
+            className={active === "#portfolio" ? "active" : ""}
+            onClick={() => {
+              setActive("#portfolio");
+              setMenuOpen(false);
+            }}
+          >
+            Portfolio
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="#contact"
+            className={active === "#contact" ? "active" : ""}
+            onClick={() => {
+              setActive("#contact");
+              setMenuOpen(false);
+            }}
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };
 

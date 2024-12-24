@@ -15,7 +15,7 @@ export const Boost = () => {
   ];
 
   return (
-    <div className="boost-performance">
+    <div className="boost-performance" id="boost">
       <h1 className="boost-performance__title">Boost your</h1>
       <h2 className="boost-performance__highlight">Performance</h2>
       <p className="boost-performance__subtitle">
