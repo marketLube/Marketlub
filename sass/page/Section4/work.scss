@@ -112,15 +112,17 @@
     font-size: 3.5rem;
     font-weight: 300;
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   &____para-style {
     min-width: 150px;
+    margin-bottom: 2rem;
   }
 
   &__rightBottomDiv {
     grid-column: 1 / -1; /* Span the entire width of the grid */
-    gap: 3rem;
+    gap: 1rem;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
@@ -198,8 +200,8 @@
   }
 
   &__heading {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
     padding: 1.5rem 0;
   }
 

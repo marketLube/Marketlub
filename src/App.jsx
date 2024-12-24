@@ -12,7 +12,6 @@ import Navbar from "./Nav/Navbar";
 function App() {
   return (
     <>
-      <Navbar />
       <Robo />
       <Boost />
       <div style={{ backgroundColor: "white" }}>
@@ -23,7 +22,7 @@ function App() {
         <Lets />
       </div>
       <div className="divider"></div>
-      <SmallFooter />
+      {/* <SmallFooter /> */}
     </>
   );
 }

@@ -1,5 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
-
 import Image1 from "../assets/images/image1.jpg";
 import Image2 from "../assets/images/image2.jpg";
 import Image3 from "../assets/images/image3.jpg";
@@ -11,12 +9,7 @@ export const WorkSection = () => {
   const items = [
     {
       image: Image1,
-      pills: [
-        "Webflow Development",
-        "UI/UX Design",
-        "Webflow Training",
-        "Graphic Design",
-      ],
+      pills: ["Webflow Development", "UI/UX Design", "Webflow Training"],
       heading: "Hacien",
       description:
         "HACIEN is a premium tequila brand supplying high-end hospitality and retail locations worldwide. They approached Phunk to undertake a comprehensive design project comprising web, packaging, and marketing assets as well as 3D renders of their signature bottles.",
@@ -24,13 +17,7 @@ export const WorkSection = () => {
     },
     {
       image: Image2,
-      pills: [
-        "Splash Screens",
-        "Illustrations",
-        "Graphic Design",
-        "Lottie Animations",
-        "Webflow Training",
-      ],
+      pills: ["Splash Screens", "Illustrations", "Lottie Animations"],
       heading: "Mobilleo",
       description:
         "Mobilleo is a SaaS solution making it easy for organisations to manage global business travel for their employees.  The team at Mobilleo approached Phunk to provide a range of design and illustration services, building on their existing brand, for use across their website and app.",
@@ -38,12 +25,7 @@ export const WorkSection = () => {
     },
     {
       image: Image3,
-      pills: [
-        "Webflow Development",
-        "UI/UX Design",
-        "Webflow Training",
-        "Graphic Design",
-      ],
+      pills: ["Webflow Development", "UI/UX Design", "Webflow Training"],
       heading: "Mannson Freight",
       description:
         "Mannson Freight operates import and export consolidation services involving sea freight. They engaged Phunk to rebrand their corporate identity and develop a new higher-performance website, as well as a custom-built portal — MFS Pro— including ongoing support.",
@@ -51,12 +33,7 @@ export const WorkSection = () => {
     },
     {
       image: Image4,
-      pills: [
-        "Webflow Development",
-        "UI/UX Design",
-        "Webflow Training",
-        "Graphic Design",
-      ],
+      pills: ["Webflow Development", "UI/UX Design", "Webflow Training"],
       heading: "BOX iQ",
       description:
         "BOXiQ Performance Center in Dubai is a globally recognised boxing gym — hosting icons like Tyson Fury and Oleksandr Usyk. Working with Phunk, they now have a high-quality digital presence to match the prestige of their brand.",
@@ -64,12 +41,7 @@ export const WorkSection = () => {
     },
     {
       image: Image5,
-      pills: [
-        "Webflow Development",
-        "Visual Identity",
-        "Packaging",
-        "Apparel & Merchandise",
-      ],
+      pills: ["Webflow Development", "Visual Identity", "Packaging"],
       heading: "The Honest Watch Dealer",
       description:
         "The Honest Watch Dealer is a luxury watch expert renowned for his popular YouTube channel, as well as founding The Luxury Watch Company. Charlie (his real name) engaged Phunk to develop a brand identity for his channel, with applications across a range of merchandise.",
@@ -77,17 +49,10 @@ export const WorkSection = () => {
     },
   ];
 
-  const workParagraphRef = useRef(null);
-
   return (
     <div className="work-section" id="service">
       <div className="work-section__header-container">
         <h1 className="work-section__title">Dive into the work.</h1>
-        <p ref={workParagraphRef} className="work-section__paragraph">
-          As creatives ourselves, we know that what you really want to see is
-          the work we’ve actually put live. Here’s a showcase of some of our
-          recent projects, across a range of sectors.
-        </p>
       </div>
       <div className="work-section__combo-set">
         <div className="work-section__scroll-container">

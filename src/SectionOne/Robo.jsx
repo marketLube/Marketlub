@@ -47,8 +47,8 @@ export const Robo = () => {
         height: "110vh",
         position: "sticky",
         overflow: "hidden",
-        opacity: opacity, // Set the opacity dynamically
-        transition: "opacity 0.5s", // Smooth opacity transition
+        display: isVisible ? "flex" : "none",
+        top: 0,
       }}
       id="home"
     >
@@ -64,7 +64,7 @@ export const Robo = () => {
             </div>
           }
         >
-          {inView && (
+          {inView && isVisible && (
             <SplineLazy
               scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
               onLoad={handleLoad}

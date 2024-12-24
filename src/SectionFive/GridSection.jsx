@@ -8,6 +8,7 @@ import Branding from "../components/branding";
 import All from "../components/All";
 
 const contents = [0, 1, 2, 3, 4, 5, 6, 7];
+
 export const GridSection = () => {
   const [activeButton, setActiveButton] = useState(" ALL ");
 
@@ -39,6 +40,27 @@ export const GridSection = () => {
         {activeButton === "PHOTOSHOOTS" && <Photoshoot />}
         {activeButton === "BRANDING" && <Branding />}
       </div>
+    <Parallax className="grid-container" speed={0}>
+      <motion.div className="grid-container__filters">
+        {[" ALL ", "WEB SERVICES", "VIDEOS", "PHOTOSHOOTS", "BRANDING"].map(
+          (filter) => (
+            <div
+              key={filter}
+              className={`grid-container__filter-btn ${
+                activeButton === filter ? "active" : ""
+              }`}
+              onClick={() => handleButtonClick(filter)}
+            >
+              {filter}
+            </div>
+          )
+        )}
+      </motion.div>
+      {activeButton === " ALL " && <All />}
+      {activeButton === "WEB SERVICES" && <Web />}
+      {activeButton === "VIDEOS" && <Video />}
+      {activeButton === "PHOTOSHOOTS" && <Photoshoot />}
+      {activeButton === "BRANDING" && <Branding />}
     </Parallax>
   );
 };
