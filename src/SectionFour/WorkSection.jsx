@@ -61,12 +61,7 @@ export const WorkSection = () => {
       <div className="work-section__combo-set">
         <div className="work-section__scroll-container">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className={`work-section__sticky-section ${
-                index === items.length - 1 ? "work-section__last" : ""
-              }`}
-            >
+            <div key={index} className={`work-section__sticky-section`}>
               <div className="work-section__imageDiv">
                 <img
                   src={item.image}

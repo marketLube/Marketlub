@@ -13,7 +13,7 @@ export const Selected = () => {
       }}
       id="selectWork"
     >
-      <Parallax className="selected" speed={-24}>
+      <Parallax className="selected" speed={-22}>
         <h1 className="selectHead">Selected Works</h1>
       </Parallax>
     </div>

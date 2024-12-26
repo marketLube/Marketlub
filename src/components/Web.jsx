@@ -39,8 +39,8 @@ function Web() {
             key={i}
             className="grid-container__boxitem"
             style={{
-              transform: `translateY(${translateY})`,
-              transition: "transform 1s ease",
+              transform: `translateY(5rem)`,
+              transition: `transform ${i * 0.5}s ease`,
             }}
           >
             {content.images.map((imgSrc, index) => (

@@ -52,10 +52,10 @@ function Photoshoot() {
           <div
             key={i}
             className="grid-container__boxitemPhoto"
-            style={{
-              transform: `translateY(${translateY})`,
-              transition: "transform 1s ease",
-            }}
+            // style={{
+            //   transform: `translateY(${translateY})`,
+            //   transition: "transform 1s ease",
+            // }}
           >
             {content.images.map((imgSrc, index) => (
               <div key={index} className="grid-container__image-wrapperPhoto">
