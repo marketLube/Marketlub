@@ -1,7 +1,7 @@
 @use "../../abstract/variables" as vars;
 
 .paragraph-container {
-  height: 700vh;
+  height: 400vh;
 }
 
 .paragraph {
@@ -26,6 +26,6 @@
     padding: 0 1rem;
   }
   .paragraph-container {
-    height: 150vh;
+    // height: 150vh;
   }
 }
