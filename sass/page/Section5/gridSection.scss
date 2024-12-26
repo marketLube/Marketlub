@@ -5,9 +5,6 @@
   z-index: 200000;
   position: relative;
   bottom: 0;
-  // overflow: hidden;
-  // transform: translateY(-10rem);
-  // background-color: yellow;
 
   &__filters {
     display: flex;
@@ -125,7 +122,8 @@
   border-radius: 8px;
   background-color: transparent;
   background-color: transparent;
-  height: 26rem;
+  height: 20rem;
+  width: 20rem;
   position: relative;
   transition: transform 1s ease;
   overflow: hidden;

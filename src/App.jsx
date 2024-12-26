@@ -6,20 +6,18 @@ import { WorkSection } from "./SectionFour/WorkSection";
 import { Robo } from "./SectionOne/Robo";
 import { Paragraph } from "./SectionThree/Paragraph";
 import { Boost } from "./SectionTwo/Boost";
-import SmallFooter from "./Footer/SmallFooter";
-import { Parallax } from "react-scroll-parallax";
+
 import { ParallaxProvider } from "react-scroll-parallax";
-import smoothscroll from "smoothscroll-polyfill";
+
 import Navbar from "./Nav/Navbar";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+
 import { useHomeScroll } from "./hooks/useHomeScroll";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 function App() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+
   useHomeScroll();
 
   return (
@@ -31,10 +29,20 @@ function App() {
         <Paragraph />
         <WorkSection />
         <Selected />
-        <div className="bottom-container">
-          <GridSection />
-          <Lets />
-        </div>
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+          }}
+          containerRef={ref}
+          watch={[]}
+        >
+          <div>
+            <div className="bottom-container" data-scroll-container ref={ref}>
+              <GridSection />
+              <Lets />
+            </div>
+          </div>
+        </LocomotiveScrollProvider>
       </div>
       <div className="divider"></div>
     </ParallaxProvider>

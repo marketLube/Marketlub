@@ -1,6 +1,5 @@
 .work-section {
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.959);
   position: relative;
 
   &__header-container {
@@ -16,9 +15,9 @@
   }
 
   &__title {
-    font-size: 4.2rem; //new
-    padding-top: 3rem; //new
-    font-weight: 600; //new
+    font-size: 4.2rem;
+    padding-top: 3rem;
+    font-weight: 600;
     color: #fff;
     text-align: start;
   }
@@ -65,7 +64,7 @@
     height: 25vh;
     position: sticky;
     top: 90vh;
-    background-color: rgb(8, 7, 7);
+    background-color: rgb(0, 0, 0);
     z-index: 1000;
     font-size: 15.7rem;
     text-wrap: nowrap;
@@ -74,13 +73,13 @@
   }
 
   &__non-sticky {
-    position: sticky;
-    height: auto;
+    position: static !important;
+    // opacity: 0;
   }
 
   &__imageDiv {
     grid-column: 1 / 2;
-    position: sticky;
+    // position: sticky;
     top: 0;
     text-align: center;
     scroll-behavior: smooth;
@@ -102,6 +101,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     display: flex;
+    padding-top: 7rem;
   }
 
   &__pill-item {
