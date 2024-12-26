@@ -23,7 +23,6 @@ function Web() {
   const isAnim = useInView(ref);
 
   let k = 0;
-
   return (
     <div className="grid-container__bluebox" ref={ref}>
       {imageContents?.map((content, i) => {
@@ -33,22 +32,24 @@ function Web() {
 
         const translateY = isAnim ? "0" : `${scales[k] * 1.5}rem`;
         k = (k + 1) % scales.length;
+        const opacity = isAnim ? "1" : "0";
 
         return (
           <div
             key={i}
-            className="grid-container__boxitem"
+            className="grid-container__boxitemWeb"
             style={{
-              transform: `translateY(5rem)`,
-              transition: `transform ${i * 0.5}s ease`,
+              transform: `translateY(${translateY})`,
+              transition: `transform 1s ease, opacity 1s ease ${i * 0.2}s`,
+              opacity: opacity,
             }}
           >
             {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapper">
+              <div key={index} className="grid-container__image-wrapperWeb">
                 <img
                   src={imgSrc}
                   alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimage"
+                  className="grid-container__hoverimageWeb"
                 />
               </div>
             ))}
