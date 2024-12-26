@@ -283,7 +283,7 @@ body {
 }
 .work-section__scroll-container {
   position: static;
-  top: 0rem;
+  top: 10rem;
   display: flex;
   flex-direction: column;
   background-color: rgb(0, 0, 0);
@@ -296,7 +296,7 @@ body {
 .work-section__cover {
   height: 25vh;
   position: sticky;
-  top: 80vh;
+  top: 82vh;
   background-color: rgb(8, 7, 7);
   z-index: 1000;
   font-size: 15.7rem;
