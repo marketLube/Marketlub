@@ -21,7 +21,8 @@
     background-color: white;
     width: fit-content;
     padding: 0.5rem 1rem;
-    // border-radius: 3rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
   &__filter-btn {
     border: 2px solid #0000ff;
@@ -56,6 +57,14 @@
   @media screen and (max-width: 900px) {
     &__filters {
       flex-wrap: wrap;
+    }
+    &__filters {
+      top: -1px;
+      gap: 5px;
+    }
+    &__filter-btn {
+      padding: 5px 12px;
+      font-size: 11px;
     }
   }
 

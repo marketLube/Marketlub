@@ -588,6 +588,8 @@ body {
   background-color: white;
   width: fit-content;
   padding: 0.5rem 1rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .grid-container__filter-btn {
   border: 2px solid #0000ff;
@@ -618,6 +620,14 @@ body {
 @media screen and (max-width: 900px) {
   .grid-container__filters {
     flex-wrap: wrap;
+  }
+  .grid-container__filters {
+    top: -1px;
+    gap: 5px;
+  }
+  .grid-container__filter-btn {
+    padding: 5px 12px;
+    font-size: 11px;
   }
 }
 @media screen and (max-width: 550px) {
