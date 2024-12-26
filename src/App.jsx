@@ -25,11 +25,11 @@ function App() {
   return (
     <ParallaxProvider>
       <Navbar />
-      {/* <Robo /> */}
+      <Robo />
       <Boost />
       <div style={{ backgroundColor: "white" }}>
         <Paragraph />
-        {/* <WorkSection /> */}
+        <WorkSection />
         <Selected />
         <div className="bottom-container">
           <GridSection />
