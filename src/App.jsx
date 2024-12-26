@@ -13,40 +13,14 @@ import smoothscroll from "smoothscroll-polyfill";
 import Navbar from "./Nav/Navbar";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { useHomeScroll } from "./hooks/useHomeScroll";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 function App() {
   const ref = useRef(null);
   const isInView = useInView(ref);
-
-  useEffect(() => {
-    const handleScrollUp = (event) => {
-      if (window.scrollY > window.innerHeight) return;
-      if (event.deltaY > 0) {
-        window.scrollTo({
-          top: window.innerHeight + 5 * 16,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    const handleScrollDown = (event) => {
-      if (window.scrollY > window.innerHeight) return;
-      if (event.deltaY < 0) {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    };
-
-    window.addEventListener("wheel", handleScrollUp);
-    window.addEventListener("wheel", handleScrollDown);
-
-    return () => {
-      window.removeEventListener("wheel", handleScrollUp);
-      window.removeEventListener("wheel", handleScrollDown);
-    };
-  }, []);
+  useHomeScroll();
 
   return (
     <ParallaxProvider>
