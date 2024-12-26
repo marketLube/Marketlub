@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 
 const SplineLazy = lazy(() => import("@splinetool/react-spline"));
 
-export const Robo = () => {
+export const MobRobo = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [opacity, setOpacity] = useState(1);
@@ -69,7 +69,7 @@ export const Robo = () => {
         >
           {inView && opacity === 1 && (
             <SplineLazy
-              scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
+              scene="https://prod.spline.design/bjHNmqBq9zzg7deH/scene.splinecode"
               onLoad={handleLoad}
               onError={handleError}
               style={{
@@ -88,4 +88,4 @@ export const Robo = () => {
   );
 };
 
-export default Robo;
+export default MobRobo;
