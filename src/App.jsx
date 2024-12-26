@@ -10,16 +10,17 @@ import SmallFooter from "./Footer/SmallFooter";
 import { Parallax } from "react-scroll-parallax";
 import { ParallaxProvider } from "react-scroll-parallax";
 import smoothscroll from "smoothscroll-polyfill";
-// import Navbar from "./Nav/Navbar";
+import Navbar from "./Nav/Navbar";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 function App() {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  console.log(isInView, "isInView");
+
   return (
     <ParallaxProvider>
+      <Navbar />
       <Robo />
       <Boost />
       <div style={{ backgroundColor: "white" }}>

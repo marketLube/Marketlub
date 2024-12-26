@@ -14,7 +14,7 @@ import { Parallax } from "react-scroll-parallax";
 function SmallFooter() {
   return (
     <Parallax className="small-footer" speed={0}>
-      <div className="small-footer-contents">
+      <div className="small-footer-contents" id="contact">
         <a
           href="https://wa.me/your-number"
           target="_blank"

@@ -51,7 +51,7 @@ export const WorkSection = () => {
   ];
 
   return (
-    <div className="work-section">
+    <div className="work-section" id="service">
       <div className="work-section__header-container">
         <h1 className="work-section__title">Dive into the work.</h1>
       </div>

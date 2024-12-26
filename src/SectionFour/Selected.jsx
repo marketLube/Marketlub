@@ -11,6 +11,7 @@ export const Selected = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
+      id="selectWork"
     >
       <Parallax className="selected" speed={-24}>
         <h1 className="selectHead">Selected Works</h1>

@@ -39,7 +39,7 @@ export const Paragraph = () => {
   }, []);
 
   return (
-    <div style={{ height: "700vh" }}>
+    <div style={{ height: "700vh" }} id="paragraph">
       <div className="paragraph">
         <div
           style={{
