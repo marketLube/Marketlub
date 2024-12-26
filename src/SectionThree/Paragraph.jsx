@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Boost } from "../SectionTwo/Boost";
 
 const str =
-  "Lorem ipsum amet consectetur, adipisicing elit. Unde non dicta obcaecati deserunt, eum magni. Fuga sapiente eaque similique est magnam quos corporis aut ut suscipit soluta consequuntur, accusamus totam!";
+  "Lorem ipsum amet consectetur, adipisicing elit. Unde non dicta obcaecati deserunt, eum magni";
 
 export const Paragraph = () => {
   const wordsRef = useRef([]);
