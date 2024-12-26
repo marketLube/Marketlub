@@ -620,6 +620,7 @@ body {
 @media screen and (max-width: 900px) {
   .grid-container__filters {
     flex-wrap: wrap;
+    margin-bottom: 10px;
   }
   .grid-container__filters {
     top: -1px;
