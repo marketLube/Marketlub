@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
   const [menuOpen, setMenuOpen] = useState(false);
-
   const [showLogo, setShowLogo] = useState(true);
 
   useEffect(() => {

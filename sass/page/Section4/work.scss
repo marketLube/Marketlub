@@ -1,3 +1,5 @@
+@use "../../base/responsive" as mixins;
+
 .work-section {
   background-color: black;
   position: relative;
@@ -36,6 +38,11 @@
     grid-template-columns: 1fr 1fr;
     padding: 3rem 15rem;
     gap: 3.5rem;
+
+    @include mixins.respond(desktop) {
+      padding: 3rem 10rem;
+      gap: 2rem;
+    }
   }
 
   &__second-tab {
@@ -55,9 +62,6 @@
     position: sticky;
     top: 16.5rem;
     height: 100vh;
-    // display: flex;
-    // align-items: end;
-    // justify-content: center;
   }
 
   &__cover {
@@ -88,9 +92,6 @@
 
   &__workImage {
     width: 100%;
-    // max-width: 500px;
-    // width: 500px;
-    // height: 550px;
     object-fit: cover;
   }
 
@@ -244,4 +245,78 @@
 }
 
 @media (min-width: 1600px) {
+  .work-section {
+    &__header-container {
+      padding-left: 20rem;
+    }
+
+    &__combo-set {
+      padding: 3rem 20rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .work-section {
+    &__header-container {
+      padding-left: 10rem;
+    }
+
+    &__combo-set {
+      padding: 3rem 10rem;
+    }
+
+    &__paragraph {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    &__header-container {
+      padding-left: 5rem;
+      padding-top: 3rem;
+    }
+
+    &__combo-set {
+      grid-template-columns: 1fr;
+      padding: 3rem 5rem;
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+    }
+
+    &__paragraph {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    &__cover {
+      font-size: 10rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .work-section {
+    &__header-container {
+      padding-left: 2rem;
+      padding-top: 2rem;
+    }
+
+    &__combo-set {
+      padding: 2rem;
+    }
+
+    &__title {
+      font-size: 2.8rem;
+    }
+
+    &__cover {
+      font-size: 8rem;
+    }
+  }
 }
