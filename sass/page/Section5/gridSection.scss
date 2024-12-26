@@ -117,13 +117,15 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .grid-container__boxitemAll {
   border-radius: 8px;
   background-color: transparent;
-  background-color: transparent;
-  height: 20rem;
-  width: 20rem;
+  // height: 25rem;
+  // width: 25rem;
+  aspect-ratio: 1;
+  // width: 100%;
   position: relative;
   transition: transform 1s ease;
   overflow: hidden;
@@ -169,6 +171,7 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 //VIDEO
@@ -177,7 +180,9 @@
   border-radius: 8px;
   background-color: transparent;
   background-color: transparent;
-  height: 26rem;
+  // height: 25rem;
+  // width: 25rem;
+  aspect-ratio: 1;
   position: relative;
   transition: transform 1s ease;
   overflow: hidden;
@@ -199,6 +204,7 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 .grid-container__blueboxVideo {
   display: grid;
@@ -212,7 +218,9 @@
   border-radius: 8px;
   background-color: transparent;
   background-color: transparent;
-  height: 26rem;
+  // height: 25rem;
+  // width: 25rem;
+  aspect-ratio: 1;
   position: relative;
   transition: transform 1s ease;
   overflow: hidden;
@@ -234,6 +242,7 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 .grid-container__blueboxPhoto {
   display: grid;
@@ -275,12 +284,15 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .grid-container__boxitemBrand {
   border-radius: 8px;
   background-color: transparent;
   background-color: transparent;
-  height: 26rem;
+  // height: 25rem;
+  // width: 25rem;
+  aspect-ratio: 1;
   position: relative;
   transition: transform 1s ease;
   overflow: hidden;
