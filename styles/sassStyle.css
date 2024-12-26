@@ -987,6 +987,14 @@ body {
   justify-content: space-between;
   margin-left: 3rem;
 }
+@media (max-width: 680px) {
+  .small-footer-contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0;
+  }
+}
 
 .footer-icon {
   color: white;
