@@ -66,7 +66,7 @@
   background-color: blue;
   width: 100%;
   height: 100px;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .logo-slide {
@@ -84,4 +84,30 @@
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
+}
+@media only screen and (max-width: 680px) {
+  .logos {
+    height: 80px;
+    margin-top: 2rem;
+  }
+
+  .logo-slide {
+    gap: 1.5rem;
+    width: calc(200% + 1.5rem);
+    animation: slide 20s linear infinite;
+  }
+
+  .logo-slide div {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .logo-slide-two {
+    display: none;
+  }
+}
+
+@media (min-width: 681px) {
+  .logo-slide-two {
+    display: none;
+  }
 }

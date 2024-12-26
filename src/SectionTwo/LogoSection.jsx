@@ -21,6 +21,25 @@ export const LogoSection = () => {
           <div key={`logo-duplicate-${index}`}>{logo}</div>
         ))}
       </div>
+
+      <div className="logo-slide-two">
+        {/* Render two sets of logos for seamless looping */}
+        {logos.map((logo, index) => (
+          <div key={`logo-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+        {logos.map((logo, index) => (
+          <div key={`logo-duplicate-${index}`}>{logo}</div>
+        ))}
+      </div>
     </div>
   );
 };

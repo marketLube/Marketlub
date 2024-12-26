@@ -136,7 +136,6 @@ body {
   background-color: blue;
   color: #fff;
   padding: 2rem;
-  border-radius: 10px;
   bottom: 0;
   display: flex;
   flex-flow: column;
@@ -159,6 +158,22 @@ body {
   font-weight: thin;
 }
 
+@media only screen and (max-width: 680px) {
+  .boost-performance {
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+  .boost-performance__title {
+    font-size: 2rem;
+  }
+  .boost-performance__highlight {
+    font-size: 2.5rem;
+  }
+  .boost-performance__subtitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
 .stats-section {
   display: flex;
   justify-content: space-around;
@@ -168,23 +183,41 @@ body {
   padding: 3rem;
   text-align: center;
   height: 50%;
-  padding-top: 6rem;
+  padding-top: 9rem;
 }
 .stats-section__item {
   flex: 1;
 }
 .stats-section__value {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin: 0;
 }
 .stats-section__label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 0.5rem;
 }
 
+@media only screen and (max-width: 680px) {
+  .stats-section {
+    padding: 1.5rem;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+  }
+  .stats-section__item {
+    flex: 0 0 50%;
+    margin-bottom: 2rem;
+  }
+  .stats-section__value {
+    font-size: 1.8rem;
+  }
+  .stats-section__label {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+}
 /* ------------------------------------------------
     ---------------------------------------------------
     ------------------------------------------------ */
@@ -204,7 +237,7 @@ body {
   background-color: blue;
   width: 100%;
   height: 100px;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .logo-slide {
@@ -224,6 +257,33 @@ body {
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 680px) {
+  .logos {
+    height: 80px;
+    margin-top: 2rem;
+  }
+  .logo-slide {
+    gap: 1.5rem;
+    width: calc(200% + 1.5rem);
+    animation: slide 20s linear infinite;
+  }
+  .logo-slide div {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .logo-slide-two {
+    display: none;
+  }
+}
+@media (min-width: 681px) {
+  .logo-slide-two {
+    display: none;
+  }
+}
+.paragraph-container {
+  height: 700vh;
+}
+
 .paragraph {
   text-align: center;
   display: flex;
@@ -240,6 +300,15 @@ body {
   top: 0;
 }
 
+@media (max-width: 680px) {
+  .paragraph {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+  .paragraph-container {
+    height: 150vh;
+  }
+}
 .work-section {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.959);
@@ -928,6 +997,7 @@ body {
   color: #ffffff;
   padding: 6px 20px;
   transition: none;
+  font-weight: thin;
 }
 
 .navbar-item a.active {
@@ -935,6 +1005,7 @@ body {
   border-radius: 60px;
   padding: 6px 20px;
   background-color: #0000ff;
+  font-weight: thin;
 }
 
 .hamburger-menu {

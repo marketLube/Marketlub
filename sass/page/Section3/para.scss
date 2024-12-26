@@ -1,5 +1,9 @@
 @use "../../abstract/variables" as vars;
 
+.paragraph-container {
+  height: 700vh;
+}
+
 .paragraph {
   text-align: center;
   display: flex;
@@ -14,4 +18,14 @@
   height: 100vh;
   position: sticky;
   top: 0;
+}
+
+@media (max-width: 680px) {
+  .paragraph {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+  .paragraph-container {
+    height: 150vh;
+  }
 }
