@@ -35,8 +35,8 @@
   &__combo-set {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3rem 10rem;
-    gap: 1rem;
+    padding: 3rem 15rem;
+    gap: 3.5rem;
   }
 
   &__second-tab {
@@ -46,7 +46,7 @@
 
   &__scroll-container {
     position: static;
-    top: 0rem;
+    top: 10rem;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
@@ -64,7 +64,7 @@
   &__cover {
     height: 25vh;
     position: sticky;
-    top: 80vh;
+    top: 90vh;
     background-color: rgb(8, 7, 7);
     z-index: 1000;
     font-size: 15.7rem;
@@ -89,9 +89,9 @@
 
   &__workImage {
     width: 100%;
-    max-width: 500px;
-    width: 500px;
-    height: 550px;
+    // max-width: 500px;
+    // width: 500px;
+    // height: 550px;
     object-fit: cover;
   }
 
