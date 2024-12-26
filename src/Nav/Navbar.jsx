@@ -33,7 +33,10 @@ const Navbar = () => {
       ) : (
         <div className="dummyLogo"></div>
       )}
-      <button className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
+      <button
+        className={`hamburger-menu ${menuOpen ? "menu-open-styles" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
       </button>
 
