@@ -7,12 +7,12 @@ export const Selected = () => {
       style={{
         height: "50vh",
         backgroundColor: "black",
-        display: "none",
+        width: "100%",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
-      <Parallax className="selected" speed={-28}>
+      <Parallax className="selected" speed={-24}>
         <h1 className="selectHead">Selected Works</h1>
       </Parallax>
     </div>

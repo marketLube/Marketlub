@@ -2,12 +2,12 @@
   width: 100%;
   padding: 6rem;
   background-color: white;
-  z-index: 2;
-  position: relative;
+  z-index: 200000;
+  position: sticky;
+  bottom: 0;
   // overflow: hidden;
   // transform: translateY(-10rem);
-
-  height: fit-content;
+  // background-color: yellow;
 
   &__filters {
     display: flex;

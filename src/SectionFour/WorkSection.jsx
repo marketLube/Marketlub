@@ -1,3 +1,4 @@
+import { Parallax } from "react-scroll-parallax";
 import Image1 from "../assets/images/image1.jpg";
 import Image2 from "../assets/images/image2.jpg";
 import Image3 from "../assets/images/image3.jpg";
@@ -54,6 +55,9 @@ export const WorkSection = () => {
       <div className="work-section__header-container">
         <h1 className="work-section__title">Dive into the work.</h1>
       </div>
+
+      <Parallax className="work-section__cover"></Parallax>
+
       <div className="work-section__combo-set">
         <div className="work-section__scroll-container">
           {items.map((item, index) => (

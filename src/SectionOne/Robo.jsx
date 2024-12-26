@@ -60,21 +60,21 @@ export const Robo = () => {
             </div>
           }
         >
-          {inView && isVisible && (
-            <SplineLazy
-              scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
-              onLoad={handleLoad}
-              onError={handleError}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-                position: "absolute",
-                top: 0,
-                left: 0,
-              }}
-            />
-          )}
+          {/* {inView && isVisible && ( */}
+          <SplineLazy
+            scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"
+            onLoad={handleLoad}
+            onError={handleError}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+          />
+          {/* )} */}
         </Suspense>
       )}
     </div>
