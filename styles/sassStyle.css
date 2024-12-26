@@ -588,7 +588,6 @@ body {
   background-color: white;
   width: fit-content;
   padding: 0.5rem 1rem;
-  border-radius: 3rem;
 }
 .grid-container__filter-btn {
   border: 2px solid #0000ff;
