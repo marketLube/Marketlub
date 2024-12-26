@@ -161,7 +161,7 @@ body {
 @media only screen and (max-width: 680px) {
   .boost-performance {
     padding: 1rem;
-    padding-top: 2rem;
+    padding-top: 3.5rem;
   }
   .boost-performance__title {
     font-size: 2rem;
