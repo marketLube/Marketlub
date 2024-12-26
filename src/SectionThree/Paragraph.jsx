@@ -9,14 +9,14 @@ export const Paragraph = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY - 1300;
+      const scrollPosition = window.scrollY - 1000;
       const windowHeight = window.innerHeight;
       const maxScroll = document.documentElement.scrollHeight - windowHeight;
 
       // Calculate how many words should be bright based on scroll position
       const progress = scrollPosition / maxScroll;
       const totalWords = str.split(" ").length;
-      const activeWordIndex = Math.floor(progress * totalWords * 2);
+      const activeWordIndex = Math.floor(progress * totalWords * 4);
 
       wordsRef.current.forEach((word, index) => {
         if (word) {
@@ -39,7 +39,7 @@ export const Paragraph = () => {
   }, []);
 
   return (
-    <div style={{ height: "700vh" }} id="paragraph">
+    <div className="paragraph-container" id="paragraph">
       <div className="paragraph">
         <div
           style={{
