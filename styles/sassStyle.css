@@ -224,7 +224,15 @@ body {
 /* ------------------------------------------------
     ---------------------------------------------------
     ------------------------------------------------ */
-@keyframes slide {
+@keyframes slide-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right-to-left {
   from {
     transform: translateX(0);
   }
@@ -252,7 +260,7 @@ body {
   display: flex;
   gap: 3rem;
   width: calc(200% + 3rem);
-  animation: slide 30s linear infinite;
+  animation: slide-left-to-right 30s linear infinite;
 }
 
 .logo-slide div {
@@ -273,7 +281,7 @@ body {
   .logo-slide {
     gap: 1.5rem;
     width: calc(200% + 1.5rem);
-    animation: slide 20s linear infinite;
+    animation: slide-left-to-right 20s linear infinite;
   }
   .logo-slide div {
     padding: 0.5rem;
@@ -284,6 +292,10 @@ body {
     margin-top: -1.5rem;
   }
 }
+.logos2 .logo-slide {
+  animation: slide-right-to-left 30s linear infinite;
+}
+
 @media (min-width: 681px) {
   .logos2 {
     display: none;
