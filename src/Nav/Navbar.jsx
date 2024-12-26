@@ -76,7 +76,9 @@ const Navbar = () => {
         </li>
         <li className="navbar-item">
           <a
-            href="#contact"
+            href="https://wa.me/1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
             className={active === "#contact" ? "active" : ""}
             onClick={() => {
               setActive("#contact");
