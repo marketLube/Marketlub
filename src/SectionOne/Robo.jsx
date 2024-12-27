@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy, useRef } from "react";
 import { useInView } from "framer-motion";
+import FullPageLoader from "../components/FullPageLoader";
 
 const SplineLazy = lazy(() => import("@splinetool/react-spline"));
 
@@ -60,13 +61,7 @@ export const Robo = () => {
           <p>Unable to load 3D scene. Please refresh or try again later.</p>
         </div>
       ) : (
-        <Suspense
-          fallback={
-            <div className="loading-overlay">
-              <p>Loading 3D Scene...</p>
-            </div>
-          }
-        >
+        <Suspense fallback={<FullPageLoader />}>
           {inView && opacity === 1 && (
             <SplineLazy
               scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"

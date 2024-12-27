@@ -7,7 +7,9 @@ export const LogoSection = () => {
         <div className="logo-slide">
           {/* Render two sets of logos for seamless looping */}
           {logos.map((logo, index) => (
-            <div key={`logo-${index}`}>{logo}</div>
+            <div key={`logo-${index}`}>
+              <img src="./1-01.svg" alt={logo} />
+            </div>
           ))}
           {logos.map((logo, index) => (
             <div key={`logo-duplicate-${index}`}>{logo}</div>

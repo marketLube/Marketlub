@@ -6,12 +6,12 @@ import { WorkSection } from "./SectionFour/WorkSection";
 import { Robo } from "./SectionOne/Robo";
 import { Paragraph } from "./SectionThree/Paragraph";
 import { Boost } from "./SectionTwo/Boost";
-import { ParallaxProvider } from "react-scroll-parallax";
 import Navbar from "./Nav/Navbar";
 import { useRef } from "react";
 import { useHomeScroll } from "./hooks/useHomeScroll";
 import { MobWorkSection } from "./SectionFour/MobWorkSection";
 import MobRobo from "./SectionOne/MobRobo";
+import { Parallax } from "react-scroll-parallax";
 
 function App() {
   const ref = useRef(null);
@@ -21,7 +21,7 @@ function App() {
   useHomeScroll();
 
   return (
-    <ParallaxProvider>
+    <Parallax>
       <Navbar />
       {isTab ? <MobRobo /> : <Robo />}
       <Boost />
@@ -35,7 +35,7 @@ function App() {
         </div>
       </div>
       <div className="divider"></div>
-    </ParallaxProvider>
+    </Parallax>
   );
 }
 
