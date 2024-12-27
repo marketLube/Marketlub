@@ -68,10 +68,10 @@
 
   @media (max-width: 680px) {
     &-contents {
-      width: 100%;
       display: flex;
-      justify-content: space-around;
-      margin-left: 0;
+      justify-content: flex-start;
+      margin-left: 2rem;
+      gap: 1rem;
     }
   }
 }
