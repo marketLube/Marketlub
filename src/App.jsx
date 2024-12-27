@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Lets } from "./Footer/Lets";
 import { GridSection } from "./SectionFive/GridSection";
 import { Selected } from "./SectionFour/Selected";
@@ -6,38 +6,36 @@ import { WorkSection } from "./SectionFour/WorkSection";
 import { Robo } from "./SectionOne/Robo";
 import { Paragraph } from "./SectionThree/Paragraph";
 import { Boost } from "./SectionTwo/Boost";
-import SmallFooter from "./Footer/SmallFooter";
-import { Parallax } from "react-scroll-parallax";
-import { ParallaxProvider } from "react-scroll-parallax";
-import smoothscroll from "smoothscroll-polyfill";
 import Navbar from "./Nav/Navbar";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { useHomeScroll } from "./hooks/useHomeScroll";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { MobWorkSection } from "./SectionFour/MobWorkSection";
+import MobRobo from "./SectionOne/MobRobo";
+import { Parallax } from "react-scroll-parallax";
 
 function App() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+
+  const isTab = window.innerWidth < 992;
+
   useHomeScroll();
 
   return (
-    <ParallaxProvider>
+    <Parallax>
       <Navbar />
-      <Robo />
+      {isTab ? <MobRobo /> : <Robo />}
       <Boost />
       <div style={{ backgroundColor: "white" }}>
         <Paragraph />
-        <WorkSection />
-        <Selected />
+        {isTab ? <MobWorkSection /> : <WorkSection />}
+        {!isTab ? <Selected /> : null}
         <div className="bottom-container">
           <GridSection />
           <Lets />
         </div>
       </div>
       <div className="divider"></div>
-    </ParallaxProvider>
+    </Parallax>
   );
 }
 

@@ -1,6 +1,7 @@
+@use "../../base/responsive" as mixins;
+
 .work-section {
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.959);
   position: relative;
 
   &__header-container {
@@ -16,9 +17,9 @@
   }
 
   &__title {
-    font-size: 4.2rem; //new
-    padding-top: 3rem; //new
-    font-weight: 600; //new
+    font-size: 4.2rem;
+    padding-top: 3rem;
+    font-weight: 600;
     color: #fff;
     text-align: start;
   }
@@ -56,16 +57,13 @@
     position: sticky;
     top: 16.5rem;
     height: 100vh;
-    // display: flex;
-    // align-items: end;
-    // justify-content: center;
   }
 
   &__cover {
     height: 25vh;
     position: sticky;
     top: 90vh;
-    background-color: rgb(8, 7, 7);
+    background-color: rgb(0, 0, 0);
     z-index: 1000;
     font-size: 15.7rem;
     text-wrap: nowrap;
@@ -74,13 +72,13 @@
   }
 
   &__non-sticky {
-    position: sticky;
-    height: auto;
+    position: static !important;
+    // opacity: 0;
   }
 
   &__imageDiv {
     grid-column: 1 / 2;
-    position: sticky;
+    // position: sticky;
     top: 0;
     text-align: center;
     scroll-behavior: smooth;
@@ -89,9 +87,6 @@
 
   &__workImage {
     width: 100%;
-    // max-width: 500px;
-    // width: 500px;
-    // height: 550px;
     object-fit: cover;
   }
 
@@ -102,6 +97,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     display: flex;
+    padding-top: 7rem;
   }
 
   &__pill-item {
@@ -163,11 +159,6 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-    }
   }
 
   &__image {
@@ -175,23 +166,12 @@
     height: 630px;
     background-color: #0000ff;
     margin-right: 2rem;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
   }
 
   &__details {
     width: 50%;
     display: flex;
     flex-direction: column;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      text-align: center;
-    }
   }
 
   &__tabs {
@@ -243,5 +223,71 @@
   }
 }
 
-@media (min-width: 1600px) {
+.mob-work-section {
+  background-color: black;
+  padding: 2rem;
+
+  &__title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: start;
+    margin-bottom: 1rem;
+  }
+
+  &__scroll-container {
+    height: fit-content;
+    position: relative;
+    height: 100%;
+  }
+
+  &__item {
+    height: 100vh;
+    position: sticky;
+    top: 3.2rem;
+    background-color: black;
+    &-image-container {
+      height: 50%;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  &__pill-item {
+    color: white;
+    background-color: black;
+    border: 1px solid #0000ff;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    display: flex;
+    overflow: hidden;
+    padding: 5px 15px;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  & .work-section__heading-style {
+    font-size: 1.5rem;
+  }
+
+  & .work-section__para-style {
+    font-size: 0.8rem !important;
+  }
+
+  & .work-section__linktag {
+    font-size: 0.8rem !important;
+    width: fit-content;
+    margin-top: 1rem;
+  }
 }
