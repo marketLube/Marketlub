@@ -289,7 +289,11 @@ body {
   }
   .logos2 {
     display: block;
-    margin-top: -1.5rem;
+    margin-top: 0rem;
+  }
+  .logo-image {
+    width: 50px;
+    height: auto;
   }
 }
 .logos2 .logo-slide {
@@ -301,6 +305,11 @@ body {
     display: none;
   }
 }
+.logo-image {
+  width: 100px;
+  height: auto;
+}
+
 .paragraph-container {
   height: 400vh;
 }
