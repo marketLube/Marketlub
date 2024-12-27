@@ -1,20 +1,11 @@
 export const LogoSection = () => {
   const logos = [
-    "src/assets/images/slideLogo/bmw.png",
-    "src/assets/images/slideLogo/face.png",
-    "src/assets/images/slideLogo/google.png",
-    "src/assets/images/slideLogo/zara.avif",
-    "src/assets/images/slideLogo/bmw.png",
-    "src/assets/images/slideLogo/face.png",
-    "src/assets/images/slideLogo/google.png",
-    "src/assets/images/slideLogo/zara.avif",
-    "src/assets/images/slideLogo/bmw.png",
-    "src/assets/images/slideLogo/face.png",
-    "src/assets/images/slideLogo/google.png",
-    "src/assets/images/slideLogo/zara.avif",
-    "src/assets/images/slideLogo/face.png",
-    "src/assets/images/slideLogo/google.png",
-    "src/assets/images/slideLogo/zara.avif",
+    "src/assets/images/slideLogo/one.png",
+    "src/assets/images/slideLogo/two.png",
+    "src/assets/images/slideLogo/four.png",
+    "src/assets/images/slideLogo/six.png",
+    "src/assets/images/slideLogo/eight.png",
+    "src/assets/images/slideLogo/nine.png",
   ];
 
   return (
