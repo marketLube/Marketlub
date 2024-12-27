@@ -5,7 +5,7 @@
   z-index: 200000;
   position: relative;
   bottom: 0;
-
+  overflow: hidden;
   &__filters {
     display: flex;
     justify-content: start;

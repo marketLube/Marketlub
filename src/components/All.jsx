@@ -105,7 +105,9 @@ function All() {
             className="grid-container__boxitemAll"
             style={{
               transform: `translateY(${translateY})`,
-              transition: `transform 1s ease, opacity 1s ease ${i * 0.2}s`,
+              transition: `transform 1s ease-in-out, opacity 1s ease-in-out ${
+                i * 0.2
+              }s`,
               opacity: opacity,
             }}
           >

@@ -644,6 +644,7 @@ body {
   z-index: 200000;
   position: relative;
   bottom: 0;
+  overflow: hidden;
 }
 .grid-container__filters {
   display: flex;
