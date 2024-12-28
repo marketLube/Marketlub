@@ -1,106 +1,85 @@
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
-import Ever1 from "../assets/images/Branding/Evergeen/eve1.png";
-import Ever2 from "../assets/images/Branding/Evergeen/eve2.png";
-import Ever3 from "../assets/images/Branding/Evergeen/eve3.png";
-import Ever4 from "../assets/images/Branding/Evergeen/eve4.png";
-import Ever5 from "../assets/images/Branding/Evergeen/eve5.png";
-import Kurusi1 from "../assets/images/Branding/Kursii/kursii1.png";
-import Kurusi2 from "../assets/images/Branding/Kursii/kursii2.png";
-import Kurusi3 from "../assets/images/Branding/Kursii/kursii3.png";
-import Kurusi4 from "../assets/images/Branding/Kursii/kursii4.png";
-import Kurusi5 from "../assets/images/Branding/Kursii/kursii5.png";
-import Kurusi6 from "../assets/images/Branding/Kursii/kursii6.png";
-import Kurusi7 from "../assets/images/Branding/Kursii/kursii7.png";
-import Kurusi8 from "../assets/images/Branding/Kursii/kursii8.png";
-import Kurusi9 from "../assets/images/Branding/Kursii/kursii9.png";
-import Kurusi10 from "../assets/images/Branding/Kursii/kursii10.png";
-import Tea1 from "../assets/images/Branding/TeaToday/tea1.png";
-import Tea2 from "../assets/images/Branding/TeaToday/tea2.png";
-import Tea3 from "../assets/images/Branding/TeaToday/tea3.png";
-import Tea4 from "../assets/images/Branding/TeaToday/tea4.png";
-import Tea5 from "../assets/images/Branding/TeaToday/tea5.png";
-import Tea6 from "../assets/images/Branding/TeaToday/tea6.png";
-import Tea7 from "../assets/images/Branding/TeaToday/tea7.png";
-import Tea8 from "../assets/images/Branding/TeaToday/tea8.png";
+import Brandbook1 from "../assets/Brandbook/1-01.png";
+import Brandbook2 from "../assets/Brandbook/1-02.png";
+import Brandbook3 from "../assets/Brandbook/1-03.png";
+import Brandbook4 from "../assets/Brandbook/1-04.png";
+import Brandbook5 from "../assets/Brandbook/1-05.png";
+import Brandbook6 from "../assets/Brandbook/1-06.png";
+import Brandbook7 from "../assets/Brandbook/1-07.png";
+import Brandbook8 from "../assets/Brandbook/1-08.png";
+import Brandbook9 from "../assets/Brandbook/1-09.png";
+import Brandbook10 from "../assets/Brandbook/1-10.png";
+import Brandbook11 from "../assets/Brandbook/1-11.png";
+import Brandbook12 from "../assets/Brandbook/1-12.png";
+import Brandbook13 from "../assets/Brandbook/1-13.png";
+import Brandbook14 from "../assets/Brandbook/1-14.png";
+import Brandbook15 from "../assets/Brandbook/1-15.png";
+import Brandbook17 from "../assets/Brandbook/1-17.png";
+import Brandbook18 from "../assets/Brandbook/1-18.png";
+import Brandbook19 from "../assets/Brandbook/1-19.png";
+import Brandbook20 from "../assets/Brandbook/1-20.png";
+import Brandbook23 from "../assets/Brandbook/1-23.png";
+import Brandbook24 from "../assets/Brandbook/1-24.png";
+import Brandbook25 from "../assets/Brandbook/1-25.png";
+import Brandbook26 from "../assets/Brandbook/1-26.png";
+import Brandbook27 from "../assets/Brandbook/1-27.png";
+import Brandbook28 from "../assets/Brandbook/1-28.png";
 
-const imageContents = [
-  { name: "Evergreen", images: [Ever1, Ever2, Ever3, Ever4, Ever5] },
-  {
-    name: "Kursii",
-    images: [
-      Kurusi1,
-      Kurusi2,
-      Kurusi3,
-      Kurusi4,
-      Kurusi5,
-      Kurusi6,
-      Kurusi7,
-      Kurusi8,
-      Kurusi9,
-      Kurusi10,
-    ],
-  },
-  // { name: "Motocraze", images: [MotoC1, MotoC2, MotoC3] },
-  // { name: "Proteinut", images: [Protien1, Protien2] },
-  {
-    name: "TeaToday",
-    images: [
-      Tea1,
-      Tea2,
-      Tea3,
-      Tea4,
-      Tea5,
-      Tea6,
-      Tea7,
-      Tea8,
-      // Tea9,
-      // Tea10,
-      // Tea11,
-    ],
-  },
-];
-
-const scales = [10, 20, 40, 80, 100];
+import Brandbook16 from "../assets/Brandbook/1-16.png";
+import Brandbook21 from "../assets/Brandbook/1-21.png";
+import Brandbook22 from "../assets/Brandbook/1-22.png";
+import Brandbook29 from "../assets/Brandbook/1-29.png";
 
 function Branding() {
   const ref = useRef(null);
-  const isAnim = useInView(ref);
 
-  let k = 0;
+  // Create an array of all Brandbook images
+  const brandImages = [
+    Brandbook16,
+    Brandbook1,
+    Brandbook2,
+    Brandbook22,
+    Brandbook3,
+    Brandbook29,
+    Brandbook4,
+    Brandbook5,
+    Brandbook6,
+    Brandbook7,
+    Brandbook8,
+    Brandbook9,
+    Brandbook10,
+    Brandbook11,
+    Brandbook12,
+    Brandbook13,
+    Brandbook14,
+    Brandbook15,
+    Brandbook17,
+    Brandbook18,
+    Brandbook19,
+    Brandbook20,
+    Brandbook21,
+    Brandbook23,
+    Brandbook24,
+    Brandbook25,
+    Brandbook26,
+    Brandbook27,
+    Brandbook28,
+  ];
+
   return (
     <div className="grid-container__bluebox" ref={ref}>
-      {imageContents?.map((content, i) => {
-        if (i % 4 === 0) {
-          k = 0;
-        }
-
-        const translateY = isAnim ? "0" : `${scales[k] * 1.5}rem`;
-        k = (k + 1) % scales.length;
-
-        return (
-          <div
-            key={i}
-            className="grid-container__boxitemBrand"
-            // style={{
-            //   transform: `translateY(${translateY})`,
-            //   transition: "transform 1s ease",
-            // }}
-          >
-            {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapperBrand">
-                <img
-                  src={imgSrc}
-                  alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimageBrand"
-                />
-              </div>
-            ))}
-          </div>
-        );
-      })}
+      {brandImages.map((image, index) => (
+        <div className="grid-container__bluebox-item" key={index}>
+          <img
+            key={index}
+            src={image}
+            alt={`Brandbook page ${index + 1}`}
+            className="brand-image"
+          />
+        </div>
+      ))}
     </div>
   );
 }
-
 export default Branding;

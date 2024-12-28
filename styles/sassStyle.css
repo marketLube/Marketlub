@@ -318,7 +318,11 @@ body {
   }
   .logos2 {
     display: block;
-    margin-top: -1.5rem;
+    margin-top: 0rem;
+  }
+  .logo-image {
+    width: 50px;
+    height: auto;
   }
 }
 .logos2 .logo-slide {
@@ -330,6 +334,14 @@ body {
     display: none;
   }
 }
+.logo-image {
+  height: 8rem;
+}
+
+.navbar-icon {
+  height: 8rem;
+}
+
 .paragraph-container {
   height: 400vh;
 }
@@ -681,6 +693,16 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  overflow: hidden;
+}
+.grid-container__bluebox-item {
+  background-color: blue;
+  height: 22rem;
+  overflow: hidden;
+}
+.grid-container__bluebox-item img {
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (max-width: 1200px) {
   .grid-container__bluebox {
@@ -1060,10 +1082,10 @@ body {
 }
 @media (max-width: 680px) {
   .small-footer-contents {
-    width: 100%;
     display: flex;
-    justify-content: space-around;
-    margin-left: 0;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    gap: 1rem;
   }
 }
 

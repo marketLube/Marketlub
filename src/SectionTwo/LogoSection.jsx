@@ -1,5 +1,12 @@
 export const LogoSection = () => {
-  const logos = Array.from({ length: 15 }, (_, i) => `Logo ${i + 1}`);
+  const logos = [
+    "src/assets/images/slideLogo/one.png",
+    "src/assets/images/slideLogo/two.png",
+    "src/assets/images/slideLogo/four.png",
+    "src/assets/images/slideLogo/six.png",
+    "src/assets/images/slideLogo/eight.png",
+    "src/assets/images/slideLogo/nine.png",
+  ];
 
   return (
     <>
@@ -7,21 +14,44 @@ export const LogoSection = () => {
         <div className="logo-slide">
           {/* Render two sets of logos for seamless looping */}
           {logos.map((logo, index) => (
-            <div key={`logo-${index}`}>
-              <img src="./1-01.svg" alt={logo} />
-            </div>
+            <img
+              key={`logo-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
         </div>
       </div>
@@ -29,19 +59,44 @@ export const LogoSection = () => {
         <div className="logo-slide">
           {/* Render two sets of logos for seamless looping */}
           {logos.map((logo, index) => (
-            <div key={`logo-${index}`}>{logo}</div>
+            <img
+              key={`logo-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
           {logos.map((logo, index) => (
-            <div key={`logo-duplicate-${index}`}>{logo}</div>
+            <img
+              key={`logo-duplicate-${index}`}
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              className="logo-image"
+            />
           ))}
         </div>
       </div>
