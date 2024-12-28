@@ -335,7 +335,11 @@ body {
   }
 }
 .logo-image {
-  height: 4rem;
+  height: 8rem;
+}
+
+.navbar-icon {
+  height: 8rem;
 }
 
 .paragraph-container {
@@ -688,6 +692,16 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  overflow: hidden;
+}
+.grid-container__bluebox-item {
+  background-color: blue;
+  height: 22rem;
+  overflow: hidden;
+}
+.grid-container__bluebox-item img {
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (max-width: 1200px) {
   .grid-container__bluebox {
