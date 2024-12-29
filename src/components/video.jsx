@@ -5,6 +5,8 @@ const vidTwo =
 
 const vidThree =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403114/nov_44_ireland_vu2cgy.mp4";
+const vidFive =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735472094/watsapp_woodux_1_1_tud2bs.mp4";
 const vidFour =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403070/zaman_1skymark_hwd1jo.mp4";
 const vidSix =
@@ -14,7 +16,7 @@ const vidSeven =
 const vidEight =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735395955/aftbefr_1_uyn5wg.mp4";
 const vidNine =
-  "https://storage.googleapis.com/kl-website-432404.appspot.com/assets//KL_Web_Video_V2_w7dz6j_3ff22704e4/KL_Web_Video_V2_w7dz6j_3ff22704e4.mp4";
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735472094/klaanonam_final_1_xmamyk.mp4";
 const vidTen =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403115/oct_9_RE_EDIT_german_public_vlvrmf.mp4";
 const vidEleven =
@@ -107,7 +109,7 @@ function Video() {
       </div>
       <div className="video-box__item video-box-five">
         <video
-          src={vidTwo}
+          src={vidFive}
           muted
           loop
           preload="auto"
