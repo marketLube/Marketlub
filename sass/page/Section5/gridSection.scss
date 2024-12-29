@@ -346,10 +346,9 @@
 
 .video-box {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(18, 100px);
-
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  padding: 1rem;
 
   &__item {
     background-color: rgb(0, 0, 0);
@@ -359,34 +358,56 @@
     height: 100%;
   }
 
-  &-one {
-    grid-row: span 6;
-    grid-column: span 4;
+  // Portrait videos
+  &-one,
+  &-three {
+    grid-column: span 1;
+    aspect-ratio: 9/16;
   }
 
-  &-two {
-    grid-row: span 3;
-    grid-column: span 8;
+  // Landscape videos
+  &-two,
+  &-six {
+    grid-column: span 2;
     aspect-ratio: 16/9;
   }
 
-  &-three {
-    grid-row: span 6;
-    grid-column: span 4;
-  }
-
-  &-four {
-    grid-column: span 3;
-    grid-row: span 3;
-  }
-
+  &-four,
   &-five {
-    grid-column: span 5;
-    grid-row: span 3;
+    grid-column: span 1;
+    aspect-ratio: 16/9;
   }
 
-  &-six {
-    grid-column: span 8;
-    grid-row: span 3;
+  // Responsive breakpoints
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    &-one,
+    &-three {
+      grid-column: span 1;
+    }
+
+    &-two,
+    &-six {
+      grid-column: span 2;
+    }
+
+    &-four,
+    &-five {
+      grid-column: span 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+
+    &-one,
+    &-two,
+    &-three,
+    &-four,
+    &-five,
+    &-six {
+      grid-column: span 1;
+    }
   }
 }
