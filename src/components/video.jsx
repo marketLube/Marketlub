@@ -1,27 +1,3 @@
-const brandImages = [
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403115/OUT_01_dxdlsn.mp4",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-  "video-1",
-];
 const vidOne =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735395959/DABZEE_1_1_dabt2r.mp4";
 const vidTwo =
@@ -53,6 +29,7 @@ function Video() {
           src={vidOne}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -69,6 +46,7 @@ function Video() {
           src={vidTwo}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -85,6 +63,7 @@ function Video() {
           src={vidThree}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -101,6 +80,7 @@ function Video() {
           src={vidFour}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -117,6 +97,7 @@ function Video() {
           src={vidTwo}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -133,6 +114,7 @@ function Video() {
           src={vidTwo}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -149,6 +131,7 @@ function Video() {
           src={vidSeven}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -165,6 +148,7 @@ function Video() {
           src={vidEight}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -181,6 +165,7 @@ function Video() {
           src={vidNine}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -197,6 +182,7 @@ function Video() {
           src={vidTen}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -213,6 +199,7 @@ function Video() {
           src={vidEleven}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -229,6 +216,7 @@ function Video() {
           src={vidTwelve}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -245,6 +233,7 @@ function Video() {
           src={vidThirteen}
           muted
           loop
+          preload="auto"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
