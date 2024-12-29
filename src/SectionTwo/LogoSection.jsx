@@ -1,12 +1,12 @@
+import logoOne from "../assets/images/slideLogo/one.png";
+import logoTwo from "../assets/images/slideLogo/two.png";
+import logoFour from "../assets/images/slideLogo/four.png";
+import logoSix from "../assets/images/slideLogo/six.png";
+import logoEight from "../assets/images/slideLogo/eight.png";
+import logoNine from "../assets/images/slideLogo/nine.png";
+
 export const LogoSection = () => {
-  const logos = [
-    "src/assets/images/slideLogo/one.png",
-    "src/assets/images/slideLogo/two.png",
-    "src/assets/images/slideLogo/four.png",
-    "src/assets/images/slideLogo/six.png",
-    "src/assets/images/slideLogo/eight.png",
-    "src/assets/images/slideLogo/nine.png",
-  ];
+  const logos = [logoOne, logoTwo, logoFour, logoSix, logoEight, logoNine];
 
   return (
     <>

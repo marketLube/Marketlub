@@ -15,6 +15,16 @@
     transform: translateX(-100%);
   }
 }
+.logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+.navbar-icon {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
 
 .logos {
   overflow: hidden;
@@ -49,29 +59,37 @@
 }
 @media only screen and (max-width: 680px) {
   .logos {
-    height: 80px;
+    height: 60px;
     margin-top: 2rem;
   }
 
+  .logos2 {
+    height: 60px;
+    margin-top: 0rem;
+  }
+
   .logo-slide {
-    gap: 1.5rem;
-    width: calc(200% + 1.5rem);
+    gap: 1rem;
+    width: calc(200% + 1rem);
     animation: slide-left-to-right 20s linear infinite;
   }
 
   .logo-slide div {
     padding: 0.5rem;
     font-size: 0.8rem;
-  }
-
-  .logos2 {
-    display: block;
-    margin-top: 0rem;
+    transform: scale(0.8);
   }
 
   .logo-image {
-    width: 50px;
-    height: auto;
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .navbar-icon {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
   }
 }
 
@@ -85,11 +103,4 @@
   .logos2 {
     display: none;
   }
-}
-
-.logo-image {
-  height: 8rem;
-}
-.navbar-icon {
-  height: 8rem;
 }
