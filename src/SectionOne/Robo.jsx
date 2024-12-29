@@ -40,8 +40,6 @@ export const Robo = () => {
     };
   }, []);
 
-  const isTab = window.innerWidth < 992;
-
   return (
     <div
       ref={ref}
@@ -59,7 +57,7 @@ export const Robo = () => {
     >
       {hasError ? (
         <div className="error-message">
-          <p>Unable to load 3D scene. Please refresh or try again later.</p>
+          <Loader />
         </div>
       ) : (
         <Suspense fallback={<Loader />}>
