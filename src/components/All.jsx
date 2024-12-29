@@ -115,7 +115,6 @@ function All() {
               transition: `transform 1s ease-in-out, opacity 1s ease-in-out ${
                 i * 0.2
               }s`,
-              opacity: opacity,
             }}
           >
             <div className="grid-container__image-wrapperAll">
