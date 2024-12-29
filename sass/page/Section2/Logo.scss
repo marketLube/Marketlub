@@ -21,9 +21,8 @@
   object-fit: contain;
 }
 .navbar-icon {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
+  width: 150px; /* Increase this value as needed */
+  height: auto; /* Maintains aspect ratio */
 }
 
 .logos {
