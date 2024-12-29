@@ -84,6 +84,7 @@ html {
 body {
   z-index: -3;
   background-color: lightgray;
+  overflow: hidden;
 }
 
 .main {
@@ -1036,6 +1037,68 @@ body {
 .video-box-six {
   grid-column: span 8;
   grid-row: span 3;
+}
+@media screen and (max-width: 1200px) {
+  .video-box {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(24, 80px);
+  }
+  .video-box-one {
+    grid-column: span 6;
+  }
+  .video-box-two {
+    grid-column: span 6;
+  }
+  .video-box-three {
+    grid-column: span 6;
+  }
+  .video-box-four {
+    grid-column: span 4;
+  }
+  .video-box-five {
+    grid-column: span 8;
+  }
+  .video-box-six {
+    grid-column: span 12;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-box {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(auto, 70px);
+    gap: 0.8rem;
+  }
+  .video-box-one {
+    grid-column: span 8;
+    grid-row: span 8;
+  }
+  .video-box-two {
+    grid-column: span 8;
+    grid-row: span 3;
+  }
+  .video-box-three {
+    grid-column: span 8;
+    grid-row: span 10;
+  }
+  .video-box-four {
+    grid-column: span 8;
+    grid-row: span 8;
+  }
+  .video-box-five {
+    grid-column: span 8;
+    grid-row: span 4;
+  }
+  .video-box-six {
+    grid-column: span 8;
+    grid-row: span 4;
+  }
+}
+@media screen and (max-width: 480px) {
+  .video-box {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(36, 60px);
+    gap: 0.5rem;
+  }
 }
 
 .bottom-container {
