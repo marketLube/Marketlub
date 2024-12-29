@@ -378,8 +378,6 @@ body {
   background-color: rgb(0, 0, 0);
   z-index: 10;
   padding-left: 15rem;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
   width: 100%;
   z-index: 1000;
 }
@@ -401,7 +399,7 @@ body {
 .work-section__combo-set {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 3rem 15rem;
+  padding: 0rem 15rem;
   gap: 3.5rem;
 }
 .work-section__second-tab {
@@ -410,14 +408,13 @@ body {
 }
 .work-section__scroll-container {
   position: static;
-  top: 10rem;
   display: flex;
   flex-direction: column;
   background-color: rgb(0, 0, 0);
 }
 .work-section__sticky-section {
   position: sticky;
-  top: 16.5rem;
+  top: 12rem;
   height: 100vh;
 }
 .work-section__cover {
@@ -453,6 +450,7 @@ body {
   align-items: flex-start;
   display: flex;
   padding-top: 7rem;
+  width: 70%;
 }
 .work-section__pill-item {
   color: white;
@@ -1012,6 +1010,49 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.video-box {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(18, 100px);
+  gap: 1rem;
+}
+.video-box__item {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+.video-box-one {
+  grid-row: span 6;
+  grid-column: span 4;
+}
+.video-box-two {
+  grid-row: span 3;
+  grid-column: span 8;
+  aspect-ratio: 16/9;
+}
+.video-box-three {
+  grid-row: span 6;
+  grid-column: span 4;
+}
+.video-box-four {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.video-box-five {
+  grid-column: span 5;
+  grid-row: span 3;
+}
+.video-box-six {
+  grid-column: span 8;
+  grid-row: span 3;
+}
+.video-box-six {
+  grid-column: span 8;
+  grid-row: span 3;
+}
+
 .bottom-container {
   position: relative;
 }

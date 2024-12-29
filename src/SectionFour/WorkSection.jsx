@@ -78,7 +78,7 @@ export const WorkSection = () => {
           ))}
         </div>
         <div className="work-section__second-tab">
-          <div style={{ width: "75%" }}>
+          <div style={{ width: "100%" }}>
             {items.map((item, index) => (
               <div className="work-section__rightBottomDiv" key={index}>
                 <div className="work-section__pills">

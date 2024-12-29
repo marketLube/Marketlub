@@ -10,8 +10,6 @@
     background-color: rgb(0, 0, 0);
     z-index: 10;
     padding-left: 15rem;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
     width: 100%;
     z-index: 1000;
   }
@@ -36,7 +34,7 @@
   &__combo-set {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3rem 15rem;
+    padding: 0rem 15rem;
     gap: 3.5rem;
   }
 
@@ -47,7 +45,7 @@
 
   &__scroll-container {
     position: static;
-    top: 10rem;
+    // top: 10rem;
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
@@ -55,7 +53,7 @@
 
   &__sticky-section {
     position: sticky;
-    top: 16.5rem;
+    top: 12rem;
     height: 100vh;
   }
 
@@ -98,6 +96,7 @@
     align-items: flex-start;
     display: flex;
     padding-top: 7rem;
+    width: 70%;
   }
 
   &__pill-item {

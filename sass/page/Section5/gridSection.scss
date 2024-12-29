@@ -88,19 +88,6 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
-
-  // &__boxitem {
-  //   border-radius: 8px;
-  //   background-color: transparent;
-  //   // height: 26rem;
-  //   aspect-ratio: 1;
-  //   position: relative;
-  //   transition: transform 1s ease;
-  //   overflow: hidden;
-  //   display: grid;
-  //   grid-template-columns: 1fr;
-  //   grid-template-rows: 1fr;
-  // }
 }
 
 // ALL
@@ -379,5 +366,56 @@
   }
   .grid-container__blueboxVideo {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.video-box {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(18, 100px);
+
+  gap: 1rem;
+
+  &__item {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &-one {
+    grid-row: span 6;
+    grid-column: span 4;
+  }
+
+  &-two {
+    grid-row: span 3;
+    grid-column: span 8;
+    aspect-ratio: 16/9;
+  }
+
+  &-three {
+    grid-row: span 6;
+    grid-column: span 4;
+  }
+
+  &-four {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
+  &-five {
+    grid-column: span 5;
+    grid-row: span 3;
+  }
+
+  &-six {
+    grid-column: span 8;
+    grid-row: span 3;
+  }
+  &-six {
+    grid-column: span 8;
+    grid-row: span 3;
   }
 }
