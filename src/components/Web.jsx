@@ -10,10 +10,14 @@ import Moto from "../assets/images/moto.jpeg";
 import Accordings2 from "../assets/images/accoundings2.jpeg";
 
 const imageContents = [
-  { name: "HIline", images: [HIlineM, HIlineL] },
-  { name: "ProtienNut", images: [ProtienNutM, ProtienNutT] },
-  { name: "Skymark", images: [SkymarkM, SkymarkL, Accordings2] },
-  { name: "Moto", images: [Moto] },
+  HIlineM,
+  HIlineL,
+  ProtienNutM,
+  ProtienNutT,
+  SkymarkM,
+  SkymarkL,
+  Accordings2,
+  Moto,
 ];
 
 const scales = [10, 20, 40, 80, 100];
@@ -25,7 +29,7 @@ function Web() {
   let k = 0;
   return (
     <div className="grid-container__bluebox" ref={ref}>
-      {imageContents?.map((content, i) => {
+      {imageContents.map((imgSrc, i) => {
         if (i % 4 === 0) {
           k = 0;
         }
@@ -44,15 +48,13 @@ function Web() {
               opacity: opacity,
             }}
           >
-            {content.images.map((imgSrc, index) => (
-              <div key={index} className="grid-container__image-wrapperWeb">
-                <img
-                  src={imgSrc}
-                  alt={`${content.name}-content-${index}`}
-                  className="grid-container__hoverimageWeb"
-                />
-              </div>
-            ))}
+            <div className="grid-container__image-wrapperWeb">
+              <img
+                src={imgSrc}
+                alt={`content-${i}`}
+                className="grid-container__hoverimageWeb"
+              />
+            </div>
           </div>
         );
       })}

@@ -1,12 +1,24 @@
 import { Parallax } from "react-scroll-parallax";
-import Image1 from "../assets/images/image1.jpg";
-import Image2 from "../assets/images/image2.jpg";
-import Image3 from "../assets/images/image3.jpg";
-import Image4 from "../assets/images/image4.jpg";
-import Image5 from "../assets/images/image5.jpg";
+import Image1 from "../assets/Services/Branding & Designing 2.png";
+import Image2 from "../assets/Services/perphomance.png";
+import Image3 from "../assets/Services/VideoProduction 2.png";
+import Image4 from "../assets/images/protienNutMob.jpeg";
+import Image5 from "../assets/images/accoundings2.jpeg";
 import { GoArrowDownLeft } from "react-icons/go";
+import { useEffect } from "react";
 
 export const WorkSection = () => {
+  useEffect(() => {
+    const images = [Image1, Image2, Image3, Image4, Image5];
+    images.forEach((image) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = image;
+      document.head.appendChild(link);
+    });
+  }, []);
+
   const items = [
     {
       image: Image1,

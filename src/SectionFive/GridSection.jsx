@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import Web from "../components/Web";

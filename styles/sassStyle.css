@@ -83,6 +83,7 @@ html {
 
 body {
   z-index: -3;
+  background-color: lightgray;
 }
 
 .main {
@@ -270,8 +271,7 @@ body {
   }
 }
 .logo-image {
-  height: 60px;
-  width: auto;
+  height: 50%;
   object-fit: contain;
 }
 
@@ -299,8 +299,10 @@ body {
 .logo-slide {
   display: flex;
   gap: 3rem;
-  width: calc(200% + 3rem);
+  height: 5rem;
   animation: slide-left-to-right 30s linear infinite;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-slide div {
@@ -311,6 +313,11 @@ body {
   border-radius: 5px;
   text-align: center;
   font-size: 1rem;
+}
+
+.logo-1 {
+  height: 80px;
+  padding-top: 0.5rem;
 }
 
 @media only screen and (max-width: 680px) {
@@ -452,6 +459,7 @@ body {
 .work-section__workImage {
   width: 100%;
   object-fit: cover;
+  height: 100%;
 }
 .work-section__pills {
   grid-column-gap: 0.75rem;
@@ -754,31 +762,6 @@ body {
   transform: translateY(0);
 }
 
-.grid-container__boxitemAll:hover .grid-container__image-wrapperAll {
-  transform: translateY(-100%);
-}
-
-.grid-container__image-wrapperAll:nth-child(1) {
-  transform: translateY(0) !important;
-  transition: none;
-}
-
-.grid-container__image-wrapperAll:nth-child(2) {
-  transition-delay: 1.45555s;
-}
-
-.grid-container__image-wrapperAll:nth-child(3) {
-  transition-delay: 1s;
-}
-
-.grid-container__image-wrapperAll:nth-child(4) {
-  transition-delay: 0.5s;
-}
-
-.grid-container__image-wrapperAll:nth-child(5) {
-  transition-delay: 0s;
-}
-
 .grid-container__hoverimageAll {
   display: block;
   width: 100%;
@@ -905,11 +888,6 @@ body {
   width: 100%;
   height: 100%;
   transition: transform 2.5s ease, bottom 2.5s ease;
-}
-
-.grid-container__boxitemPhoto:hover .grid-container__image-wrapperPhoto img {
-  transform: translateY(-100%);
-  transition-delay: 1s;
 }
 
 .grid-container__hoverimagePhoto {
@@ -1280,7 +1258,7 @@ body {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 4rem;
+  top: 6rem;
   width: 100%;
   z-index: 100000000000;
   height: 0px;
@@ -1294,8 +1272,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  padding: 1rem;
-  border-radius: 6rem;
+  padding: 1rem 0.7rem;
+  border-radius: 8rem;
 }
 
 .navbar-item a {

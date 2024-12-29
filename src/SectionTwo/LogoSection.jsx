@@ -12,92 +12,50 @@ export const LogoSection = () => {
     <>
       <div className="logos">
         <div className="logo-slide">
-          {/* Render two sets of logos for seamless looping */}
+          {/* First set with unique classes */}
           {logos.map((logo, index) => (
             <img
               key={`logo-${index}`}
               src={logo}
               alt={`Logo ${index + 1}`}
-              className="logo-image"
+              className={`logo-image logo-${index + 1}`}
             />
           ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
+          {/* Duplicate sets */}
+          {[...Array(4)].map((_, setIndex) =>
+            logos.map((logo, index) => (
+              <img
+                key={`logo-duplicate-${setIndex}-${index}`}
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                className={`logo-image logo-${index + 1}`}
+              />
+            ))
+          )}
         </div>
       </div>
       <div className="logos2">
         <div className="logo-slide">
-          {/* Render two sets of logos for seamless looping */}
+          {/* First set with unique classes */}
           {logos.map((logo, index) => (
             <img
               key={`logo-${index}`}
               src={logo}
               alt={`Logo ${index + 1}`}
-              className="logo-image"
+              className={`logo-image logo-${index + 1}`}
             />
           ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
-          {logos.map((logo, index) => (
-            <img
-              key={`logo-duplicate-${index}`}
-              src={logo}
-              alt={`Logo ${index + 1}`}
-              className="logo-image"
-            />
-          ))}
+          {/* Duplicate sets */}
+          {[...Array(4)].map((_, setIndex) =>
+            logos.map((logo, index) => (
+              <img
+                key={`logo-duplicate-${setIndex}-${index}`}
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                className={`logo-image logo-${index + 1}`}
+              />
+            ))
+          )}
         </div>
       </div>
     </>
