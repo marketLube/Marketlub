@@ -1059,10 +1059,6 @@ body {
   grid-column: span 8;
   grid-row: span 3;
 }
-.video-box-six {
-  grid-column: span 8;
-  grid-row: span 3;
-}
 
 .bottom-container {
   position: relative;

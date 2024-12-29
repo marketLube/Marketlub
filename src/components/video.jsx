@@ -1,11 +1,14 @@
 const vidOne =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735395959/DABZEE_1_1_dabt2r.mp4";
 const vidTwo =
-  "https://storage.googleapis.com/kl-website-432404.appspot.com/assets//KL_Web_Video_V2_w7dz6j_3ff22704e4/KL_Web_Video_V2_w7dz6j_3ff22704e4.mp4";
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462541/FINAL_2_ixb2nj.mp4";
+
 const vidThree =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403114/nov_44_ireland_vu2cgy.mp4";
 const vidFour =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403070/zaman_1skymark_hwd1jo.mp4";
+const vidSix =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462366/dec_41_event_drone_bx8qmw.mp4";
 const vidSeven =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403056/thaski_vid2_h6ofv1.mp4";
 const vidEight =
@@ -20,6 +23,16 @@ const vidTwelve =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403056/reel02_u1ais2.mp4";
 const vidThirteen =
   "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735396036/fjahan_1_1_m0wqdj.mp4";
+const vidFourteen =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462747/final_1_ezfirq.mp4";
+const vidFifteen =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462746/BOSQ_2_2_tpdskg.mp4";
+const vidSixteen =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462747/BOSQ_2_1_bdrjhh.mp4";
+const vidSeventeen =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462745/BOSQ_2_clmfov.mp4";
+const vidEighteen =
+  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403114/nov_38_event_video_megha_psezqp.mp4";
 
 function Video() {
   return (
@@ -111,7 +124,7 @@ function Video() {
       </div>
       <div className="video-box__item video-box-six">
         <video
-          src={vidTwo}
+          src={vidSix}
           muted
           loop
           preload="auto"
@@ -211,7 +224,7 @@ function Video() {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
-      <div className="video-box__item video-box-one video-box-eleven">
+      <div className="video-box__item video-box-one video-box-twelve">
         <video
           src={vidTwelve}
           muted
@@ -228,9 +241,77 @@ function Video() {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
-      <div className="video-box__item video-box-one video-box-eleven">
+      <div className="video-box__item video-box-one video-box-thirteen">
         <video
           src={vidThirteen}
+          muted
+          loop
+          preload="auto"
+          onMouseEnter={(e) => {
+            e.target.play();
+            e.target.muted = false;
+          }}
+          onMouseLeave={(e) => {
+            e.target.pause();
+            e.target.muted = true;
+          }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </div>
+      <div className="video-box__item video-box-one video-box-fourteen">
+        <video
+          src={vidFourteen}
+          muted
+          loop
+          preload="auto"
+          onMouseEnter={(e) => {
+            e.target.play();
+            e.target.muted = false;
+          }}
+          onMouseLeave={(e) => {
+            e.target.pause();
+            e.target.muted = true;
+          }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </div>
+      <div className="video-box__item video-box-one video-box-fourteen">
+        <video
+          src={vidFifteen}
+          muted
+          loop
+          preload="auto"
+          onMouseEnter={(e) => {
+            e.target.play();
+            e.target.muted = false;
+          }}
+          onMouseLeave={(e) => {
+            e.target.pause();
+            e.target.muted = true;
+          }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </div>
+      <div className="video-box__item video-box-one video-box-fourteen">
+        <video
+          src={vidSeventeen}
+          muted
+          loop
+          preload="auto"
+          onMouseEnter={(e) => {
+            e.target.play();
+            e.target.muted = false;
+          }}
+          onMouseLeave={(e) => {
+            e.target.pause();
+            e.target.muted = true;
+          }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </div>
+      <div className="video-box__item video-box-one video-box-fourteen">
+        <video
+          src={vidEighteen}
           muted
           loop
           preload="auto"

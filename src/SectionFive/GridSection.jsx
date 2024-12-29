@@ -35,11 +35,30 @@ export const GridSection = () => {
           </div>
         ))}
       </motion.div>
-      {activeButton === " ALL " && <All />}
-      {activeButton === "WEB SERVICES" && <Web />}
-      {activeButton === "VIDEOS" && <Video />}
-      {activeButton === "SOCIAL MEDIA" && <Photoshoot />}
-      {activeButton === "BRAND IDENTITY" && <Branding />}
+
+      <div style={{ display: activeButton === " ALL " ? "block" : "none" }}>
+        <All />
+      </div>
+      <div
+        style={{ display: activeButton === "WEB SERVICES" ? "block" : "none" }}
+      >
+        <Web />
+      </div>
+      <div style={{ display: activeButton === "VIDEOS" ? "block" : "none" }}>
+        <Video />
+      </div>
+      <div
+        style={{ display: activeButton === "SOCIAL MEDIA" ? "block" : "none" }}
+      >
+        <Photoshoot />
+      </div>
+      <div
+        style={{
+          display: activeButton === "BRAND IDENTITY" ? "block" : "none",
+        }}
+      >
+        <Branding />
+      </div>
     </Parallax>
   );
 };
