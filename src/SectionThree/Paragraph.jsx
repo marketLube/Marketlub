@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Boost } from "../SectionTwo/Boost";
 
 const str =
-  "We transform your digital vision into reality through innovative web solutions. Our expert team crafts seamless, responsive websites that drive growth and engage your audience. From concept to deployment, we deliver excellence in every line of code.";
+  "We transform businesses through innovative web development and digital marketing solutions. Our expert team delivers high-impact websites and strategic campaigns that drive growth and engage your audience.";
 
 export const Paragraph = () => {
   const wordsRef = useRef([]);
