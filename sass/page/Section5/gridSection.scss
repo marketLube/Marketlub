@@ -346,9 +346,9 @@
 
 .video-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(18, 100px);
   gap: 1rem;
-  padding: 1rem;
 
   &__item {
     background-color: rgb(0, 0, 0);
@@ -358,48 +358,79 @@
     height: 100%;
   }
 
-  // Portrait videos
-  &-one,
+  // Individual grid items
+  &-one {
+    grid-row: span 6;
+    grid-column: span 4;
+  }
+
+  &-two {
+    grid-row: span 3;
+    grid-column: span 8;
+  }
+
   &-three {
-    grid-column: span 1;
-    aspect-ratio: 9/16;
+    grid-row: span 6;
+    grid-column: span 4;
   }
 
-  // Landscape videos
-  &-two,
-  &-six {
-    grid-column: span 2;
-    aspect-ratio: 16/9;
+  &-four {
+    grid-column: span 3;
+    grid-row: span 3;
   }
 
-  &-four,
   &-five {
-    grid-column: span 1;
-    aspect-ratio: 16/9;
+    grid-column: span 5;
+    grid-row: span 3;
   }
 
-  // Responsive breakpoints
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
+  &-six {
+    grid-column: span 8;
+    grid-row: span 3;
+  }
+}
 
-    &-one,
+@media screen and (max-width: 1024px) {
+  .video-box {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+
+    &-one {
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+
+    &-two {
+      grid-column: span 4;
+      grid-row: span 4;
+    }
+
     &-three {
-      grid-column: span 1;
+      grid-column: span 4;
+      grid-row: span 4;
     }
 
-    &-two,
-    &-six {
-      grid-column: span 2;
+    &-four {
+      grid-column: span 4;
+      grid-row: span 3;
     }
 
-    &-four,
     &-five {
-      grid-column: span 1;
+      grid-column: span 4;
+      grid-row: span 3;
+    }
+
+    &-six {
+      grid-column: span 8;
+      grid-row: span 3;
     }
   }
+}
 
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 768px) {
+  .video-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
 
     &-one,
     &-two,
@@ -407,7 +438,8 @@
     &-four,
     &-five,
     &-six {
-      grid-column: span 1;
+      grid-column: span 4;
+      grid-row: span 3;
     }
   }
 }

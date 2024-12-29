@@ -1001,9 +1001,9 @@ body {
 }
 .video-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(18, 100px);
   gap: 1rem;
-  padding: 1rem;
 }
 .video-box__item {
   background-color: rgb(0, 0, 0);
@@ -1012,41 +1012,71 @@ body {
   overflow: hidden;
   height: 100%;
 }
-.video-box-one, .video-box-three {
-  grid-column: span 1;
-  aspect-ratio: 9/16;
+.video-box-one {
+  grid-row: span 6;
+  grid-column: span 4;
 }
-.video-box-two, .video-box-six {
-  grid-column: span 2;
-  aspect-ratio: 16/9;
+.video-box-two {
+  grid-row: span 3;
+  grid-column: span 8;
 }
-.video-box-four, .video-box-five {
-  grid-column: span 1;
-  aspect-ratio: 16/9;
+.video-box-three {
+  grid-row: span 6;
+  grid-column: span 4;
 }
-@media (max-width: 1024px) {
-  .video-box {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .video-box-one, .video-box-three {
-    grid-column: span 1;
-  }
-  .video-box-two, .video-box-six {
-    grid-column: span 2;
-  }
-  .video-box-four, .video-box-five {
-    grid-column: span 1;
-  }
+.video-box-four {
+  grid-column: span 3;
+  grid-row: span 3;
 }
-@media (max-width: 640px) {
-  .video-box {
-    grid-template-columns: 1fr;
-  }
-  .video-box-one, .video-box-two, .video-box-three, .video-box-four, .video-box-five, .video-box-six {
-    grid-column: span 1;
-  }
+.video-box-five {
+  grid-column: span 5;
+  grid-row: span 3;
+}
+.video-box-six {
+  grid-column: span 8;
+  grid-row: span 3;
 }
 
+@media screen and (max-width: 1024px) {
+  .video-box {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+  }
+  .video-box-one {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
+  .video-box-two {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
+  .video-box-three {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
+  .video-box-four {
+    grid-column: span 4;
+    grid-row: span 3;
+  }
+  .video-box-five {
+    grid-column: span 4;
+    grid-row: span 3;
+  }
+  .video-box-six {
+    grid-column: span 8;
+    grid-row: span 3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .video-box-one, .video-box-two, .video-box-three, .video-box-four, .video-box-five, .video-box-six {
+    grid-column: span 4;
+    grid-row: span 3;
+  }
+}
 .bottom-container {
   position: relative;
 }
