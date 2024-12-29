@@ -1298,8 +1298,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  padding: 12px 9px 12px 9px;
-  border-radius: 60px;
+  padding: 1rem;
+  border-radius: 6rem;
 }
 
 .navbar-item a {
