@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/LOGO.png";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
@@ -24,6 +24,22 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleMenuScroll = () => {
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      window.addEventListener("scroll", handleMenuScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleMenuScroll);
+    };
+  }, [menuOpen]);
+
   return (
     <div className="navbar-menu">
       {showLogo ? (
@@ -31,14 +47,40 @@ const Navbar = () => {
       ) : (
         <div className="dummyLogo"></div>
       )}
-      <button
-        className={`hamburger-menu ${menuOpen ? "menu-open-styles" : ""}`}
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
-      </button>
+      {menuOpen === false && (
+        <button
+          className="hamburger-menu"
+          style={{ cursor: "pointer" }}
+          onClick={() => setMenuOpen((val) => !val)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      )}
+
+      <div className="splash-container">
+        <div className={`splash ${menuOpen ? "active" : ""}`}></div>
+      </div>
 
       <ul className={`navbar-list ${menuOpen ? "open" : ""}`}>
+        {menuOpen && (
+          <button
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+            style={{
+              color: "white",
+              position: "absolute",
+              top: "3rem",
+              right: "2.2rem",
+              background: "none",
+              fontSize: "1.5rem",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
+        )}
         <li className="navbar-item">
           <a
             href="#home"
