@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/logo.png";
+import logo from "../assets/LOGO.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
