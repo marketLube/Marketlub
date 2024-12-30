@@ -95,60 +95,60 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faTimes} />
           </button>
         )}
-        {showItems && (
-          <>
-            <li className="navbar-item">
-              <a
-                href="#home"
-                className={active === "#home" ? "active" : ""}
-                onClick={() => {
-                  setActive("#home");
-                  setMenuOpen(false);
-                }}
-              >
-                Home
-              </a>
-            </li>
-            <li className="navbar-item">
-              <a
-                href="#service"
-                className={active === "#service" ? "active" : ""}
-                onClick={() => {
-                  setActive("#service");
-                  setMenuOpen(false);
-                }}
-              >
-                Service
-              </a>
-            </li>
-            <li className="navbar-item">
-              <a
-                href="#portfolio"
-                className={active === "#portfolio" ? "active" : ""}
-                onClick={() => {
-                  setActive("#portfolio");
-                  setMenuOpen(false);
-                }}
-              >
-                Portfolio
-              </a>
-            </li>
-            <li className="navbar-item">
-              <a
-                href="https://wa.me/919061663675"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={active === "#contact" ? "active" : ""}
-                onClick={() => {
-                  setActive("#contact");
-                  setMenuOpen(false);
-                }}
-              >
-                Contact
-              </a>
-            </li>
-          </>
-        )}
+        {/* {showItems && ( */}
+        <>
+          <li className="navbar-item">
+            <a
+              href="#home"
+              className={active === "#home" ? "active" : ""}
+              onClick={() => {
+                setActive("#home");
+                setMenuOpen(false);
+              }}
+            >
+              Home
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a
+              href="#service"
+              className={active === "#service" ? "active" : ""}
+              onClick={() => {
+                setActive("#service");
+                setMenuOpen(false);
+              }}
+            >
+              Service
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a
+              href="#portfolio"
+              className={active === "#portfolio" ? "active" : ""}
+              onClick={() => {
+                setActive("#portfolio");
+                setMenuOpen(false);
+              }}
+            >
+              Portfolio
+            </a>
+          </li>
+          <li className="navbar-item">
+            <a
+              href="https://wa.me/919061663675"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={active === "#contact" ? "active" : ""}
+              onClick={() => {
+                setActive("#contact");
+                setMenuOpen(false);
+              }}
+            >
+              Contact
+            </a>
+          </li>
+        </>
+        {/* )} */}
       </ul>
     </div>
   );
