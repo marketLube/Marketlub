@@ -44,7 +44,7 @@
 
 .intern::before {
   content: "100%";
-  animation: percent 2s ease-in-out infinite;
+  animation: percent 3s ease-in-out infinite;
 }
 
 @keyframes rotate {
@@ -94,12 +94,32 @@
     content: "75%";
   }
 
-  86% {
-    content: "86%";
+  80% {
+    content: "80%";
   }
 
-  95% {
-    content: "95%";
+  85% {
+    content: "85%";
+  }
+
+  90% {
+    content: "90%";
+  }
+
+  91% {
+    content: "91%";
+  }
+
+  92% {
+    content: "92%";
+  }
+
+  94% {
+    content: "94%";
+  }
+
+  96% {
+    content: "96%";
   }
 
   98% {
@@ -108,5 +128,9 @@
 
   99% {
     content: "99%";
+  }
+
+  100% {
+    content: "100%";
   }
 }
