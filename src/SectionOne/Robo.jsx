@@ -58,11 +58,14 @@ export const Robo = () => {
       id="home"
     >
       {hasError ? (
-        <div className="error-message">
-          <Loader />
-        </div>
+        <div className="error-message">{/* <Loader /> */}</div>
       ) : (
-        <Suspense fallback={<Loader />}>
+        <Suspense
+          fallback={
+            <></>
+            // <Loader />
+          }
+        >
           {inView && opacity === 1 && (
             <SplineLazy
               scene="https://prod.spline.design/Le6MsQHhIgww0Y3B/scene.splinecode"

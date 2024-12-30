@@ -57,16 +57,10 @@ export const MobRobo = () => {
       id="home"
     >
       {hasError ? (
-        <div className="error-message">
-          <Loader />
-        </div>
+        <div className="error-message">{/* <Loader /> */}</div>
       ) : (
         <Suspense
-          fallback={
-            <div className="loading-overlay">
-              <Loader />
-            </div>
-          }
+          fallback={<div className="loading-overlay">{/* <Loader /> */}</div>}
         >
           {inView && opacity === 1 && (
             <SplineLazy
