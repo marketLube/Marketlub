@@ -119,7 +119,7 @@ const Navbar = () => {
         </li>
         <li className="navbar-item">
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/919061663675"
             target="_blank"
             rel="noopener noreferrer"
             className={active === "#contact" ? "active" : ""}

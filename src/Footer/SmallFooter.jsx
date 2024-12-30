@@ -16,35 +16,35 @@ function SmallFooter() {
     <Parallax className="small-footer" speed={0}>
       <div className="small-footer-contents" id="contact">
         <a
-          href="https://wa.me/your-number"
+          href="https://wa.me/919061663675"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaWhatsapp className="footer-icon" />
         </a>
         <a
-          href="https://instagram.com/your-profile"
+          href="https://www.instagram.com/marketlube/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaInstagram className="footer-icon" />
         </a>
-        <a
+        {/* <a
           href="https://facebook.com/your-profile"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaFacebook className="footer-icon" />
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="https://youtube.com/your-channel"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaYoutube className="footer-icon" />
-        </a>
+        </a> */}
         <a
-          href="https://linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/company/marketlube/"
           target="_blank"
           rel="noopener noreferrer"
         >
