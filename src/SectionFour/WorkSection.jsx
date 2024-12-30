@@ -21,7 +21,7 @@ export const WorkSection = () => {
 
   const items = [
     {
-      image: Image1,
+      image: Image2,
       pills: ["Best in Kerala", "Podcast Videos", "Corporate Shoots"],
       heading: "Video Production",
       description:
@@ -29,7 +29,7 @@ export const WorkSection = () => {
       link: "",
     },
     {
-      image: Image2,
+      image: Image1,
       pills: ["Branding & Designing", "Illustrations"],
       heading: "Branding & Designing",
       description:
@@ -38,8 +38,8 @@ export const WorkSection = () => {
     },
     {
       image: Image3,
-      pills: ["Performance Marketing", "UI/UX Design"],
-      heading: "Website Development",
+      pills: ["Performance Marketing", "SEO", "Social Media Ads"],
+      heading: "Performance Marketing",
       description:
         "Mannson Freight operates import and export consolidation services involving sea freight. They engaged Phunk to rebrand their corporate identity and develop a new higher-performance website, as well as a custom-built portal — MFS Pro— including ongoing support.",
       link: "",
