@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense, lazy, useRef } from "react";
 import { useInView } from "framer-motion";
+import Loader from "./Loader";
 
 const SplineLazy = lazy(() => import("@splinetool/react-spline"));
 
@@ -57,13 +58,13 @@ export const MobRobo = () => {
     >
       {hasError ? (
         <div className="error-message">
-          <p>Unable to load 3D scene. Please refresh or try again later.</p>
+          <Loader />
         </div>
       ) : (
         <Suspense
           fallback={
             <div className="loading-overlay">
-              <p>Loading 3D Scene...</p>
+              <Loader />
             </div>
           }
         >
