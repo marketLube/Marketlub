@@ -21,7 +21,7 @@ export const WorkSection = () => {
 
   const items = [
     {
-      image: Image2,
+      image: Image3,
       pills: ["Best in Kerala", "Podcast Videos", "Corporate Shoots"],
       heading: "Video Production",
       description:
@@ -37,7 +37,7 @@ export const WorkSection = () => {
       link: "",
     },
     {
-      image: Image3,
+      image: Image2,
       pills: ["Performance Marketing", "SEO", "Social Media Ads"],
       heading: "Performance Marketing",
       description:

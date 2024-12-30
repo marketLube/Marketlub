@@ -1,52 +1,52 @@
 import { Parallax } from "react-scroll-parallax";
-import Image1 from "../assets/images/image1.jpg";
-import Image2 from "../assets/images/image2.jpg";
-import Image3 from "../assets/images/image3.jpg";
-import Image4 from "../assets/images/image4.jpg";
-import Image5 from "../assets/images/image5.jpg";
+import Image1 from "../assets/Services/Branding & Designing 2.png";
+import Image2 from "../assets/Services/perphomance.png";
+import Image3 from "../assets/Services/VideoProduction 2.png";
+import Image4 from "../assets/images/protienNutMob.jpeg";
+import Image5 from "../assets/images/accoundings2.jpeg";
 import { GoArrowDownLeft } from "react-icons/go";
 
 export const MobWorkSection = () => {
   const items = [
     {
-      image: Image1,
-      pills: ["Skymark", "Wilmouont"],
-      heading: "Hacien",
+      image: Image3,
+      pills: ["Best in Kerala", "Podcast Videos", "Corporate Shoots"],
+      heading: "Video Production",
       description:
-        "HACIEN is a premium tequila brand supplying high-end hospitality and retail locations worldwide. They approached Phunk to undertake a comprehensive design project comprising web, packaging, and marketing assets as well as 3D renders of their signature bottles.",
-      link: "https://www.phunk.co.uk/work/hacien",
+        "As Calicut's best video production agency, we create stunning visual content that captivates audiences and elevates your brand. From concept to execution, our expert team delivers high-quality videos tailored to your business goals.",
+      link: "",
+    },
+    {
+      image: Image1,
+      pills: ["Branding & Designing", "Illustrations"],
+      heading: "Branding & Designing",
+      description:
+        "Maximize ROI with data-driven performance marketing strategies. We focus on measurable results through targeted campaigns, optimizing ad spend and delivering high-quality leads to accelerate growth and achieve your business objectives effectively.",
+      link: "",
     },
     {
       image: Image2,
-      pills: ["Splash Screens", "Illustrations"],
-      heading: "Mobilleo",
-      description:
-        "Mobilleo is a SaaS solution making it easy for organisations to manage global business travel for their employees.  The team at Mobilleo approached Phunk to provide a range of design and illustration services, building on their existing brand, for use across their website and app.",
-      link: "https://www.phunk.co.uk/work/mobillio",
-    },
-    {
-      image: Image3,
-      pills: ["Webflow Development", "UI/UX Design"],
-      heading: "Mannson Freight",
+      pills: ["Performance Marketing", "SEO", "Social Media Ads"],
+      heading: "Performance Marketing",
       description:
         "Mannson Freight operates import and export consolidation services involving sea freight. They engaged Phunk to rebrand their corporate identity and develop a new higher-performance website, as well as a custom-built portal — MFS Pro— including ongoing support.",
-      link: "https://www.phunk.co.uk/work/mannson-freight",
+      link: "",
     },
     {
       image: Image4,
-      pills: ["Webflow Development", "UI/UX Design"],
-      heading: "BOX iQ",
+      pills: ["Web Applications", "UI/UX design"],
+      heading: "Website Development",
       description:
-        "BOXiQ Performance Center in Dubai is a globally recognised boxing gym — hosting icons like Tyson Fury and Oleksandr Usyk. Working with Phunk, they now have a high-quality digital presence to match the prestige of their brand.",
-      link: "https://www.phunk.co.uk/work/box-iq",
+        "Transform your online presence with modern, responsive websites designed for functionality and aesthetics. Our website development services ensure seamless user experiences, robust performance, and scalability to meet evolving business needs.",
+      link: "",
     },
     {
       image: Image5,
-      pills: ["Webflow Development", "Visual Identity"],
-      heading: "The Honest Watch Dealer",
+      pills: ["Enterprise Software", "E-commerce Solutions"],
+      heading: "Custom Web Solutions",
       description:
-        "The Honest Watch Dealer is a luxury watch expert renowned for his popular YouTube channel, as well as founding The Luxury Watch Company. Charlie (his real name) engaged Phunk to develop a brand identity for his channel, with applications across a range of merchandise.",
-      link: "https://www.phunk.co.uk/work/honest-watch-dealer",
+        "Empower your business with tailored web solutions designed to address unique challenges. From custom software to advanced integrations, we deliver scalable and innovative tools that drive efficiency and support long-term success.",
+      link: "",
     },
   ];
 

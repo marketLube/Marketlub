@@ -60,7 +60,7 @@
   &__cover {
     height: 30vh;
     position: sticky;
-    top: 75vh;
+    top: 80vh;
     background-color: rgb(0, 0, 0);
     z-index: 1000;
     font-size: 15.7rem;
@@ -290,5 +290,14 @@
     font-size: 0.8rem !important;
     width: fit-content;
     margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    &__item-pills {
+      gap: 0.5rem;
+    }
+    &__pill-item {
+      margin: 0.5rem 0;
+    }
   }
 }
