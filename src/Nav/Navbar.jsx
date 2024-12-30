@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/LOGO.png";
+import LOGO from "../assets/LOGO.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <div className="navbar-menu">
       {showLogo ? (
-        <img src={logo} alt="Logo" className="navbar-icon" />
+        <img src={LOGO} alt="Logo" className="navbar-icon" />
       ) : (
         <div className="dummyLogo"></div>
       )}
