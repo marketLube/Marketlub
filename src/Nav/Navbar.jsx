@@ -7,7 +7,7 @@ const Navbar = () => {
   const [active, setActive] = useState("#home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLogo, setShowLogo] = useState(true);
-  const [showItems, setShowItems] = useState(false);
+  const [showItems, setShowItems] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +54,24 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setShowItems(true);
+      } else {
+        setShowItems(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="navbar-menu">
       {showLogo ? (
@@ -95,60 +113,60 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faTimes} />
           </button>
         )}
-        {/* {showItems && ( */}
-        <>
-          <li className="navbar-item">
-            <a
-              href="#home"
-              className={active === "#home" ? "active" : ""}
-              onClick={() => {
-                setActive("#home");
-                setMenuOpen(false);
-              }}
-            >
-              Home
-            </a>
-          </li>
-          <li className="navbar-item">
-            <a
-              href="#service"
-              className={active === "#service" ? "active" : ""}
-              onClick={() => {
-                setActive("#service");
-                setMenuOpen(false);
-              }}
-            >
-              Service
-            </a>
-          </li>
-          <li className="navbar-item">
-            <a
-              href="#portfolio"
-              className={active === "#portfolio" ? "active" : ""}
-              onClick={() => {
-                setActive("#portfolio");
-                setMenuOpen(false);
-              }}
-            >
-              Portfolio
-            </a>
-          </li>
-          <li className="navbar-item">
-            <a
-              href="https://wa.me/919061663675"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={active === "#contact" ? "active" : ""}
-              onClick={() => {
-                setActive("#contact");
-                setMenuOpen(false);
-              }}
-            >
-              Contact
-            </a>
-          </li>
-        </>
-        {/* )} */}
+        {showItems && (
+          <>
+            <li className="navbar-item">
+              <a
+                href="#home"
+                className={active === "#home" ? "active" : ""}
+                onClick={() => {
+                  setActive("#home");
+                  setMenuOpen(false);
+                }}
+              >
+                Home
+              </a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href="#service"
+                className={active === "#service" ? "active" : ""}
+                onClick={() => {
+                  setActive("#service");
+                  setMenuOpen(false);
+                }}
+              >
+                Service
+              </a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href="#portfolio"
+                className={active === "#portfolio" ? "active" : ""}
+                onClick={() => {
+                  setActive("#portfolio");
+                  setMenuOpen(false);
+                }}
+              >
+                Portfolio
+              </a>
+            </li>
+            <li className="navbar-item">
+              <a
+                href="https://wa.me/919061663675"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={active === "#contact" ? "active" : ""}
+                onClick={() => {
+                  setActive("#contact");
+                  setMenuOpen(false);
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </>
+        )}
       </ul>
     </div>
   );
