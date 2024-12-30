@@ -439,9 +439,9 @@ body {
   height: 100vh;
 }
 .work-section__cover {
-  height: 25vh;
+  height: 30vh;
   position: sticky;
-  top: 85vh;
+  top: 75vh;
   background-color: rgb(0, 0, 0);
   z-index: 1000;
   font-size: 15.7rem;
