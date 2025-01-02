@@ -51,7 +51,7 @@ export const MobWorkSection = () => {
   ];
 
   return (
-    <div className="mob-work-section">
+    <div className="mob-work-section" id="service">
       <div className="mob-work-section__header-container">
         <h1 className="mob-work-section__title">Dive into the work.</h1>
       </div>

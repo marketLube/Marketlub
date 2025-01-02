@@ -1,20 +1,14 @@
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import LOGO from "../assets/LOGO.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("#home");
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showLogo, setShowLogo] = useState(true);
-  const [showItems, setShowItems] = useState(window.innerWidth <= 768);
+  const [checked, setIsChecked] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        setShowLogo(false);
-      } else {
-        setShowLogo(true);
+      if (checked) {
+        setIsChecked(false);
       }
     };
 
@@ -23,150 +17,121 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [checked]);
 
-  useEffect(() => {
-    const handleMenuScroll = () => {
-      if (menuOpen) {
-        setMenuOpen(false);
-      }
-    };
-
-    if (menuOpen) {
-      window.addEventListener("scroll", handleMenuScroll);
-    }
-
-    return () => {
-      window.removeEventListener("scroll", handleMenuScroll);
-    };
-  }, [menuOpen]);
-
-  useEffect(() => {
-    if (menuOpen) {
-      setShowItems(false);
-      const timer = setTimeout(() => {
-        setShowItems(true);
-      }, 600);
-
-      return () => clearTimeout(timer);
-    } else {
-      setShowItems(false);
-    }
-  }, [menuOpen]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setShowItems(true);
-      } else {
-        setShowItems(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const handleNavClick = (href) => {
+    setActive(href);
+    setIsChecked(false);
+  };
 
   return (
     <div className="navbar-menu">
-      {showLogo ? (
-        <img src={LOGO} alt="Logo" className="navbar-icon" />
-      ) : (
-        <div className="dummyLogo"></div>
-      )}
-      {menuOpen === false && (
-        <button
-          className="hamburger-menu"
-          style={{ cursor: "pointer" }}
-          onClick={() => setMenuOpen((val) => !val)}
+      <img src={LOGO} alt="Logo" className="navbar-icon" />
+
+      <div className="navigation">
+        <input
+          checked={checked}
+          onClick={() => setIsChecked((checked) => !checked)}
+          type="checkbox"
+          className="navigation__checkbox"
+          id="navi__toggle"
+          aria-label="Toggle navigation"
+        />
+        <label
+          htmlFor="navi__toggle"
+          className="navigation__btn"
+          aria-controls="navigationMenu"
         >
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-      )}
+          <span className="navigation__icon">&nbsp;</span>
+        </label>
 
-      <div className="splash-container">
-        <div className={`splash ${menuOpen ? "active" : ""}`}></div>
-      </div>
-
-      <ul className={`navbar-list ${menuOpen ? "open" : ""}`}>
-        {menuOpen && (
-          <button
-            onClick={() => {
-              setMenuOpen(false);
-            }}
-            style={{
-              color: "white",
-              position: "absolute",
-              top: "3rem",
-              right: "2.2rem",
-              background: "none",
-              fontSize: "1.5rem",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
-        )}
-        {showItems && (
-          <>
-            <li className="navbar-item">
+        <nav
+          className="navigation__nav"
+          id="navigationMenu"
+          aria-label="Main navigation"
+        >
+          <ul className="navigation__list">
+            <li className="navigation__item">
               <a
                 href="#home"
                 className={active === "#home" ? "active" : ""}
-                onClick={() => {
-                  setActive("#home");
-                  setMenuOpen(false);
-                }}
+                onClick={() => handleNavClick("#home")}
               >
                 Home
               </a>
             </li>
-            <li className="navbar-item">
+            <li className="navigation__item">
               <a
                 href="#service"
                 className={active === "#service" ? "active" : ""}
-                onClick={() => {
-                  setActive("#service");
-                  setMenuOpen(false);
-                }}
+                onClick={() => handleNavClick("#service")}
               >
                 Service
               </a>
             </li>
-            <li className="navbar-item">
+            <li className="navigation__item">
               <a
                 href="#portfolio"
                 className={active === "#portfolio" ? "active" : ""}
-                onClick={() => {
-                  setActive("#portfolio");
-                  setMenuOpen(false);
-                }}
+                onClick={() => handleNavClick("#portfolio")}
               >
                 Portfolio
               </a>
             </li>
-            <li className="navbar-item">
+            <li className="navigation__item">
               <a
                 href="https://wa.me/919061663675"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={active === "#contact" ? "active" : ""}
-                onClick={() => {
-                  setActive("#contact");
-                  setMenuOpen(false);
-                }}
+                onClick={() => handleNavClick("#contact")}
               >
                 Contact
               </a>
             </li>
-          </>
-        )}
+          </ul>
+        </nav>
+      </div>
+
+      <ul className="navbar-list">
+        <li className="navbar-item">
+          <a
+            href="#home"
+            className={active === "#home" ? "active" : ""}
+            onClick={() => handleNavClick("#home")}
+          >
+            Home
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="#service"
+            className={active === "#service" ? "active" : ""}
+            onClick={() => handleNavClick("#service")}
+          >
+            Service
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="#portfolio"
+            className={active === "#portfolio" ? "active" : ""}
+            onClick={() => handleNavClick("#portfolio")}
+          >
+            Portfolio
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="https://wa.me/919061663675"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={active === "#contact" ? "active" : ""}
+            onClick={() => setActive("#contact")}
+          >
+            Contact
+          </a>
+        </li>
       </ul>
     </div>
   );
