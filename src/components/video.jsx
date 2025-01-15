@@ -1,40 +1,40 @@
 const vidOne =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735395959/DABZEE_1_1_dabt2r.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923671/BOSQ_2_grcgol.mp4";
 const vidTwo =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462541/FINAL_2_ixb2nj.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923670/FINAL_2_giftch.mp4";
 
 const vidThree =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403114/nov_44_ireland_vu2cgy.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923660/nov_44_ireland_sobtf9.mp4";
 const vidFive =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735472094/watsapp_woodux_1_1_tud2bs.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923675/watsapp_woodux_1_u1fbhj.mp4";
 const vidFour =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403070/zaman_1skymark_hwd1jo.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923669/BOSQ_2_2_copy_1_hwybnx.mp4";
 const vidSix =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462366/dec_41_event_drone_bx8qmw.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923678/dec_41_event_drone_foc3ka.mp4";
 const vidSeven =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403056/thaski_vid2_h6ofv1.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923647/aftbefr_1_v6eyo5.mp4";
 const vidEight =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735395955/aftbefr_1_uyn5wg.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923644/fjahan_1_1_vfhpqa.mp4";
 const vidNine =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735472094/klaanonam_final_1_xmamyk.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923665/klaanonam_final_1_1_yd2swt.mp4";
 const vidTen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403115/oct_9_RE_EDIT_german_public_vlvrmf.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923680/thaski_vid2_rec3xc.mp4";
 const vidEleven =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403115/OUT_01_dxdlsn.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923662/BOSQ_2_1_sp1xbv.mp4";
 const vidTwelve =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403056/reel02_u1ais2.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923630/DABZEE_1_1_idxjus.mp4";
 const vidThirteen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735396036/fjahan_1_1_m0wqdj.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923667/oct_9_RE_EDIT_german_public_lutep4.mp4";
 const vidFourteen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462747/final_1_ezfirq.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923677/final_1_muj1lm.mp4";
 const vidFifteen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462746/BOSQ_2_2_tpdskg.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923626/dabzeee_1_wau1qa.mp4";
 const vidSixteen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462747/BOSQ_2_1_bdrjhh.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923626/dabzeee_1_wau1qa.mp4";
 const vidSeventeen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735462745/BOSQ_2_clmfov.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923653/nov_38_event_video_megha_wjssb1.mp4";
 const vidEighteen =
-  "https://res.cloudinary.com/dpzy6cozb/video/upload/v1735403114/nov_38_event_video_megha_psezqp.mp4";
+  "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923672/reel02_bu7d4b.mp4";
 
 function Video() {
   return (
