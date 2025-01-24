@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
-import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import Web from "../components/Web";
 import Video from "../components/video";
 import Photoshoot from "../components/photoshoot";
@@ -9,43 +8,88 @@ import Branding from "../components/branding";
 import All from "../components/All";
 
 export const GridSection = () => {
-  const navigate = useNavigate();
+  const [activeButton, setActiveButton] = useState("ALL");
+
   useEffect(() => {
-    navigate("/", { replace: true });
+    const hash = window.location.hash
+      .replace("#", "")
+      .toUpperCase()
+      .replace(/-/g, " ");
+
+    const validFilters = [
+      "ALL",
+      "WEB SERVICES",
+      "VIDEOS",
+      "SOCIAL MEDIA",
+      "BRAND IDENTITY",
+    ];
+
+    if (validFilters.includes(hash)) {
+      setActiveButton(hash);
+    } else {
+      setActiveButton("ALL");
+    }
   }, []);
+
+  const handleButtonClick = (filterName) => {
+    setActiveButton(filterName);
+    window.location.hash = filterName.trim().toLowerCase().replace(/\s+/g, "-");
+  };
+
   return (
     <Parallax speed={0} className="grid-container" id="portfolio">
       <motion.div className="grid-container__filters">
         {[
-          { name: "ALL", path: "/" },
-          { name: "WEB SERVICES", path: "/web-services" },
-          { name: "VIDEOS", path: "/videos" },
-          { name: "SOCIAL MEDIA", path: "/social-media" },
-          { name: "BRAND IDENTITY", path: "/brand-identity" },
+          "ALL",
+          "WEB SERVICES",
+          "VIDEOS",
+          "SOCIAL MEDIA",
+          "BRAND IDENTITY",
         ].map((filter) => (
-          <NavLink
-            key={filter.name}
-            to={filter.path}
-            className={({ isActive }) =>
-              isActive
-                ? "grid-container__filter-btn active"
-                : "grid-container__filter-btn"
-            }
-            end
+          <div
+            key={filter}
+            className={`grid-container__filter-btn ${
+              activeButton === filter ? "active" : ""
+            }`}
+            onClick={() => handleButtonClick(filter)}
           >
-            {filter.name}
-          </NavLink>
+            {filter}
+          </div>
         ))}
       </motion.div>
 
-      <Routes>
-        <Route path="/" element={<All />} />
-        <Route path="/all" element={<All />} />
-        <Route path="/web-services" element={<Web />} />
-        <Route path="/videos" element={<Video />} />
-        <Route path="/social-media" element={<Photoshoot />} />
-        <Route path="/brand-identity" element={<Branding />} />
-      </Routes>
+      <div
+        style={{ display: activeButton === "ALL" ? "block" : "none" }}
+        id="all"
+      >
+        <All />
+      </div>
+      <div
+        style={{ display: activeButton === "WEB SERVICES" ? "block" : "none" }}
+        id="web-services"
+      >
+        <Web />
+      </div>
+      <div
+        style={{ display: activeButton === "VIDEOS" ? "block" : "none" }}
+        id="videos"
+      >
+        <Video />
+      </div>
+      <div
+        style={{ display: activeButton === "SOCIAL MEDIA" ? "block" : "none" }}
+        id="social-media"
+      >
+        <Photoshoot />
+      </div>
+      <div
+        style={{
+          display: activeButton === "BRAND IDENTITY" ? "block" : "none",
+        }}
+        id="brand-identity"
+      >
+        <Branding />
+      </div>
     </Parallax>
   );
 };

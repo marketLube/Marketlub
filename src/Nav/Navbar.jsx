@@ -22,6 +22,13 @@ const Navbar = () => {
   const handleNavClick = (href) => {
     setActive(href);
     setIsChecked(false);
+
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
