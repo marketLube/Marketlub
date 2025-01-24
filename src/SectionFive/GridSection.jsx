@@ -1,6 +1,7 @@
+import React, { useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import Web from "../components/Web";
 import Video from "../components/video";
 import Photoshoot from "../components/photoshoot";
@@ -8,6 +9,10 @@ import Branding from "../components/branding";
 import All from "../components/All";
 
 export const GridSection = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/", { replace: true });
+  }, []);
   return (
     <Parallax speed={0} className="grid-container" id="portfolio">
       <motion.div className="grid-container__filters">
