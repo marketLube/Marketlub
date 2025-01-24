@@ -15,7 +15,11 @@ import { Parallax } from "react-scroll-parallax";
 import Loader from "./SectionOne/Loader";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const hash = window.location.hash;
+  const [loading, setLoading] = useState(() =>
+    window.location.hash === "" ? true : false
+  );
+
   const ref = useRef(null);
 
   const isTab = window.innerWidth < 992;
