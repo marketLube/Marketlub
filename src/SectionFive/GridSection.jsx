@@ -38,6 +38,11 @@ export const GridSection = () => {
 
   return (
     <Parallax speed={0} className="grid-container" id="portfolio">
+      <span id="all "></span>
+      <span id="web-services"></span>
+      <span id="videos"></span>
+      <span id="social-media"></span>
+      <span id="brand-identity"></span>
       <motion.div className="grid-container__filters">
         {[
           "ALL",
@@ -60,25 +65,25 @@ export const GridSection = () => {
 
       <div
         style={{ display: activeButton === "ALL" ? "block" : "none" }}
-        id="all"
+        // id="all"
       >
         <All />
       </div>
       <div
         style={{ display: activeButton === "WEB SERVICES" ? "block" : "none" }}
-        id="web-services"
+        // id="web-services"
       >
         <Web />
       </div>
       <div
         style={{ display: activeButton === "VIDEOS" ? "block" : "none" }}
-        id="videos"
+        // id="videos"
       >
         <Video />
       </div>
       <div
         style={{ display: activeButton === "SOCIAL MEDIA" ? "block" : "none" }}
-        id="social-media"
+        // id="social-media"
       >
         <Photoshoot />
       </div>
@@ -86,7 +91,7 @@ export const GridSection = () => {
         style={{
           display: activeButton === "BRAND IDENTITY" ? "block" : "none",
         }}
-        id="brand-identity"
+        // id="brand-identity"
       >
         <Branding />
       </div>
