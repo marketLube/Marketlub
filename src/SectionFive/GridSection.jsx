@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Web from "../components/Web";
 import Video from "../components/video";
 import Photoshoot from "../components/photoshoot";
@@ -8,57 +8,39 @@ import Branding from "../components/branding";
 import All from "../components/All";
 
 export const GridSection = () => {
-  const [activeButton, setActiveButton] = useState(" ALL ");
-
-  const handleButtonClick = (filterName) => {
-    setActiveButton(filterName);
-  };
-
   return (
     <Parallax speed={0} className="grid-container" id="portfolio">
       <motion.div className="grid-container__filters">
         {[
-          " ALL ",
-          "WEB SERVICES",
-          "VIDEOS",
-          "SOCIAL MEDIA",
-          "BRAND IDENTITY",
+          { name: "ALL", path: "/" },
+          { name: "WEB SERVICES", path: "/web-services" },
+          { name: "VIDEOS", path: "/videos" },
+          { name: "SOCIAL MEDIA", path: "/social-media" },
+          { name: "BRAND IDENTITY", path: "/brand-identity" },
         ].map((filter) => (
-          <div
-            key={filter}
-            className={`grid-container__filter-btn ${
-              activeButton === filter ? "active" : ""
-            }`}
-            onClick={() => handleButtonClick(filter)}
+          <NavLink
+            key={filter.name}
+            to={filter.path}
+            className={({ isActive }) =>
+              isActive
+                ? "grid-container__filter-btn active"
+                : "grid-container__filter-btn"
+            }
+            end
           >
-            {filter}
-          </div>
+            {filter.name}
+          </NavLink>
         ))}
       </motion.div>
 
-      <div style={{ display: activeButton === " ALL " ? "block" : "none" }}>
-        <All />
-      </div>
-      <div
-        style={{ display: activeButton === "WEB SERVICES" ? "block" : "none" }}
-      >
-        <Web />
-      </div>
-      <div style={{ display: activeButton === "VIDEOS" ? "block" : "none" }}>
-        <Video />
-      </div>
-      <div
-        style={{ display: activeButton === "SOCIAL MEDIA" ? "block" : "none" }}
-      >
-        <Photoshoot />
-      </div>
-      <div
-        style={{
-          display: activeButton === "BRAND IDENTITY" ? "block" : "none",
-        }}
-      >
-        <Branding />
-      </div>
+      <Routes>
+        <Route path="/" element={<All />} />
+        <Route path="/all" element={<All />} />
+        <Route path="/web-services" element={<Web />} />
+        <Route path="/videos" element={<Video />} />
+        <Route path="/social-media" element={<Photoshoot />} />
+        <Route path="/brand-identity" element={<Branding />} />
+      </Routes>
     </Parallax>
   );
 };

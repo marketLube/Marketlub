@@ -714,6 +714,8 @@ body {
   background: none;
   font-size: 14px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 .grid-container__filter-btn:hover {
   background-color: rgba(203, 202, 217, 0.1);
