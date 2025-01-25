@@ -2,7 +2,6 @@ const vidOne =
   "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923671/BOSQ_2_grcgol.mp4";
 const vidTwo =
   "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923670/FINAL_2_giftch.mp4";
-
 const vidThree =
   "https://res.cloudinary.com/dcys2vbpv/video/upload/v1736923660/nov_44_ireland_sobtf9.mp4";
 const vidFive =
@@ -333,16 +332,3 @@ function Video() {
 }
 
 export default Video;
-// {brandImages.map((vid, index) => (
-//   <div className="video-box__item video-box-one" key={index}>
-//     {/* <video
-//       key={index}
-//       src={vid}
-//       muted
-//       loop
-//       onMouseEnter={(e) => e.target.play()}
-//       onMouseLeave={(e) => e.target.pause()}
-//       style={{ width: "100%", height: "100%", objectFit: "cover" }}
-//     /> */}
-//   </div>
-// ))}
