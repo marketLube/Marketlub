@@ -1535,9 +1535,8 @@ body {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 12px 9px;
   background-color: #000000;
-  padding: 12px 9px 12px 9px;
   border-radius: 60px;
   position: relative;
 }
@@ -1619,7 +1618,7 @@ body {
   right: 0;
   z-index: 500000000;
   height: 100vh;
-  width: 0;
+  width: 100%;
   opacity: 0;
   transition: all 0.2s;
   visibility: hidden;
@@ -1628,9 +1627,8 @@ body {
 
 .navigation__list {
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 10%;
-  left: 0;
   width: 100%;
   padding: 2rem;
   font-weight: 900;

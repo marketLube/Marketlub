@@ -66,7 +66,7 @@ function App() {
             position: "fixed",
             top: 0,
             left: 0,
-            zIndex: 9999999999999999999999,
+            zIndex: 999999999999999,
           }}
         >
           <Loader />

@@ -18,15 +18,15 @@
   height: 0px;
   padding-left: 7rem;
   padding-right: 7rem;
+  // overflow-x: hidden;
 }
 
 .navbar-list {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 12px 9px;
   background-color: #000000;
-  padding: 12px 9px 12px 9px;
   border-radius: 60px;
   position: relative;
 
@@ -106,7 +106,7 @@
   right: 0;
   z-index: 500000000;
   height: 100vh;
-  width: 0;
+  width: 100%;
   opacity: 0;
   transition: all 0.2s;
   visibility: hidden;
@@ -114,9 +114,9 @@
 }
 .navigation__list {
   cursor: pointer;
-  position: absolute;
+  position: relative;
   top: 10%;
-  left: 0;
+  // left: 0;
   width: 100%;
   padding: 2rem;
 
@@ -234,9 +234,6 @@
 
   &.active {
     color: #ffffff;
-    // border-radius: 60px;
-    // padding: 6px 20px;
-    // background-color: #0000ff;
     background-color: transparent;
   }
 }
