@@ -44,6 +44,7 @@ function Video() {
           muted
           loop
           preload="auto"
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978866/vdo1_dfyrm4.png"
           onMouseEnter={(e) => {
             e.target.play();
             e.target.muted = false;
@@ -58,6 +59,7 @@ function Video() {
       <div className="video-box__item video-box-two">
         <video
           src={vidTwo}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978869/vdo2_khkc20.png"
           muted
           loop
           preload="auto"
@@ -75,6 +77,7 @@ function Video() {
       <div className="video-box__item video-box-three">
         <video
           src={vidThree}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978874/vdo3_lch8qp.png"
           muted
           loop
           preload="auto"
@@ -92,6 +95,7 @@ function Video() {
       <div className="video-box__item video-box-four">
         <video
           src={vidFour}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978867/vdo4_duw6nr.png"
           muted
           loop
           preload="auto"
@@ -109,6 +113,7 @@ function Video() {
       <div className="video-box__item video-box-five">
         <video
           src={vidFive}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978867/vdo5_d5z2hh.png"
           muted
           loop
           preload="auto"
@@ -126,6 +131,7 @@ function Video() {
       <div className="video-box__item video-box-six">
         <video
           src={vidSix}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978868/vdo6_voqo01.png"
           muted
           loop
           preload="auto"
@@ -143,6 +149,7 @@ function Video() {
       <div className="video-box__item video-box-seven video-box-one">
         <video
           src={vidSeven}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978869/vdo7_pvdn0k.png"
           muted
           loop
           preload="auto"
@@ -160,6 +167,7 @@ function Video() {
       <div className="video-box__item video-box-eight video-box-one">
         <video
           src={vidEight}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978871/vdo8_v9dsyd.png"
           muted
           loop
           preload="auto"
@@ -177,6 +185,7 @@ function Video() {
       <div className="video-box__item video-box-six video-box-nine">
         <video
           src={vidNine}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978866/vdo9_g9hgl8.png"
           muted
           loop
           preload="auto"
@@ -194,6 +203,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-ten">
         <video
           src={vidTen}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978869/vdo10_sosagj.png"
           muted
           loop
           preload="auto"
@@ -211,6 +221,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-eleven">
         <video
           src={vidEleven}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978869/vdo11_quspzr.png"
           muted
           loop
           preload="auto"
@@ -228,6 +239,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-twelve">
         <video
           src={vidTwelve}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978869/vdo12_nvimyu.png"
           muted
           loop
           preload="auto"
@@ -245,6 +257,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-thirteen">
         <video
           src={vidThirteen}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978867/vdo13_j4z6nv.png"
           muted
           loop
           preload="auto"
@@ -262,6 +275,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-fourteen">
         <video
           src={vidFourteen}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978867/vdo14_tu4ysc.png"
           muted
           loop
           preload="auto"
@@ -279,6 +293,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-fourteen">
         <video
           src={vidFifteen}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978866/vdo15_blg4me.png"
           muted
           loop
           preload="auto"
@@ -296,6 +311,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-fourteen">
         <video
           src={vidSeventeen}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978869/vdo16_wer49f.png"
           muted
           loop
           preload="auto"
@@ -313,6 +329,7 @@ function Video() {
       <div className="video-box__item video-box-one video-box-fourteen">
         <video
           src={vidEighteen}
+          poster="https://res.cloudinary.com/dzuqczvb7/image/upload/v1737978866/vdo17_iqwwxl.png"
           muted
           loop
           preload="auto"
