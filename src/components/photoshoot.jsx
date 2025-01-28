@@ -1,3 +1,4 @@
+import React from "react";
 import WillM1 from "../assets/images/Poster/willmount.png";
 import Shine1 from "../assets/images/Poster/shine.png";
 import Evergreen1 from "../assets/images/Poster/evergreen.png";
@@ -7,13 +8,13 @@ import Blazeemco1 from "../assets/images/Poster/blazeemco.png";
 import Kuruva1 from "../assets/images/Poster/kuruva.png";
 
 const imageContents = [
-  WillM1,
-  Shine1,
-  Evergreen1,
-  BigDeal1,
-  Defzen1,
-  Blazeemco1,
-  Kuruva1,
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042827/willmount_jfwehq.png",
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042824/shine_jmekdf.png",
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042822/evergreen_e5jdiq.png",
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042820/bigDeals_gl37l3.png",
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042822/defzen_ybrrtb.png",
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042821/blazeemco_phwwpy.png",
+  "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738042823/kuruva_eygdl6.png",
 ];
 
 function Photoshoot() {

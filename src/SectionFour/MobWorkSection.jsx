@@ -1,3 +1,4 @@
+import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import Image1 from "../assets/Services/Branding & Designing 2.png";
 import Image2 from "../assets/Services/perphomance.png";
@@ -9,7 +10,8 @@ import { GoArrowDownLeft } from "react-icons/go";
 export const MobWorkSection = () => {
   const items = [
     {
-      image: Image3,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738040658/VideoProduction_2_zvlnlj.png",
       pills: ["Best in Kerala", "Podcast Videos", "Corporate Shoots"],
       heading: "Video Production",
       description:
@@ -17,7 +19,8 @@ export const MobWorkSection = () => {
       link: "",
     },
     {
-      image: Image1,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738041281/Branding_Designing_2_ztzq1r.png",
       pills: ["Branding & Designing", "Illustrations"],
       heading: "Branding & Designing",
       description:
@@ -25,7 +28,8 @@ export const MobWorkSection = () => {
       link: "",
     },
     {
-      image: Image2,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738041273/perphomance_hgrxxe.png",
       pills: ["Performance Marketing", "SEO", "Social Media Ads"],
       heading: "Performance Marketing",
       description:
@@ -33,7 +37,8 @@ export const MobWorkSection = () => {
       link: "",
     },
     {
-      image: Image4,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738040756/protienNutMob_tmqjih.jpg",
       pills: ["Web Applications", "UI/UX design"],
       heading: "Website Development",
       description:
@@ -41,7 +46,8 @@ export const MobWorkSection = () => {
       link: "",
     },
     {
-      image: Image5,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738040757/accoundings2_sbi0vt.jpg",
       pills: ["Enterprise Software", "E-commerce Solutions"],
       heading: "Custom Web Solutions",
       description:

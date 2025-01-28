@@ -21,44 +21,49 @@ export const WorkSection = () => {
 
   const items = [
     {
-      image: Image3,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738040658/VideoProduction_2_zvlnlj.png",
       pills: ["Best in Kerala", "Podcast Videos", "Corporate Shoots"],
       heading: "Video Production",
       description:
         "As Calicut's best video production agency, we create stunning visual content that captivates audiences and elevates your brand. From concept to execution, our expert team delivers high-quality videos tailored to your business goals.",
-      link: "",
+      link: "https://www.instagram.com/marketlube/",
     },
     {
-      image: Image1,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738041281/Branding_Designing_2_ztzq1r.png",
       pills: ["Branding & Designing", "Illustrations"],
       heading: "Branding & Designing",
       description:
         "Maximize ROI with data-driven performance marketing strategies. We focus on measurable results through targeted campaigns, optimizing ad spend and delivering high-quality leads to accelerate growth and achieve your business objectives effectively.",
-      link: "",
+      link: "https://www.instagram.com/marketlube/",
     },
     {
-      image: Image2,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738041273/perphomance_hgrxxe.png",
       pills: ["Performance Marketing", "SEO", "Social Media Ads"],
       heading: "Performance Marketing",
       description:
         "Mannson Freight operates import and export consolidation services involving sea freight. They engaged Phunk to rebrand their corporate identity and develop a new higher-performance website, as well as a custom-built portal — MFS Pro— including ongoing support.",
-      link: "",
+      link: "https://www.instagram.com/marketlube/",
     },
     {
-      image: Image4,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738040756/protienNutMob_tmqjih.jpg",
       pills: ["Web Applications", "UI/UX design"],
       heading: "Website Development",
       description:
         "Transform your online presence with modern, responsive websites designed for functionality and aesthetics. Our website development services ensure seamless user experiences, robust performance, and scalability to meet evolving business needs.",
-      link: "",
+      link: "https://www.instagram.com/marketlube/",
     },
     {
-      image: Image5,
+      image:
+        "https://res.cloudinary.com/dihhxzfq3/image/upload/v1738040757/accoundings2_sbi0vt.jpg",
       pills: ["Enterprise Software", "E-commerce Solutions"],
       heading: "Custom Web Solutions",
       description:
         "Empower your business with tailored web solutions designed to address unique challenges. From custom software to advanced integrations, we deliver scalable and innovative tools that drive efficiency and support long-term success.",
-      link: "",
+      link: "https://www.instagram.com/marketlube/",
     },
   ];
 
